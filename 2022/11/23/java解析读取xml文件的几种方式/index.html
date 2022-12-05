@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>java解析读取xml文件的几种方式.md | 青春纪念册</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="java解析读取xml文件的几种方式.md | 青春纪念册">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="青春纪念册">
+<meta property="og:description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-09T13:19:10.000Z">
+<meta property="article:modified_time" content="2022-12-05T00:55:49.023Z">
+<meta property="article:author" content="BossLiu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/IMG_1706.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/IMG_1706.jpg"/>
+</a>
+<div class="author">
+    <span>BossLiu</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/xmlrambo"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="weibo"
+               href="https://weibo.com/u/2234281571"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/acd0a68dff7e"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/wananyanyucheng"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/ForeverLucky_"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/u/263448"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:384276224@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=384276224&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=369320275"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+    <a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(14)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="java">
+                        
+                        java
+                        <small>(13)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="sql">
+                        
+                        sql
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+        
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+        
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="14">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://xmlrambo.github.io/">青春纪念册</a></li>
+            
+            <li><a target="_blank" href="http://xmlrambo.gitee.io/">青春纪念册（备用地址）</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>设计模式</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/12/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之状态模式">设计模式之状态模式</span>
+            <span class="post-date" title="2022-12-05 14:01:16">2022/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/12/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之抽象工厂模式">设计模式之抽象工厂模式</span>
+            <span class="post-date" title="2022-12-04 17:02:36">2022/12/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/12/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之观察者模式">设计模式之观察者模式</span>
+            <span class="post-date" title="2022-12-03 10:14:52">2022/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之建造者模式">设计模式之建造者模式</span>
+            <span class="post-date" title="2022-12-02 14:38:06">2022/12/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/12/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之外观模式">设计模式之外观模式</span>
+            <span class="post-date" title="2022-12-01 14:39:56">2022/12/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之模板方法模式">设计模式之模板方法模式</span>
+            <span class="post-date" title="2022-11-30 10:04:08">2022/11/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之原型模式">设计模式之原型模式</span>
+            <span class="post-date" title="2022-11-28 22:05:57">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之工厂方法模式">设计模式之工厂方法模式</span>
+            <span class="post-date" title="2022-11-28 09:28:33">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之代理模式">设计模式之代理模式</span>
+            <span class="post-date" title="2022-11-25 11:25:11">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之装饰模式">设计模式之装饰模式</span>
+            <span class="post-date" title="2022-11-25 11:24:58">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之策略模式">设计模式之策略模式</span>
+            <span class="post-date" title="2022-11-24 17:40:34">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之简单工厂模式">设计模式之简单工厂模式</span>
+            <span class="post-date" title="2022-11-24 13:56:56">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java "
+           href="/2022/11/23/java%E8%A7%A3%E6%9E%90%E8%AF%BB%E5%8F%96xml%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java解析读取xml文件的几种方式.md">java解析读取xml文件的几种方式.md</span>
+            <span class="post-date" title="2022-11-23 13:45:51">2022/11/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 sql "
+           href="/2022/11/21/%E8%A7%A3%E5%86%B3plsql%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E5%8F%B7%E9%97%AE%E9%A2%98/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="解决plsql中文显示问号问题">解决plsql中文显示问号问题</span>
+            <span class="post-date" title="2022-11-21 18:05:55">2022/11/21</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-java解析读取xml文件的几种方式" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">java解析读取xml文件的几种方式.md</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="java">java</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-12-05 08:55:49'>2022-11-23 13:45</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8xml%E6%96%87%E4%BB%B6"><span class="toc-text">一、为什么使用xml文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%BB%E5%8F%96xml%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">二、读取xml的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-dom%E6%96%B9%E5%BC%8F%E8%AF%BB%E5%8F%96"><span class="toc-text">2.1 dom方式读取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%9A"><span class="toc-text">运行结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-dom4j%E6%96%B9%E5%BC%8F"><span class="toc-text">2.2 dom4j方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%9A-1"><span class="toc-text">运行结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-jdom%E6%96%B9%E5%BC%8F"><span class="toc-text">2.3 jdom方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%9A-2"><span class="toc-text">运行结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Sax%E6%96%B9%E5%BC%8F"><span class="toc-text">2.4 Sax方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%9A-3"><span class="toc-text">运行结果：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%80%BB%E7%BB%93%E5%AF%B9%E6%AF%94"><span class="toc-text">三、总结对比</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、为什么使用xml文件"><a href="#一、为什么使用xml文件" class="headerlink" title="一、为什么使用xml文件"></a>一、为什么使用xml文件</h1><ul>
+<li>便于不同应用程序之间通信。</li>
+<li>便于不同平台之间通信。</li>
+<li>便于不同平台之间数据共享。</li>
+</ul>
+<h1 id="二、读取xml的方式"><a href="#二、读取xml的方式" class="headerlink" title="二、读取xml的方式"></a>二、读取xml的方式</h1><p>xml测试文件内容如下：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;studentInfo&gt;
+    &lt;student id=&quot;1&quot;&gt;
+        &lt;name&gt;小明&lt;/name&gt;
+        &lt;age&gt;28&lt;/age&gt;
+        &lt;birthday&gt;19920114&lt;/birthday&gt;
+        &lt;home&gt;河南&lt;/home&gt;
+    &lt;/student&gt;
+    &lt;student id=&quot;2&quot;&gt;
+        &lt;name&gt;小刚&lt;/name&gt;
+        &lt;age&gt;29&lt;/age&gt;
+        &lt;birthday&gt;19911114&lt;/birthday&gt;
+        &lt;home&gt;湖北&lt;/home&gt;
+    &lt;/student&gt;
+    &lt;student id=&quot;3&quot;&gt;
+        &lt;name&gt;小红&lt;/name&gt;
+        &lt;age&gt;28&lt;/age&gt;
+        &lt;birthday&gt;19920115&lt;/birthday&gt;
+        &lt;home&gt;湖南&lt;/home&gt;
+    &lt;/student&gt;
+&lt;/studentInfo&gt;
+</code></pre>
+<h2 id="2-1-dom方式读取"><a href="#2-1-dom方式读取" class="headerlink" title="2.1 dom方式读取"></a>2.1 dom方式读取</h2><p>dom方式读取xml文件具体源代码如下：</p>
+<pre><code class="java">package basic;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+public class ReadXmlDomService &#123;
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;readXmlByDom start:&quot;);
+        readXmlByDom();
+        System.out.println(&quot;readXmlByDom end.&quot;);
+    &#125;
+
+
+    //dom方式
+    private static void readXmlByDom()&#123;
+        try &#123;
+            // 创建解析器工厂
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = factory.newDocumentBuilder();
+            // 创建一个Document对象
+            Document doc = db.parse(&quot;/Users/liuxiaoming/Desktop/test.xml&quot;);
+            NodeList studentList = doc.getElementsByTagName(&quot;student&quot;);
+            // 获取节点个数
+            System.out.println(&quot;一共有&quot; + studentList.getLength() + &quot;同学&quot;);
+
+            // 遍历每个student节点
+            for (int i = 0; i &lt; studentList.getLength(); i++) &#123;
+                System.out.println(&quot;*******************************&quot;);
+                // 索引从零开始
+                org.w3c.dom.Node student = studentList.item(i);
+                // 获取student节点所有属性集合
+                org.w3c.dom.NamedNodeMap attrs = student.getAttributes();
+
+                System.out.println(&quot;第&quot; + (i + 1) + &quot;个同学共有&quot; + attrs.getLength() + &quot;属性&quot;);
+                // 遍历student属性，不知道节点属性和属性名情况
+                for (int j = 0; j &lt; attrs.getLength(); j++) &#123;
+                    // 获取某一个属性
+                    org.w3c.dom.Node attr = attrs.item(j);
+                    System.out.print(&quot;属性名:&quot; + attr.getNodeName());
+                    System.out.println(&quot; --- 属性值:&quot; + attr.getNodeValue());
+                &#125;
+
+                // 若已经知道student节点有且只有1个ID属性,可用以下方式
+                // org.w3c.dom.Element e = (org.w3c.dom.Element)
+                // bookList.item(i);
+                // System.out.println(&quot;Element属性值:&quot;+e.getAttribute(&quot;id&quot;));
+
+                NodeList childNodes = student.getChildNodes();
+                for (int k = 0; k &lt; childNodes.getLength(); k++) &#123;
+                    // 区分,去掉空格和换行符
+                    if (childNodes.item(k).getNodeType() == Node.ELEMENT_NODE) &#123;
+                        // 获取element类型的节点和节点值
+                        System.out.print(&quot;节点名：&quot; + childNodes.item(k).getNodeName());
+                        System.out.print(&quot; --- 节点值：&quot; + childNodes.item(k).getFirstChild().getNodeValue());
+                        System.out.println(&quot; --- 节点值：&quot;+childNodes.item(k).getTextContent());
+                    &#125;
+                &#125;
+            &#125;
+
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h3><pre><code>readXmlByDom start:
+一共有3同学
+*******************************
+第1个同学共有1属性
+属性名:id --- 属性值:1
+节点名：name --- 节点值：小明 --- 节点值：小明
+节点名：age --- 节点值：28 --- 节点值：28
+节点名：birthday --- 节点值：19920114 --- 节点值：19920114
+节点名：home --- 节点值：河南 --- 节点值：河南
+*******************************
+第2个同学共有1属性
+属性名:id --- 属性值:2
+节点名：name --- 节点值：小刚 --- 节点值：小刚
+节点名：age --- 节点值：29 --- 节点值：29
+节点名：birthday --- 节点值：19911114 --- 节点值：19911114
+节点名：home --- 节点值：湖北 --- 节点值：湖北
+*******************************
+第3个同学共有1属性
+属性名:id --- 属性值:3
+节点名：name --- 节点值：小红 --- 节点值：小红
+节点名：age --- 节点值：28 --- 节点值：28
+节点名：birthday --- 节点值：19920115 --- 节点值：19920115
+节点名：home --- 节点值：湖南 --- 节点值：湖南
+readXmlByDom end.
+</code></pre>
+<h2 id="2-2-dom4j方式"><a href="#2-2-dom4j方式" class="headerlink" title="2.2 dom4j方式"></a>2.2 dom4j方式</h2><p>dom4j方式需要引入dom4j依赖包  </p>
+<p>maven依赖项：</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;dom4j&lt;/groupId&gt;
+  &lt;artifactId&gt;dom4j&lt;/artifactId&gt;
+  &lt;version&gt;1.6.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>java源码如下：  </p>
+<pre><code class="java">package basic;
+
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+
+public class ReadXmlDom4jService &#123;
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;readXmlByDom4j start:&quot;);
+        readXmlByDom4j();
+        System.out.println(&quot;readXmlByDom4j end.&quot;);
+    &#125;
+
+    //dom4j方式
+    private static void readXmlByDom4j()&#123;
+        try &#123;
+            // 创建SAXReader对象
+            SAXReader reader = new SAXReader();
+            // 加载xml文件
+            Document dc= reader.read(new File(&quot;/Users/liuxiaoming/Desktop/test.xml&quot;));
+            // 获取根节点
+            Element e = dc.getRootElement();
+            // 获取迭代器
+            Iterator it = e.elementIterator();
+            // 遍历迭代器，获取根节点信息
+            while(it.hasNext())&#123;
+                Element studentInfo = (Element) it.next();
+
+                List&lt;Attribute&gt; atts= studentInfo.attributes();
+                // 获取student属性名和属性值
+                for (Attribute att : atts) &#123;
+                    System.out.println(&quot;节点名：&quot;+att.getName()+&quot;节点值：&quot;+att.getValue());
+                &#125;
+
+                Iterator itt = studentInfo.elementIterator();
+                while(itt.hasNext())&#123;
+                    Element b = (Element) itt.next();
+
+                    System.out.println(&quot;属性名：&quot;+b.getName()+&quot;属性值：&quot;+b.getText());
+                &#125;
+
+            &#125;
+        &#125; catch (Exception e) &#123;
+            // TODO: handle exception
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="运行结果：-1"><a href="#运行结果：-1" class="headerlink" title="运行结果："></a>运行结果：</h3><pre><code>readXmlByDom4j start:
+节点名：id节点值：1
+属性名：name属性值：小明
+属性名：age属性值：28
+属性名：birthday属性值：19920114
+属性名：home属性值：河南
+节点名：id节点值：2
+属性名：name属性值：小刚
+属性名：age属性值：29
+属性名：birthday属性值：19911114
+属性名：home属性值：湖北
+节点名：id节点值：3
+属性名：name属性值：小红
+属性名：age属性值：28
+属性名：birthday属性值：19920115
+属性名：home属性值：湖南
+readXmlByDom4j end.
+</code></pre>
+<h2 id="2-3-jdom方式"><a href="#2-3-jdom方式" class="headerlink" title="2.3 jdom方式"></a>2.3 jdom方式</h2><p>使用jdom方式需要引入相关maven依赖</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.jdom&lt;/groupId&gt;
+  &lt;artifactId&gt;jdom&lt;/artifactId&gt;
+  &lt;version&gt;1.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>jdom方式导入源码如下：</p>
+<pre><code class="java">package basic;
+
+import org.jdom.Attribute;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.input.SAXBuilder;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ReadXmlJdomService &#123;
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;readXmlByJdom start:&quot;);
+        readXmlByJdom();
+        System.out.println(&quot;readXmlByJdom end.&quot;);
+    &#125;
+
+    //jdom方式
+    private static void readXmlByJdom()&#123;
+        List&lt;Student&gt; bList = new ArrayList&lt;Student&gt;();
+        try &#123;
+            // 创建一个SAXBuilder对象
+            SAXBuilder builder = new SAXBuilder();
+            // 创建一个输入流
+            InputStream in = new FileInputStream(&quot;/Users/liuxiaoming/Desktop/test.xml&quot;);
+
+            // 处理乱码情况
+            InputStreamReader isr = new InputStreamReader(in, &quot;UTF-8&quot;);
+
+            // 通过build方法，将输入流加载到SAXBuilder中
+            Document doc = builder.build(isr);
+            // 通过Document对象获取根节点
+            Element foo= doc.getRootElement();
+            // 获取根节点下子节点名
+            List&lt;Element&gt; allChildren = foo.getChildren();
+            // 进行解析
+            for (Element student : allChildren) &#123;
+
+                Student b = new Student();
+
+                System.out.println(&quot;开始解析第&quot;+(allChildren.indexOf(student)+1)+&quot;个同学&quot;);
+                // 解析student属性集合
+                List&lt;Attribute&gt; attrList = student.getAttributes();
+                // 遍历(针对不清楚节点下属性名)
+                for (Attribute attr : attrList) &#123;
+                    System.out.println(&quot;属性名：&quot;+attr.getName() +&quot; -- 属性值：&quot;+attr.getValue());
+                    if(&quot;id&quot;.equals(attr.getName()))&#123;
+                        b.setId(attr.getValue());
+                    &#125;
+                &#125;
+
+                // 清楚知道属性名获取属性值
+                String v = student.getAttributeValue(&quot;id&quot;);
+                System.out.println(&quot;清楚知道属性名&quot;+v);
+
+                // 对student节点子节点的节点名和节点值进行遍历
+                List&lt;Element&gt; studentChiles = student.getChildren();
+                for (Element element : studentChiles) &#123;
+                    System.out.println(&quot;属性名：&quot;+element.getName() +&quot; -- 属性值：&quot;+element.getValue());
+
+                    if(&quot;name&quot;.equals(element.getName()))&#123;
+                        b.setName(element.getValue());
+                    &#125;else if(&quot;age&quot;.equals(element.getName()))&#123;
+                        b.setAge(element.getValue());
+                    &#125;else if(&quot;home&quot;.equals(element.getName()))&#123;
+                        b.setHome(element.getValue());
+                    &#125;else if(&quot;birthday&quot;.equals(element.getName()))&#123;
+                        b.setBirthday(element.getValue());
+                    &#125;else if(&quot;id&quot;.equals(element.getName()))&#123;
+                        b.setId(element.getValue());
+                    &#125;
+                &#125;
+                System.out.println(&quot;结束解析第&quot;+(allChildren.indexOf(student)+1)+&quot;个同学&quot;);
+                bList.add(b);
+                b = null;
+            &#125;
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="运行结果：-2"><a href="#运行结果：-2" class="headerlink" title="运行结果："></a>运行结果：</h3><pre><code>readXmlByJdom start:
+开始解析第1个同学
+属性名：id -- 属性值：1
+清楚知道属性名1
+属性名：name -- 属性值：小明
+属性名：age -- 属性值：28
+属性名：birthday -- 属性值：19920114
+属性名：home -- 属性值：河南
+结束解析第1个同学
+开始解析第2个同学
+属性名：id -- 属性值：2
+清楚知道属性名2
+属性名：name -- 属性值：小刚
+属性名：age -- 属性值：29
+属性名：birthday -- 属性值：19911114
+属性名：home -- 属性值：湖北
+结束解析第2个同学
+开始解析第3个同学
+属性名：id -- 属性值：3
+清楚知道属性名3
+属性名：name -- 属性值：小红
+属性名：age -- 属性值：28
+属性名：birthday -- 属性值：19920115
+属性名：home -- 属性值：湖南
+结束解析第3个同学
+readXmlByJdom end.
+</code></pre>
+<h2 id="2-4-Sax方式"><a href="#2-4-Sax方式" class="headerlink" title="2.4 Sax方式"></a>2.4 Sax方式</h2><p>Sax方式解析xml文件源码如下：</p>
+<pre><code class="java">package basic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class SAXParserHandler extends DefaultHandler &#123;
+    int studentIndex = 0;
+    String str = null;
+    Student student = null;
+    private List&lt;Student&gt; stuList = new ArrayList&lt;Student&gt;();
+
+    public List&lt;Student&gt; getStuList() &#123;
+        return stuList;
+    &#125;
+
+    /**
+     * 用来遍历xml文件的开始标签
+     */
+    @Override
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException &#123;
+        // 调用DefaultHandler的startElement方法
+        super.startElement(uri, localName, qName, attributes);
+        // 开始解析student元素属性
+        if(qName.equals(&quot;student&quot;))&#123;
+            studentIndex++;
+
+            // 创建一个student对象
+            student = new Student();
+            System.out.println(&quot;****开始第&quot;+ studentIndex +&quot;个同学内容****&quot;);
+            // 已知student元素下属性名称，根据属性名称获取属性值s
+            String value = attributes.getValue(&quot;id&quot;);
+            System.out.println(&quot;student的属性值是：&quot;+value);
+
+            int num = attributes.getLength();
+
+            for(int i=0;i&lt;num;i++)&#123;
+                System.out.print(&quot;student元素的第&quot;+(i+1)+&quot;个属性名是：&quot;+attributes.getQName(i));
+                System.out.println(&quot; -- 属性值是：&quot;+attributes.getValue(i));
+                if(attributes.getQName(i).equals(&quot;id&quot;))&#123;
+                    student.setId(attributes.getQName(i));
+                &#125;
+            &#125;
+        &#125;else if(!qName.equals(&quot;student&quot;) &amp;&amp; !qName.equals(&quot;studentInfo&quot;))&#123;
+            System.out.print(&quot;节点名是：&quot;+qName);
+
+        &#125;
+    &#125;
+
+    /**
+     * 用来遍历xml文件的结束标签
+     */
+    @Override
+    public void endElement(String uri, String localName, String qName) throws SAXException &#123;
+        // 调用DefaultHandler的endElement方法
+        super.endElement(uri, localName, qName);
+        // 判断是否针对一本书已经遍历结束
+        if(qName.equals(&quot;student&quot;))&#123;
+            stuList.add(student);
+            student = null;
+            System.out.println(&quot;****结束第&quot;+ studentIndex +&quot;个同学内容****&quot;);
+        &#125;else if(qName.equals(&quot;name&quot;))&#123;
+            student.setName(str);
+        &#125;else if(qName.equals(&quot;id&quot;))&#123;
+            student.setId(str);
+        &#125;else if(qName.equals(&quot;age&quot;))&#123;
+            student.setAge(str);
+        &#125;else if(qName.equals(&quot;birthday&quot;))&#123;
+            student.setBirthday(str);
+        &#125;else if(qName.equals(&quot;home&quot;))&#123;
+            student.setHome(str);
+        &#125;
+    &#125;
+
+    /**
+     * 用来标志解析开始
+     */
+    @Override
+    public void startDocument() throws SAXException &#123;
+        // 调用DefaultHandler的startDocument方法
+        super.startDocument();
+        System.out.println(&quot;解析开始&quot;);
+    &#125;
+
+    /**
+     * 用来标志解析结束
+     */
+    @Override
+    public void endDocument() throws SAXException &#123;
+        // 调用DefaultHandler的endDocument方法
+        super.endDocument();
+        System.out.println(&quot;解析结束&quot;);
+    &#125;
+
+    /**
+     * 用来标志解析结束
+     */
+    @Override
+    public void characters(char[] ch, int start, int length) throws SAXException &#123;
+        // 调用DefaultHandler的characters方法
+        super.characters(ch, start, length);
+        str = new String(ch, start, length);
+        if(!str.trim().equals(&quot;&quot;))&#123;
+            System.out.println(&quot; -- 节点值是：&quot;+str);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">package basic;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+public class ReadXmlSaxService &#123;
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;readXmlByJdom start:&quot;);
+        readXmlBySax();
+        System.out.println(&quot;readXmlByJdom end.&quot;);
+    &#125;
+
+    private static void readXmlBySax()&#123;
+        try &#123;
+            // 创建工厂
+            SAXParserFactory sf=SAXParserFactory.newInstance();
+            // 获取SAXParser实例
+            SAXParser sp = sf.newSAXParser();
+            // 创建一个解析对象
+            SAXParserHandler handler = new SAXParserHandler();
+            sp.parse(&quot;/Users/liuxiaoming/Desktop/test.xml&quot;, handler);
+
+            for(Student student : handler.getStuList())&#123;
+                System.out.println(student.getId());
+                System.out.println(student.getName());
+                System.out.println(student.getAge());
+                System.out.println(student.getBirthday());
+                System.out.println(student.getHome());
+                System.out.println(&quot;*****************&quot;);
+            &#125;
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="运行结果：-3"><a href="#运行结果：-3" class="headerlink" title="运行结果："></a>运行结果：</h3><pre><code>readXmlByJdom start:
+解析开始
+****开始第1个同学内容****
+student的属性值是：1
+student元素的第1个属性名是：id -- 属性值是：1
+节点名是：name -- 节点值是：小明
+节点名是：age -- 节点值是：28
+节点名是：birthday -- 节点值是：19920114
+节点名是：home -- 节点值是：河南
+****结束第1个同学内容****
+****开始第2个同学内容****
+student的属性值是：2
+student元素的第1个属性名是：id -- 属性值是：2
+节点名是：name -- 节点值是：小刚
+节点名是：age -- 节点值是：29
+节点名是：birthday -- 节点值是：19911114
+节点名是：home -- 节点值是：湖北
+****结束第2个同学内容****
+****开始第3个同学内容****
+student的属性值是：3
+student元素的第1个属性名是：id -- 属性值是：3
+节点名是：name -- 节点值是：小红
+节点名是：age -- 节点值是：28
+节点名是：birthday -- 节点值是：19920115
+节点名是：home -- 节点值是：湖南
+****结束第3个同学内容****
+解析结束
+id
+小明
+28
+19920114
+河南
+*****************
+id
+小刚
+29
+19911114
+湖北
+*****************
+id
+小红
+28
+19920115
+湖南
+*****************
+readXmlByJdom end.
+</code></pre>
+<h1 id="三、总结对比"><a href="#三、总结对比" class="headerlink" title="三、总结对比"></a>三、总结对比</h1><pre><code> * dom平台无关，官方解析方式，一次性加载，方便解析，代码容易编写，当文件过大，容易造成内存溢出
+ * sax基于事件驱动的解析方式，加载时进行验证判断，内存耗费小，不易编码，很难同时访问一个xml中的多处不同数据
+ * 
+ * jdom和dom4j是基于sax扩展
+ * 
+ * jdom仅使用具体类而不使用接口，api中大量使用了collections类
+ * 
+ * dom4j是jdom的一种智能分支，具有性能优异，灵活性好，功能强大和易使用的特点
+</code></pre>
+<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'bfcd27a804f71cfad5a0',
+            clientSecret: '77a760ab4dd835aa828e1bbc86680fb6246d4d63',
+            repo: 'xmlrambo.github.io',
+            owner: 'xmlrambo',
+            admin: ['xmlrambo'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2022-至今 xmlrambo
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+    
+    
+</div>
+
+
+</html>
