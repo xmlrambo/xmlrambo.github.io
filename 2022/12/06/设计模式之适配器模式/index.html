@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>解决plsql中文显示问号问题 | 青春纪念册</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="解决plsql中文显示问号问题 | 青春纪念册">
+  <title>设计模式之适配器模式 | 青春纪念册</title>
+  <meta name="keywords" content=" 设计模式 ">
+  <meta name="description" content="设计模式之适配器模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -501,9 +501,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-解决plsql中文显示问号问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之适配器模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">解决plsql中文显示问号问题</h1>
+        <h1 class="article-title">设计模式之适配器模式</h1>
     
     <div class="article-meta">
         
@@ -513,15 +513,22 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="sql">sql</a>
+            <a  data-rel="java">java</a>
             
         </span>
         
         
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">设计模式</a>
+            
+        </span>
+        
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-05 08:55:49'>2022-11-21 18:05</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-06 09:01:29'>2022-12-06 08:53</time>
         
     </div>
     <div class="article-meta">
@@ -554,7 +561,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3plsql%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E5%8F%B7%EF%BC%88%EF%BC%9F%EF%BC%9F%EF%BC%9F%EF%BC%89%E9%97%AE%E9%A2%98"><span class="toc-text">解决plsql中文显示问号（？？？）问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-text">处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80"><span class="toc-text">步骤一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C"><span class="toc-text">步骤二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89"><span class="toc-text">步骤三</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理适配器模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">适配器模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -570,12 +577,151 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="解决plsql中文显示问号（？？？）问题"><a href="#解决plsql中文显示问号（？？？）问题" class="headerlink" title="解决plsql中文显示问号（？？？）问题"></a>解决plsql中文显示问号（？？？）问题</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>本机没有配置数据库字符集环境变量，或是与数据库字符集不一致。</p>
-<h2 id="处理方法"><a href="#处理方法" class="headerlink" title="处理方法"></a>处理方法</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>执行在plsql中执行 select userenv(‘language’) from dual; 语句来查看本机的字符集</p>
-<h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>在环境变量中添加两条配置信息，鼠标右键我的电脑（计算机&#x2F;此电脑）等图标，选择属性，选择高级系统设置，选择高级选项卡的环境变量，在系统变量里新建两条配置：  </p>
-<p>1、LANG&#x3D;zh_CN.GBK（GBK是这样形式的，不同编码这里的value值需要跟着改变）  </p>
-<p>2、NLS_LANG&#x3D;AMERICAN_AMERICA.ZHS16GBK（这个value值就是我们步骤一中拼接好的那个值）  </p>
-<h3 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h3><p>这步也是至关重要的，到这里我们就配置好了，重启plsql或重启电脑 生效。</p>
+        <h1 id="简单梳理适配器模式"><a href="#简单梳理适配器模式" class="headerlink" title="简单梳理适配器模式"></a>简单梳理适配器模式</h1><h2 id="适配器模式实现"><a href="#适配器模式实现" class="headerlink" title="适配器模式实现"></a>适配器模式实现</h2><p>我们看篮球的时候，经常看到前锋中锋后卫针对球场形式进行进攻或防守。  </p>
+<p>但是对于需要翻译的外籍球员，就需要配备一个翻译员才能听懂教练的战术。  </p>
+<p>我们看下这个场景下，用适配器模式如何实现。  </p>
+<p>首先我们定义基本类，球员基类。  </p>
+<pre><code class="java">public abstract class Player &#123;
+    protected String name;
+
+    public Player(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public abstract void Attack();
+    public abstract void Defense();
+&#125;
+</code></pre>
+<p>定义对应的前锋、中锋、后卫类</p>
+<p>前锋</p>
+<pre><code class="java">public class Forwards extends Player&#123;
+    public Forwards(String name) &#123;
+        super(name);
+    &#125;
+
+    @Override
+    public void Attack() &#123;
+        System.out.println(&quot;前锋（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        System.out.println(&quot;前锋（&quot;+name+&quot;)防守&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>中锋</p>
+<pre><code class="java">public class Center extends Player&#123;
+    public Center(String name) &#123;
+        super(name);
+    &#125;
+
+    @Override
+    public void Attack() &#123;
+        System.out.println(&quot;中锋（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        System.out.println(&quot;中锋（&quot;+name+&quot;)防守&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>后卫</p>
+<pre><code class="java">public class Guards extends Player&#123;
+    public Guards(String name) &#123;
+        super(name);
+    &#125;
+
+    @Override
+    public void Attack() &#123;
+        System.out.println(&quot;后卫（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        System.out.println(&quot;后卫（&quot;+name+&quot;)防守&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>外籍中锋</p>
+<pre><code class="java">public class ForeignCenter &#123;
+    private String name;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public void Attack() &#123;
+        System.out.println(&quot;外籍中锋（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    public void Defense() &#123;
+        System.out.println(&quot;外籍中锋（&quot;+name+&quot;)防守&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>再为外籍中锋配备一个翻译类，同样继承自Player基类</p>
+<pre><code class="java">public class Translator extends Player&#123;
+    private ForeignCenter wjzf = new ForeignCenter();
+
+    public Translator(String name) &#123;
+        super(name);
+        wjzf.setName(name);
+    &#125;
+
+    @Override
+    public void Attack() &#123;
+        wjzf.Attack();
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        wjzf.Defense();
+    &#125;
+&#125;
+</code></pre>
+<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
+<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
+<pre><code class="java">public class AdapterTest &#123;
+    public static void main(String[] args) &#123;
+        //适配器模式
+        func1();
+    &#125;
+
+    public static void func1()&#123;
+        Player a = new Forwards(&quot;麦迪&quot;);
+        a.Attack();
+
+        Player b = new Center(&quot;乔丹&quot;);
+        b.Attack();
+
+        Player c = new Guards(&quot;艾弗森&quot;);
+        c.Defense();
+
+        Player d = new Translator(&quot;姚明&quot;);
+        d.Attack();
+        d.Defense();
+    &#125;
+&#125;
+</code></pre>
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>前锋（麦迪)进攻
+中锋（乔丹)进攻
+后卫（艾弗森)防守
+外籍中锋（姚明)进攻
+外籍中锋（姚明)防守
+</code></pre>
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>适配器模式，将一个类的接口，转换为客户想要的另一个类的接口。
+适配器模式使得原本不兼容的接口可以一起工作。
+
+那什么时候该考虑使用适配器模式呢？
+在我们想使用一个已经存在的类，但由于接口也就是它的方法和你的要求不一致时，
+就该考虑使用适配器模式了。
+</code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
