@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之策略模式 | 青春纪念册</title>
+  <title>设计模式之适配器模式 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之策略模式 | 青春纪念册">
+  <meta name="description" content="设计模式之适配器模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -519,9 +519,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之策略模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之适配器模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之策略模式</h1>
+        <h1 class="article-title">设计模式之适配器模式</h1>
     
     <div class="article-meta">
         
@@ -546,7 +546,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-01 17:58:56'>2022-11-24 17:40</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-07 19:29:19'>2022-12-06 08:53</time>
         
     </div>
     <div class="article-meta">
@@ -579,7 +579,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%95%86%E5%9C%BA%E6%94%B6%E8%B4%B9%E8%AE%A1%E7%AE%97%E5%99%A8%E6%9D%A5%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">定义一个商场收费计算器来简单梳理策略模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">策略模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">定义抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%85%B7%E4%BD%93%E7%9A%84%E4%BF%83%E9%94%80%E6%B4%BB%E5%8A%A8%E7%AE%97%E6%B3%95%E7%B1%BB"><span class="toc-text">定义具体的促销活动算法类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%AD%96%E7%95%A5%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">定义策略实现类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95%E9%AA%8C%E8%AF%81"><span class="toc-text">定义业务方法验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理适配器模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">适配器模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -595,123 +595,151 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="定义一个商场收费计算器来简单梳理策略模式"><a href="#定义一个商场收费计算器来简单梳理策略模式" class="headerlink" title="定义一个商场收费计算器来简单梳理策略模式"></a>定义一个商场收费计算器来简单梳理策略模式</h1><p>假设商场平时商品正常收费，赶上节假日，会有八折或者满300减100等优惠活动<br>现在定义实现一个商场收费器，来满足这些促销活动商品计算  </p>
-<h2 id="策略模式实现"><a href="#策略模式实现" class="headerlink" title="策略模式实现"></a>策略模式实现</h2><h3 id="定义抽象类"><a href="#定义抽象类" class="headerlink" title="定义抽象类"></a>定义抽象类</h3><p>用于派生出相应的优惠活动算法</p>
-<pre><code class="java">public abstract class CashSuper &#123;
-    public abstract double acceptCash(double money);
-&#125;
-</code></pre>
-<h3 id="定义具体的促销活动算法类"><a href="#定义具体的促销活动算法类" class="headerlink" title="定义具体的促销活动算法类"></a>定义具体的促销活动算法类</h3><p>正常收费类</p>
-<pre><code class="java">//正常收费子类
-public class CashNormal extends CashSuper&#123;
-    @Override
-    public double acceptCash(double money) &#123;
-        return money;
-    &#125;
-&#125;
-</code></pre>
-<p>打折促销类</p>
-<pre><code class="java">//打折收费子类
-public class CashRebate extends CashSuper&#123;
-    private double moneyRebate = 1d;
+        <h1 id="简单梳理适配器模式"><a href="#简单梳理适配器模式" class="headerlink" title="简单梳理适配器模式"></a>简单梳理适配器模式</h1><h2 id="适配器模式实现"><a href="#适配器模式实现" class="headerlink" title="适配器模式实现"></a>适配器模式实现</h2><p>我们看篮球的时候，经常看到前锋中锋后卫针对球场形式进行进攻或防守。  </p>
+<p>但是对于需要翻译的外籍球员，就需要配备一个翻译员才能听懂教练的战术。  </p>
+<p>我们看下这个场景下，用适配器模式如何实现。  </p>
+<p>首先我们定义基本类，球员基类。  </p>
+<pre><code class="java">public abstract class Player &#123;
+    protected String name;
 
-    public CashRebate(String moneyRebate)&#123;
-        this.moneyRebate = Double.valueOf(moneyRebate);
+    public Player(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public abstract void Attack();
+    public abstract void Defense();
+&#125;
+</code></pre>
+<p>定义对应的前锋、中锋、后卫类</p>
+<p>前锋</p>
+<pre><code class="java">public class Forwards extends Player&#123;
+    public Forwards(String name) &#123;
+        super(name);
     &#125;
 
     @Override
-    public double acceptCash(double money) &#123;
-        return money*moneyRebate;
-    &#125;
-&#125;
-</code></pre>
-<p>返利类</p>
-<pre><code class="java">//返利收费子类
-public class CashReturn extends CashSuper&#123;
-    private double moneyCondition = 0.0d;
-    private double moneyReturn = 0.0d;
-
-    public CashReturn(String moneyCondition, String moneyReturn)&#123;
-        this.moneyCondition = Double.valueOf(moneyCondition);
-        this.moneyReturn = Double.valueOf(moneyReturn);
+    public void Attack() &#123;
+        System.out.println(&quot;前锋（&quot;+name+&quot;)进攻&quot;);
     &#125;
 
     @Override
-    public double acceptCash(double money) &#123;
-        double result = money;
-        if(money &gt;= moneyCondition)&#123;
-            result = money - Math.floor(money / moneyCondition) * moneyReturn;
-        &#125;
-        return result;
+    public void Defense() &#123;
+        System.out.println(&quot;前锋（&quot;+name+&quot;)防守&quot;);
     &#125;
 &#125;
 </code></pre>
-<h3 id="定义策略实现类"><a href="#定义策略实现类" class="headerlink" title="定义策略实现类"></a>定义策略实现类</h3><p>用于根据不同的促销方式，生成对应的算法策略</p>
-<pre><code class="java">public class CashContext &#123;
-    private CashSuper cs;
-
-    public CashContext(String type)&#123;
-        switch (type)&#123;
-            case &quot;正常收费&quot;:
-                CashNormal cashNormal = new CashNormal();
-                this.cs = cashNormal;
-                break;
-            case &quot;满300减100&quot;:
-                CashReturn cashReturn = new CashReturn(&quot;300&quot;, &quot;100&quot;);
-                this.cs = cashReturn;
-                break;
-            case &quot;打八折&quot;:
-                CashRebate cashRebate = new CashRebate(&quot;0.8&quot;);
-                this.cs = cashRebate;
-                break;
-        &#125;
+<p>中锋</p>
+<pre><code class="java">public class Center extends Player&#123;
+    public Center(String name) &#123;
+        super(name);
     &#125;
 
-    public double getResult(double money)&#123;
-        return cs.acceptCash(money);
+    @Override
+    public void Attack() &#123;
+        System.out.println(&quot;中锋（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        System.out.println(&quot;中锋（&quot;+name+&quot;)防守&quot;);
     &#125;
 &#125;
 </code></pre>
-<h3 id="定义业务方法验证"><a href="#定义业务方法验证" class="headerlink" title="定义业务方法验证"></a>定义业务方法验证</h3><pre><code class="java">import java.util.Scanner;
-
-//策略模式
-public class CashCalculator &#123;
-
-    public static void func1()&#123;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(&quot;请输入单价：&quot;);
-        String strA = scanner.nextLine();
-        System.out.println(&quot;请输入数量：&quot;);
-        String strB = scanner.nextLine();
-        System.out.println(&quot;请输入算法(&#39;正常收费&#39;,&#39;打八折&#39;,&#39;满300减100&#39;)：&quot;);
-        String strOper = scanner.nextLine();
-
-        String strResult = &quot;&quot;;
-        CashContext cashContext = new CashContext(strOper);
-        strResult = cashContext.getResult(Double.valueOf(strA)*Double.valueOf(strB))+&quot;&quot;;
-
-        System.out.println(&quot;收费结果：&quot;+strResult);
+<p>后卫</p>
+<pre><code class="java">public class Guards extends Player&#123;
+    public Guards(String name) &#123;
+        super(name);
     &#125;
 
+    @Override
+    public void Attack() &#123;
+        System.out.println(&quot;后卫（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        System.out.println(&quot;后卫（&quot;+name+&quot;)防守&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>外籍中锋</p>
+<pre><code class="java">public class ForeignCenter &#123;
+    private String name;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public void Attack() &#123;
+        System.out.println(&quot;外籍中锋（&quot;+name+&quot;)进攻&quot;);
+    &#125;
+
+    public void Defense() &#123;
+        System.out.println(&quot;外籍中锋（&quot;+name+&quot;)防守&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>再为外籍中锋配备一个翻译类，同样继承自Player基类</p>
+<pre><code class="java">public class Translator extends Player&#123;
+    private ForeignCenter wjzf = new ForeignCenter();
+
+    public Translator(String name) &#123;
+        super(name);
+        wjzf.setName(name);
+    &#125;
+
+    @Override
+    public void Attack() &#123;
+        wjzf.Attack();
+    &#125;
+
+    @Override
+    public void Defense() &#123;
+        wjzf.Defense();
+    &#125;
+&#125;
+</code></pre>
+<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
+<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
+<pre><code class="java">public class AdapterTest &#123;
     public static void main(String[] args) &#123;
-        //策略模式+简单工厂模式
+        //适配器模式
         func1();
     &#125;
+
+    public static void func1()&#123;
+        Player a = new Forwards(&quot;麦迪&quot;);
+        a.Attack();
+
+        Player b = new Center(&quot;乔丹&quot;);
+        b.Attack();
+
+        Player c = new Guards(&quot;艾弗森&quot;);
+        c.Defense();
+
+        Player d = new Translator(&quot;姚明&quot;);
+        d.Attack();
+        d.Defense();
+    &#125;
 &#125;
 </code></pre>
-<h2 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h2><pre><code>请输入单价：
-500
-请输入数量：
-10
-请输入算法(&#39;正常收费&#39;,&#39;打八折&#39;,&#39;满300减100&#39;)：
-满300减100
-收费结果：3400.0
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>前锋（麦迪)进攻
+中锋（乔丹)进攻
+后卫（艾弗森)防守
+外籍中锋（姚明)进攻
+外籍中锋（姚明)防守
 </code></pre>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>策略模式，是一种定义了一系列算法的方法，  </p>
-<p>可以以相同的方式调用所有的算法，减少各种算法类与实现类之间的耦合度。  </p>
-<p>但不可避免的还是在算法中加入了switch方法，比如增加一种促销算法的话，还是不可避免的需要修改switch分支。  </p>
-<p>那是否有增加算法时可以使代码改动量更小的方法呢？  </p>
-<p>当然有，期待后续的反射技术，“反射反射，程序员的快乐嘛”</p>
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>适配器模式，将一个类的接口，转换为客户想要的另一个类的接口。
+适配器模式使得原本不兼容的接口可以一起工作。
+
+那什么时候该考虑使用适配器模式呢？
+在我们想使用一个已经存在的类，但由于接口也就是它的方法和你的要求不一致时，
+就该考虑使用适配器模式了。
+</code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
