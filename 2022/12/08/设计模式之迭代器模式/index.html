@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之建造者模式 | 青春纪念册</title>
+  <title>设计模式之迭代器模式 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之建造者模式 | 青春纪念册">
+  <meta name="description" content="设计模式之迭代器模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -528,9 +528,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之建造者模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之迭代器模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之建造者模式</h1>
+        <h1 class="article-title">设计模式之迭代器模式</h1>
     
     <div class="article-meta">
         
@@ -555,7 +555,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-05 08:55:49'>2022-12-02 14:38</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-08 07:56:10'>2022-12-08 07:50</time>
         
     </div>
     <div class="article-meta">
@@ -588,7 +588,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理建造者模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">建造者模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理迭代器模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">迭代器模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -604,108 +604,119 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理建造者模式"><a href="#简单梳理建造者模式" class="headerlink" title="简单梳理建造者模式"></a>简单梳理建造者模式</h1><h2 id="建造者模式实现"><a href="#建造者模式实现" class="headerlink" title="建造者模式实现"></a>建造者模式实现</h2><p>首先定义产品类，由多个零部件构成</p>
-<pre><code class="java">import java.util.ArrayList;
-import java.util.List;
+        <h1 id="简单梳理迭代器模式"><a href="#简单梳理迭代器模式" class="headerlink" title="简单梳理迭代器模式"></a>简单梳理迭代器模式</h1><h2 id="迭代器模式实现"><a href="#迭代器模式实现" class="headerlink" title="迭代器模式实现"></a>迭代器模式实现</h2><p>现实生活中，我们经常会遇到遍历一个集合的场景，<br>比如说乘坐公交的时候，售票员需要遍历每个人，检查是否买票了。<br>那针对这种场景，就非常适合迭代器模式了。  </p>
+<p>首先我们定义基本类，抽象基类。  </p>
+<pre><code class="java">//抽象聚集类
+public abstract class Aggregate &#123;
+    public abstract Iterator CreateIterator();
+&#125;
+</code></pre>
+<p>定义抽象的迭代器类</p>
+<pre><code class="java">//迭代器抽象类
+public abstract class Iterator &#123;
+    public abstract Object First();
+    public abstract Object Next();
+    public abstract boolean IsDone();
+    public abstract Object CurrentItem();
+&#125;
+</code></pre>
+<p>定义具体的实现类</p>
+<pre><code class="java">public class ConcreteAggregate extends Aggregate &#123;
+    private List&lt;Object&gt; items = new ArrayList();
 
-public class Product &#123;
-    List&lt;String&gt; parts = new ArrayList&lt;&gt;();
-
-    public void Add(String part)&#123;
-        parts.add(part);
+    @Override
+    public Iterator CreateIterator() &#123;
+        return new ConcreteIterator(this);
     &#125;
 
-    public void Show()&#123;
-        System.out.println(&quot;产品创建：&quot;);
-        for (String part: parts) &#123;
-            System.out.println(part);
+    public int Count()&#123;
+        return items.size();
+    &#125;
+
+    public Object getItems(int index)&#123;
+        return items.get(index);
+    &#125;
+
+    public void setItems(Object item)&#123;
+        items.add(item);
+    &#125;
+
+&#125;
+</code></pre>
+<pre><code class="java">//具体迭代类
+public class ConcreteIterator extends Iterator &#123;
+    private ConcreteAggregate aggregate;
+    private int current = 0;
+
+    public ConcreteIterator(ConcreteAggregate aggregate) &#123;
+        this.aggregate = aggregate;
+    &#125;
+
+    @Override
+    public Object First() &#123;
+        return aggregate.getItems(0);
+    &#125;
+
+    @Override
+    public Object Next() &#123;
+        Object ret = null;
+        current++;
+        if(current&lt;aggregate.Count())&#123;
+            ret=aggregate.getItems(current);
         &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>Builder类，抽象建造者类</p>
-<pre><code class="java">public abstract class Builder &#123;
-    public abstract void BuildPartA();
-    public abstract void BuildPartB();
-    public abstract Product GetResult();
-&#125;
-</code></pre>
-<p>ConcreteBuilder1类，具体建造者1</p>
-<pre><code class="java">public class ConcreteBuilder1 extends Builder&#123;
-    private Product product = new Product();
-    @Override
-    public void BuildPartA() &#123;
-        product.Add(&quot;部件A&quot;);
+        return ret;
     &#125;
 
     @Override
-    public void BuildPartB() &#123;
-        product.Add(&quot;部件B&quot;);
+    public boolean IsDone() &#123;
+        return current&gt;=aggregate.Count()?true:false;
     &#125;
 
     @Override
-    public Product GetResult() &#123;
-        return product;
+    public Object CurrentItem() &#123;
+        return aggregate.getItems(current);
     &#125;
 &#125;
 </code></pre>
-<p>ConcreteBuilder2类，具体建造者2</p>
-<pre><code class="java">public class ConcreteBuilder2 extends Builder&#123;
-    private Product product = new Product();
-    @Override
-    public void BuildPartA() &#123;
-        product.Add(&quot;部件X&quot;);
-    &#125;
-
-    @Override
-    public void BuildPartB() &#123;
-        product.Add(&quot;部件Y&quot;);
-    &#125;
-
-    @Override
-    public Product GetResult() &#123;
-        return product;
-    &#125;
-&#125;
-</code></pre>
-<p>Director类，指挥者类</p>
-<pre><code class="java">public class Director &#123;
-    public void Construct(Builder builder)&#123;
-        builder.BuildPartA();
-        builder.BuildPartB();
-    &#125;
-&#125;
-</code></pre>
+<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
 <h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class BuilderTest &#123;
+<pre><code class="java">public class IteratorTest &#123;
     public static void main(String[] args) &#123;
-        //建造者模式
+        //迭代器模式
         func1();
     &#125;
 
     public static void func1()&#123;
-        Director director = new Director();
-        Builder b1 = new ConcreteBuilder1();
-        Builder b2 = new ConcreteBuilder2();
+        ConcreteAggregate a = new ConcreteAggregate();
 
-        director.Construct(b1);
-        Product p1 = b1.GetResult();
-        p1.Show();
+        a.setItems(&quot;大鸟&quot;);
+        a.setItems(&quot;小菜&quot;);
+        a.setItems(&quot;行李&quot;);
+        a.setItems(&quot;老外&quot;);
+        a.setItems(&quot;公交内部员工&quot;);
+        a.setItems(&quot;小偷&quot;);
 
-        director.Construct(b2);
-        Product p2 = b2.GetResult();
-        p2.Show();
+        Iterator i = new ConcreteIterator(a);
+
+        Object item = i.First();
+        while(!i.IsDone())&#123;
+            System.out.println(i.CurrentItem()+&quot;,请买车票!&quot;);
+            i.Next();
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>产品创建：
-部件A
-部件B
-产品创建：
-部件X
-部件Y
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>大鸟,请买车票!
+小菜,请买车票!
+行李,请买车票!
+老外,请买车票!
+公交内部员工,请买车票!
+小偷,请买车票!
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>建造者模式，将一个复杂对象的建造与它的表现分离，使得同样的构建过程可以构建不同的表示。  
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>迭代器模式，提供一种方法顺序访问一个聚合对象中的各个元素，而不暴漏该对象的内部表示。
+
+那什么场景可以考虑迭代器模式呢？
+当你需要访问一个聚集对象，而且不管这些对象是什么，都需要遍历的时候，就可以考虑使用迭代器模式了。
 </code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
