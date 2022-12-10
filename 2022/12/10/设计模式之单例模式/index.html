@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之备忘录模式 | 青春纪念册</title>
+  <title>设计模式之单例模式 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之备忘录模式 | 青春纪念册">
+  <meta name="description" content="设计模式之单例模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -537,9 +537,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之备忘录模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之单例模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之备忘录模式</h1>
+        <h1 class="article-title">设计模式之单例模式</h1>
     
     <div class="article-meta">
         
@@ -564,7 +564,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-07 19:29:19'>2022-12-07 07:56</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-10 16:12:08'>2022-12-10 16:07</time>
         
     </div>
     <div class="article-meta">
@@ -597,7 +597,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理备忘录模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">备忘录模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理单例模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0"><span class="toc-text">单例模式的几种实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -613,173 +613,89 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理备忘录模式"><a href="#简单梳理备忘录模式" class="headerlink" title="简单梳理备忘录模式"></a>简单梳理备忘录模式</h1><h2 id="备忘录模式实现"><a href="#备忘录模式实现" class="headerlink" title="备忘录模式实现"></a>备忘录模式实现</h2><p>我们在打游戏的时候，经常会遇到大Boss，打不过的时候，想恢复到打Boss之前的状态。  </p>
-<p>这种恢复到之前某个时间点的状态可以用备忘录模式来实现。  </p>
-<p>首先我们定义基本类，游戏角色类。  </p>
-<pre><code class="java">public class GameRole &#123;
-    //生命力
-    private int vit;
-    //攻击力
-    private int atk;
-    //防御力
-    private int def;
+        <h1 id="简单梳理单例模式"><a href="#简单梳理单例模式" class="headerlink" title="简单梳理单例模式"></a>简单梳理单例模式</h1><h2 id="单例模式的几种实现"><a href="#单例模式的几种实现" class="headerlink" title="单例模式的几种实现"></a>单例模式的几种实现</h2><p>单例模式分为三种实现方法，具体如下  </p>
+<p>饿汉式  </p>
+<pre><code class="java">//饿汉式
+public class SingleDemo &#123;
+    private static SingleDemo singleDemo = new SingleDemo();
 
-    public int getVit() &#123;
-        return vit;
+    private SingleDemo() &#123;
+
     &#125;
 
-    public void setVit(int vit) &#123;
-        this.vit = vit;
-    &#125;
-
-    public int getAtk() &#123;
-        return atk;
-    &#125;
-
-    public void setAtk(int atk) &#123;
-        this.atk = atk;
-    &#125;
-
-    public int getDef() &#123;
-        return def;
-    &#125;
-
-    public void setDef(int def) &#123;
-        this.def = def;
-    &#125;
-
-    public void StateDisplay()&#123;
-        System.out.println(&quot;角色当前状态：&quot;);
-        System.out.println(&quot;体力：&quot;+this.vit);
-        System.out.println(&quot;攻击力：&quot;+this.atk);
-        System.out.println(&quot;防御力：&quot;+this.def);
-    &#125;
-
-    //初始状态
-    public void GetInitState()&#123;
-        this.vit=100;
-        this.atk=100;
-        this.def=100;
-    &#125;
-
-    //战斗后
-    public void Fight()&#123;
-        this.vit=0;
-        this.atk=0;
-        this.def=0;
-    &#125;
-
-    //保存角色状态
-    public RoleStateMemento SaveState()&#123;
-        return new RoleStateMemento(vit, atk, def);
-    &#125;
-
-    //恢复角色状态
-    public void RecoveryState(RoleStateMemento roleStateMemento)&#123;
-        this.vit = roleStateMemento.getVit();
-        this.atk = roleStateMemento.getAtk();
-        this.def = roleStateMemento.getDef();
+    public static SingleDemo getInstance() &#123;
+        return singleDemo;
     &#125;
 &#125;
 </code></pre>
-<p>定义存储之前状态的类</p>
-<pre><code class="java">//状态存储类
-public class RoleStateMemento &#123;
-    private int vit;
-    private int atk;
-    private int def;
+<p>懒汉式</p>
+<pre><code class="java">//懒汉式
+public class SingleDemo2 &#123;
+    private static SingleDemo2 singleDemo2 = null;
 
-    public RoleStateMemento(int vit, int atk, int def) &#123;
-        this.vit = vit;
-        this.atk = atk;
-        this.def = def;
+    private SingleDemo2() &#123;
+
     &#125;
 
-    public int getVit() &#123;
-        return vit;
-    &#125;
-
-    public void setVit(int vit) &#123;
-        this.vit = vit;
-    &#125;
-
-    public int getAtk() &#123;
-        return atk;
-    &#125;
-
-    public void setAtk(int atk) &#123;
-        this.atk = atk;
-    &#125;
-
-    public int getDef() &#123;
-        return def;
-    &#125;
-
-    public void setDef(int def) &#123;
-        this.def = def;
+    public static SingleDemo2 getInstance() &#123;
+        if (null == singleDemo2) &#123;
+            synchronized (SingleDemo2.class) &#123;
+                if (null == singleDemo2) &#123;
+                    return singleDemo2 = new SingleDemo2();
+                &#125;
+            &#125;
+        &#125;
+        return singleDemo2;
     &#125;
 &#125;
 </code></pre>
-<p>定义状态恢复类</p>
-<pre><code class="java">public class RoleStateCaretaker &#123;
-    private RoleStateMemento roleStateMemento;
+<p>内部类 饿汉式</p>
+<pre><code class="java">public class SingleDemo3 &#123;
+    private SingleDemo3() &#123;
 
-    public RoleStateMemento getRoleStateMemento() &#123;
-        return roleStateMemento;
     &#125;
 
-    public void setRoleStateMemento(RoleStateMemento roleStateMemento) &#123;
-        this.roleStateMemento = roleStateMemento;
+    private static class SingleHold &#123;
+        private static SingleDemo3 singleDemo3 = new SingleDemo3();
+    &#125;
+
+    public static SingleDemo3 getInstance() &#123;
+        return SingleHold.singleDemo3;
     &#125;
 &#125;
 </code></pre>
 <p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
 <h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class MementoTest &#123;
+<pre><code class="java">public class SingletonTest &#123;
     public static void main(String[] args) &#123;
-        //备忘录模式
+        //单例模式
         func1();
     &#125;
 
     public static void func1()&#123;
-        //大战前
-        GameRole lixiaoyao = new GameRole();
-        lixiaoyao.GetInitState();
-        lixiaoyao.StateDisplay();
+        SingleDemo singleDemo = SingleDemo.getInstance();
+        SingleDemo singleDemo1 = SingleDemo.getInstance();
+        System.out.println(singleDemo == singleDemo1);
 
-        //保存进度
-        RoleStateCaretaker stateAdmin = new RoleStateCaretaker();
-        stateAdmin.setRoleStateMemento(lixiaoyao.SaveState());
+        SingleDemo2 singleDemo2 = SingleDemo2.getInstance();
+        SingleDemo2 singleDemo21 = SingleDemo2.getInstance();
+        System.out.println(singleDemo2 == singleDemo21);
 
-        //大战Boss,损耗严重
-        lixiaoyao.Fight();
-        lixiaoyao.StateDisplay();
-
-        //恢复之前的状态
-        lixiaoyao.RecoveryState(stateAdmin.getRoleStateMemento());
-        lixiaoyao.StateDisplay();
+        SingleDemo3 singleDemo3 = SingleDemo3.getInstance();
+        SingleDemo3 singleDemo31 = SingleDemo3.getInstance();
+        System.out.println(singleDemo3 == singleDemo31);
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>角色当前状态：
-体力：100
-攻击力：100
-防御力：100
-角色当前状态：
-体力：0
-攻击力：0
-防御力：0
-角色当前状态：
-体力：100
-攻击力：100
-防御力：100
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>true
+true
+true
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>备忘录模式，在不破坏封装的前提下，捕获一个对象的内部状态，
-并在该对象之外，保存这个状态。
-这样就可以将该对象恢复到之前的某个状态。
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>单例模式，保证一个类仅有一个实例，并提供一个访问它的全局访问点。  
 
-备忘录模式适用于功能比较复杂的，但需要记录和维护属性历史的类。
-或者需要保存的属性是众多属性中的一小部分时，可以根据保存的信息还原到前一状态。
+单例模式除了可以保证唯一的实例外，还有什么好处呢？
+单例模式因为Singleton类封装它的唯一实例，这样它可以严格的控制客户怎样访问它以及合适访问它。
+简单点说就是对唯一实例的受控访问。
 </code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
