@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之原型模式 | 青春纪念册</title>
+  <title>设计模式之中介者模式 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之原型模式 | 青春纪念册">
+  <meta name="description" content="设计模式之中介者模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -573,9 +573,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之原型模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之中介者模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之原型模式</h1>
+        <h1 class="article-title">设计模式之中介者模式</h1>
     
     <div class="article-meta">
         
@@ -600,7 +600,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-05 08:55:49'>2022-11-28 22:05</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-12 15:43:25'>2022-12-12 15:35</time>
         
     </div>
     <div class="article-meta">
@@ -633,7 +633,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%8B%B7%E8%B4%9D%E7%AE%80%E5%8E%86%E7%9A%84%E6%A1%88%E4%BE%8B%E6%9D%A5%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">通过拷贝简历的案例来简单梳理原型模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">原型模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%AE%80%E5%8E%86%E7%B1%BB"><span class="toc-text">定义简历类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理中介者模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">中介者模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -649,72 +649,113 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="通过拷贝简历的案例来简单梳理原型模式"><a href="#通过拷贝简历的案例来简单梳理原型模式" class="headerlink" title="通过拷贝简历的案例来简单梳理原型模式"></a>通过拷贝简历的案例来简单梳理原型模式</h1><p>假设我们求职时，针对不同的公司岗位需要准备不同的求职简历来突出重点，<br>来看下用原型模式如何实现。  </p>
-<h2 id="原型模式实现"><a href="#原型模式实现" class="headerlink" title="原型模式实现"></a>原型模式实现</h2><h3 id="定义简历类"><a href="#定义简历类" class="headerlink" title="定义简历类"></a>定义简历类</h3><p>首先定义一个简历类，实现Cloneable接口</p>
-<pre><code class="java">public class Resume implements Cloneable&#123;
-    private String name;
-    private String age;
-    private String sex;
-    private String timeArea;
-    private String company;
+        <h1 id="简单梳理中介者模式"><a href="#简单梳理中介者模式" class="headerlink" title="简单梳理中介者模式"></a>简单梳理中介者模式</h1><h2 id="中介者模式的实现"><a href="#中介者模式的实现" class="headerlink" title="中介者模式的实现"></a>中介者模式的实现</h2><p>现实生活中，经常会见到对话双方靠中介来传递消息的场景。<br>比如在当前的国际形势下，不同国家之间对话，就可以通过联合国安理会来对话。  </p>
+<p>我们来看下这种使用中间人对话的场景如何用设计模式来实现。</p>
+<p>国家基类</p>
+<pre><code class="java">//国家
+public abstract class Country &#123;
+    protected UnitedNations unitedNations;
 
-    public Resume(String name)&#123;
-        this.name = name;
+    public Country(UnitedNations unitedNations) &#123;
+        this.unitedNations = unitedNations;
+    &#125;
+&#125;
+</code></pre>
+<p>联合国基类</p>
+<pre><code class="java">//联合国机构
+public abstract class UnitedNations &#123;
+    public abstract void Declare(String message, Country country);
+&#125;
+</code></pre>
+<p>实现两个具体的国家类，当然，继承自国家基类</p>
+<pre><code class="java">public class USA extends Country&#123;
+    public USA(UnitedNations unitedNations) &#123;
+        super(unitedNations);
     &#125;
 
-    public void SetPersonalInfo(String sex, String age)&#123;
-        this.sex = sex;
-        this.age = age;
+    public void Declare(String message)&#123;
+        unitedNations.Declare(message,this);
     &#125;
 
-    public void SetWorkExprience(String timeArea, String company)&#123;
-        this.company = company;
-        this.timeArea = timeArea;
+    public void GetMessage(String message)&#123;
+        System.out.println(&quot;美国获得对方的消息：&quot;+message);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">public class Iraq extends Country&#123;
+    public Iraq(UnitedNations unitedNations) &#123;
+        super(unitedNations);
     &#125;
 
-    public void Display()&#123;
-        System.out.println(name+&quot;,&quot;+sex+&quot;,&quot;+age);
-        System.out.println(&quot;工作经历：&quot;+timeArea+&quot;,&quot;+company);
+    public void Declare(String message)&#123;
+        unitedNations.Declare(message,this);
+    &#125;
+
+    public void GetMessage(String message)&#123;
+        System.out.println(&quot;伊拉克获得对方的消息：&quot;+message);
+    &#125;
+&#125;
+</code></pre>
+<p>实现一个传话的中介类，比如联合国安理会，来实现两个国家的对话传递，当然继承自联合国基类</p>
+<pre><code class="java">public class UnitedNationsSecurityCouncil extends UnitedNations&#123;
+    private USA usa;
+    private Iraq iraq;
+
+    public USA getUsa() &#123;
+        return usa;
+    &#125;
+
+    public void setUsa(USA usa) &#123;
+        this.usa = usa;
+    &#125;
+
+    public Iraq getIraq() &#123;
+        return iraq;
+    &#125;
+
+    public void setIraq(Iraq iraq) &#123;
+        this.iraq = iraq;
     &#125;
 
     @Override
-    public Object clone() throws CloneNotSupportedException&#123;
-        return super.clone();
+    public void Declare(String message, Country country) &#123;
+        if(country == usa)&#123;
+            iraq.GetMessage(message);
+        &#125;else&#123;
+            usa.GetMessage(message);
+        &#125;
     &#125;
 &#125;
 </code></pre>
+<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
 <h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class PrototypeTest &#123;
-    public static void func1() throws CloneNotSupportedException &#123;
-        Resume a = new Resume(&quot;小明&quot;);
-        a.SetPersonalInfo(&quot;男&quot;, &quot;30&quot;);
-        a.SetWorkExprience(&quot;2014-2017&quot;, &quot;xx公司&quot;);
-
-        Resume b = (Resume) a.clone();
-        b.SetWorkExprience(&quot;2017-2022&quot;, &quot;YY公司&quot;);
-
-        Resume c = (Resume) a.clone();
-        c.SetPersonalInfo(&quot;男&quot;,&quot;24&quot;);
-
-        a.Display();
-        b.Display();
-        c.Display();
-    &#125;
-
-    public static void main(String[] args) throws CloneNotSupportedException &#123;
-        //代理模式
+<pre><code class="java">public class MediatorTest &#123;
+    public static void main(String[] args) &#123;
+        //中介者模式
         func1();
     &#125;
+
+    public static void func1()&#123;
+        UnitedNationsSecurityCouncil UNSC = new UnitedNationsSecurityCouncil();
+        USA usa = new USA(UNSC);
+        Iraq iraq = new Iraq(UNSC);
+
+        UNSC.setUsa(usa);
+        UNSC.setIraq(iraq);
+
+        usa.Declare(&quot;不准研制核武器，否则发动战争&quot;);
+        iraq.Declare(&quot;我们没有核武器，也不怕侵略&quot;);
+    &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>小明,男,30
-工作经历：2014-2017,xx公司
-小明,男,30
-工作经历：2017-2022,YY公司
-小明,男,24
-工作经历：2014-2017,xx公司
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>伊拉克获得对方的消息：不准研制核武器，否则发动战争
+美国获得对方的消息：我们没有核武器，也不怕侵略
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>原型模式，用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象。
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>中介者模式，用一个中介对象，来封装一系列的对象交互。
+中介者使得各对象不需要显示的引用，从而降低耦合度，而且可以独立的改变他们的交互。
+
+中介者模式很容易在系统中使用，但是需要注意，中介者模式也很容易在系统中误用，
+当出现多对多等复杂的场景时，不要着急使用中介者模式，而是考虑设计是否合理。
 </code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
