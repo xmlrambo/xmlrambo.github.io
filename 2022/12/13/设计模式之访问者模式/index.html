@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>青春纪念册</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="青春纪念册">
+  <title>设计模式之访问者模式 | 青春纪念册</title>
+  <meta name="keywords" content=" 设计模式 ">
+  <meta name="description" content="设计模式之访问者模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -589,12 +589,69 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-设计模式之访问者模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BB%BA%E7%AB%99%E5%88%9D%E8%A1%B7"><span class="toc-text">建站初衷</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E6%88%91"><span class="toc-text">联系我</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E6%96%87%E4%B8%96%E7%95%8C"><span class="toc-text">网文世界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%B4%BB%E7%82%B9%E6%BB%B4"><span class="toc-text">生活点滴</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E9%9D%92%E6%98%A5%E7%BA%AA%E5%BF%B5%E5%86%8C"><span class="toc-text">关于青春纪念册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">设计模式之访问者模式</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="java">java</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">设计模式</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-12-13 16:08:20'>2022-12-13 15:57</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理访问者模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">访问者模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -607,39 +664,188 @@
     }
 </style>
 </div>
-            <h1 id="建站初衷"><a href="#建站初衷" class="headerlink" title="建站初衷"></a>建站初衷</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p>xiaomingxiaola<br>（BossLiu）</p>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h3><p>58726094</p>
-<h3 id="网文世界"><a href="#网文世界" class="headerlink" title="网文世界"></a>网文世界</h3><p><a target="_blank" rel="noopener" href="https://xmlrambo.gitee.io/xml_novel/">https://xmlrambo.gitee.io/xml_novel/</a></p>
-<h3 id="生活点滴"><a href="#生活点滴" class="headerlink" title="生活点滴"></a>生活点滴</h3><p><a target="_blank" rel="noopener" href="https://xmlrambo.gitee.io/xml_diary/">https://xmlrambo.gitee.io/xml_diary/</a></p>
-<h2 id="关于青春纪念册"><a href="#关于青春纪念册" class="headerlink" title="关于青春纪念册"></a>关于青春纪念册</h2><p><strong>青春纪念册</strong> 是博主（刘小明）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad&#x2F;手机等移动端适配</li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简单梳理访问者模式"><a href="#简单梳理访问者模式" class="headerlink" title="简单梳理访问者模式"></a>简单梳理访问者模式</h1><h2 id="访问者模式的实现"><a href="#访问者模式的实现" class="headerlink" title="访问者模式的实现"></a>访问者模式的实现</h2><p>生活中，一个成功的男人背后往往有一个伟大的女人，<br>相反，一个成功的女人背后往往有个拖后腿的男人。。  </p>
+<p>我们也经常看到成功、失败甚至恋爱中，男人和女人状态时不一致的。  </p>
+<p>我们来看下这种场景如何用设计模式来实现。</p>
+<p>首先我们定义个Person基类，并定义男人和女人的实现类</p>
+<pre><code class="java">public abstract class Person &#123;
+    public abstract void Accept(Action visitor);
+&#125;
+</code></pre>
+<pre><code class="java">public class Man extends Person&#123;
+    private String name;
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+    public Man(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    @Override
+    public void Accept(Action visitor) &#123;
+        visitor.GetManConclusion(this);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">public class Women extends Person&#123;
+    private String name;
+
+    public Women(String name) &#123;
+        this.name = name;
+    &#125;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    @Override
+    public void Accept(Action visitor) &#123;
+        visitor.GetWomanConclusion(this);
+    &#125;
+&#125;
+</code></pre>
+<p>定义一个Action基类，用来访问人的状态</p>
+<pre><code class="java">public abstract class Action &#123;
+    //得到男人的结论
+    public abstract void GetManConclusion(Man man);
+    //得到女人的结论
+    public abstract void GetWomanConclusion(Women women);
+&#125;
+</code></pre>
+<pre><code class="java">public class Success extends Action&#123;
+    private String status;
+
+    public Success(String status) &#123;
+        this.status = status;
+    &#125;
+
+    @Override
+    public void GetManConclusion(Man man) &#123;
+        System.out.println(man.getName()+this.status+&quot;时,背后多半有一个伟大的女人&quot;);
+    &#125;
+
+    @Override
+    public void GetWomanConclusion(Women women) &#123;
+        System.out.println(women.getName()+this.status+&quot;时,背后多半有一个不成功的男人&quot;);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">public class Failing extends Action&#123;
+    private String status;
+
+    public Failing(String status) &#123;
+        this.status = status;
+    &#125;
+
+    @Override
+    public void GetManConclusion(Man man) &#123;
+        System.out.println(man.getName()+this.status+&quot;时,闷头喝酒谁也不用劝&quot;);
+    &#125;
+
+    @Override
+    public void GetWomanConclusion(Women women) &#123;
+        System.out.println(women.getName()+this.status+&quot;时,眼泪汪汪谁也劝不了&quot;);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">public class Amativeness extends Action&#123;
+
+    private String status;
+
+    public Amativeness(String status) &#123;
+        this.status = status;
+    &#125;
+
+    @Override
+    public void GetManConclusion(Man man) &#123;
+        System.out.println(man.getName()+this.status+&quot;时,凡事不懂也要装懂&quot;);
+    &#125;
+
+    @Override
+    public void GetWomanConclusion(Women women) &#123;
+        System.out.println(women.getName()+this.status+&quot;时,凡事懂也装作不懂&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>再定义一个状态结构类，用来遍历不同人的状态</p>
+<pre><code class="java">public class ObjectStructure &#123;
+    private List&lt;Person&gt; elements = new ArrayList&lt;&gt;();
+
+    public void Attach(Person element)&#123;
+        elements.add(element);
+    &#125;
+
+    public void Detach(Person element)&#123;
+        elements.remove(element);
+    &#125;
+
+    public void Display(Action visitor)&#123;
+        for(Person person: elements)&#123;
+            person.Accept(visitor);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
+<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
+<pre><code class="java">public class VisitorTest &#123;
+    public static void main(String[] args) &#123;
+        //访问者模式
+        func1();
+    &#125;
+
+    public static void func1()&#123;
+        ObjectStructure o = new ObjectStructure();
+        o.Attach(new Man(&quot;男人&quot;));
+        o.Attach(new Women(&quot;女人&quot;));
+
+        //成功时
+        Success v1 = new Success(&quot;成功&quot;);
+        o.Display(v1);
+
+        //失败时
+        Failing v2 = new Failing(&quot;失败&quot;);
+        o.Display(v2);
+
+        //恋爱时
+        Amativeness v3 = new Amativeness(&quot;恋爱&quot;);
+        o.Display(v3);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>男人成功时,背后多半有一个伟大的女人
+女人成功时,背后多半有一个不成功的男人
+男人失败时,闷头喝酒谁也不用劝
+女人失败时,眼泪汪汪谁也劝不了
+男人恋爱时,凡事不懂也要装懂
+女人恋爱时,凡事懂也装作不懂
+</code></pre>
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>访问者模式，表示一个作用于某对象结构中各元素的操作，
+它可以使你在不改变各元素的类的前提下定义作用于这些元素的新操作。
+
+访问者模式适用于数据结构比较稳定的系统，目的是要把处理逻辑从数据结构中分离出来。
+</code></pre>
+<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
     <div id="comments"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
@@ -661,6 +867,13 @@
 </script>
 
 
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -669,11 +882,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
