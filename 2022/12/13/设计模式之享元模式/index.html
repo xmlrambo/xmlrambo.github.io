@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之工厂方法模式 | 青春纪念册</title>
+  <title>设计模式之享元模式 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之工厂方法模式 | 青春纪念册">
+  <meta name="description" content="设计模式之享元模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -582,9 +582,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之工厂方法模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之享元模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之工厂方法模式</h1>
+        <h1 class="article-title">设计模式之享元模式</h1>
     
     <div class="article-meta">
         
@@ -609,7 +609,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-05 08:55:49'>2022-11-28 09:28</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-13 10:00:14'>2022-12-13 09:53</time>
         
     </div>
     <div class="article-meta">
@@ -642,7 +642,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%94%B9%E9%80%A0%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E8%AE%A1%E7%AE%97%E5%99%A8%E6%9D%A5%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">通过改造简单工厂模式计算器来简单梳理工厂方法模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="toc-text">工厂方法模式实现加减乘除计算器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%9B%B8%E5%85%B3%E7%B1%BB"><span class="toc-text">定义相关类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理享元模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">享元模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -658,137 +658,106 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="通过改造简单工厂模式计算器来简单梳理工厂方法模式"><a href="#通过改造简单工厂模式计算器来简单梳理工厂方法模式" class="headerlink" title="通过改造简单工厂模式计算器来简单梳理工厂方法模式"></a>通过改造简单工厂模式计算器来简单梳理工厂方法模式</h1><p>我们可以实现工厂方法模式，与前文简单工厂模式代码做个对比   </p>
-<h2 id="工厂方法模式实现加减乘除计算器"><a href="#工厂方法模式实现加减乘除计算器" class="headerlink" title="工厂方法模式实现加减乘除计算器"></a>工厂方法模式实现加减乘除计算器</h2><h3 id="定义相关类"><a href="#定义相关类" class="headerlink" title="定义相关类"></a>定义相关类</h3><p>首先定义一个工厂接口</p>
-<pre><code class="java">//代理接口
-public interface IFactory &#123;
-    Operation CreateOperation();
-&#125;
-</code></pre>
-<p>分别定义加减乘除工厂类</p>
-<pre><code class="java">public class AddFactory implements IFactory&#123;
-    @Override
-    public Operation CreateOperation() &#123;
-        return new OperationAdd();
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">public class SubFactory implements IFactory &#123;
-    @Override
-    public Operation CreateOperation() &#123;
-        return new OperationSub();
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">public class MulFactory implements IFactory &#123;
-    @Override
-    public Operation CreateOperation() &#123;
-        return new OperationMul();
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">public class DivFactory implements IFactory &#123;
-    @Override
-    public Operation CreateOperation() &#123;
-        return new OperationDiv();
-    &#125;
-&#125;
-</code></pre>
-<p>运算符类及运算符具体类，同简单工厂模式中保持一致即可</p>
-<pre><code class="java">public class Operation &#123;
-    private double numA = 0;
-    private double numB = 0;
+        <h1 id="简单梳理享元模式"><a href="#简单梳理享元模式" class="headerlink" title="简单梳理享元模式"></a>简单梳理享元模式</h1><h2 id="享元模式的实现"><a href="#享元模式的实现" class="headerlink" title="享元模式的实现"></a>享元模式的实现</h2><p>如果你是个程序员，经常接私活，可能会遇到如下的问题，<br>比如A客户找你做个网站，B客户又找你做个网站，大体相同但又有细微差异，该怎么做的？<br>没错，复制一份改改，但是又来个C客户找你做个网站呢？D客户E客户F客户呢？<br>总不能来一个客户就复制一份，那后期的维护工作累就爆发式增加了。    </p>
+<p>我们来看下这种场景如何用设计模式来实现。</p>
+<p>首先我们定义个User类，用来维护不同的客户</p>
+<pre><code class="java">public class User &#123;
+    private String name;
 
-    public double getNumA() &#123;
-        return numA;
+    public User(String name) &#123;
+        this.name = name;
     &#125;
 
-    public void setNumA(double numA) &#123;
-        this.numA = numA;
+    public String getName() &#123;
+        return name;
     &#125;
 
-    public double getNumB() &#123;
-        return numB;
-    &#125;
-
-    public void setNumB(double numB) &#123;
-        this.numB = numB;
-    &#125;
-
-    public double getResult() throws Exception &#123;
-        double result = 0;
-        return result;
+    public void setName(String name) &#123;
+        this.name = name;
     &#125;
 &#125;
 </code></pre>
-<p>加法运算具体实现类</p>
-<pre><code class="java">public class OperationAdd extends Operation&#123;
+<p>网站基类</p>
+<pre><code class="java">//网站抽象类
+public abstract class Website &#123;
+    public abstract void Use(User user);
+&#125;
+</code></pre>
+<p>网站的具体实现类，当然，继承自网站基类</p>
+<pre><code class="java">public class ConcreteWebsite extends Website&#123;
+    private String name;
+
+    public ConcreteWebsite(String name) &#123;
+        this.name = name;
+    &#125;
+
     @Override
-    public double getResult() &#123;
-        double result = 0;
-        result = getNumA()+getNumB();
-        return result;
+    public void Use(User user) &#123;
+        System.out.println(&quot;网站分类：&quot;+name+&quot;，用户：&quot;+user.getName());
     &#125;
 &#125;
 </code></pre>
-<p>减法乘法除法同简单工厂模式一致，忽略。  </p>
+<p>再来个网站工厂，用来生成客户要求的网站</p>
+<pre><code class="java">//网站工厂
+public class WebsiteFactory &#123;
+    public Hashtable flyweights = new Hashtable();
+
+    public Website GetWebsiteCategory(String key)&#123;
+        if(!flyweights.containsKey(key))&#123;
+            flyweights.put(key, new ConcreteWebsite(key));
+        &#125;
+        return (Website) flyweights.get(key);
+    &#125;
+
+    public int GetWebsiteCount()&#123;
+        return flyweights.size();
+    &#125;
+&#125;
+</code></pre>
+<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
 <h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class FactoryMethodTest &#123;
+<pre><code class="java">public class FlyweightTest &#123;
     public static void main(String[] args) &#123;
-        //工厂方法模式
+        //享元模式
         func1();
     &#125;
 
     public static void func1()&#123;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(&quot;请输入数字A：&quot;);
-        String strA = scanner.nextLine();
-        System.out.println(&quot;请输入运算符(+、-、*、/)：&quot;);
-        String strOper = scanner.nextLine();
-        System.out.println(&quot;请输入数字B：&quot;);
-        String strB = scanner.nextLine();
+        WebsiteFactory wf = new WebsiteFactory();
+        Website w1 = wf.GetWebsiteCategory(&quot;产品展示&quot;);
+        w1.Use(new User(&quot;用户1&quot;));
 
-        String strResult = &quot;&quot;;
-        try&#123;
-           IFactory operFactory = null;
-           switch (strOper)&#123;
-               case &quot;+&quot;:
-                   operFactory = new AddFactory();
-                   break;
-               case &quot;-&quot;:
-                   operFactory = new SubFactory();
-                   break;
-               case &quot;*&quot;:
-                   operFactory = new MulFactory();
-                   break;
-               case &quot;/&quot;:
-                   operFactory = new DivFactory();
-                   break;
-           &#125;
-           Operation oper = operFactory.CreateOperation();
-           oper.setNumA(Double.valueOf(strA));
-           oper.setNumB(Double.valueOf(strB));
-           strResult = oper.getResult()+&quot;&quot;;
-           System.out.println(&quot;运算结果是：&quot;+strResult);
-        &#125;catch (Exception e)&#123;
-            System.out.println(&quot;运算出错，异常信息：&quot;+e.getMessage());
-        &#125;
+        Website w2 = wf.GetWebsiteCategory(&quot;产品展示&quot;);
+        w2.Use(new User(&quot;用户2&quot;));
+
+        Website w3 = wf.GetWebsiteCategory(&quot;产品展示&quot;);
+        w3.Use(new User(&quot;用户3&quot;));
+
+        Website w4 = wf.GetWebsiteCategory(&quot;博客&quot;);
+        w4.Use(new User(&quot;用户4&quot;));
+
+        Website w5 = wf.GetWebsiteCategory(&quot;博客&quot;);
+        w5.Use(new User(&quot;用户5&quot;));
+
+        Website w6 = wf.GetWebsiteCategory(&quot;博客&quot;);
+        w6.Use(new User(&quot;用户6&quot;));
+
+        System.out.println(&quot;网站分类总数为：&quot;+wf.GetWebsiteCount());
+
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>请输入数字A：
-15
-请输入运算符(+、-、*、/)：
-/
-请输入数字B：
-3
-运算结果是：5.0
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>网站分类：产品展示，用户：用户1
+网站分类：产品展示，用户：用户2
+网站分类：产品展示，用户：用户3
+网站分类：博客，用户：用户4
+网站分类：博客，用户：用户5
+网站分类：博客，用户：用户6
+网站分类总数为：2
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>工厂方法模式，定义一个用于创建对象的接口，让子类去决定实例化哪一个类。工厂方法模式，让一个类的实例化延迟到其子类上。    
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>享元模式，用共享技术，有效的支持大量细粒度的对象。
 
-工厂方法模式克服了简单工厂模式违背开放封闭原则的缺点，又保持了封装对象创建的有点。
-
-工厂方法模式是简单工厂模式的进一步抽象和推广。
+享元模式可以避免大量非常相似类的开销
 </code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
