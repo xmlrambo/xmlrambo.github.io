@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之桥接模式 | 青春纪念册</title>
+  <title>设计模式之解释器模式 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之桥接模式 | 青春纪念册">
+  <meta name="description" content="设计模式之解释器模式 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -600,9 +600,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之桥接模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之解释器模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之桥接模式</h1>
+        <h1 class="article-title">设计模式之解释器模式</h1>
     
     <div class="article-meta">
         
@@ -627,7 +627,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-12 09:22:01'>2022-12-11 17:45</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-14 08:45:18'>2022-12-14 08:37</time>
         
     </div>
     <div class="article-meta">
@@ -660,7 +660,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理桥接模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">桥接模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理解释器模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">解释器模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -676,72 +676,85 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理桥接模式"><a href="#简单梳理桥接模式" class="headerlink" title="简单梳理桥接模式"></a>简单梳理桥接模式</h1><h2 id="桥接模式的实现"><a href="#桥接模式的实现" class="headerlink" title="桥接模式的实现"></a>桥接模式的实现</h2><p>桥接模式的基本实现方法  </p>
-<p>抽象类或接口</p>
-<pre><code class="java">public abstract class Implementor &#123;
-    public abstract void Operation();
-&#125;
-</code></pre>
-<p>派生类ConcreteImplementorA和ConcreteImplementorB</p>
-<pre><code class="java">public class ConcreteImplementorA extends Implementor&#123;
-    @Override
-    public void Operation() &#123;
-        System.out.println(&quot;具体实现A的方法执行。&quot;);
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">public class ConcreteImplementorB extends Implementor&#123;
-    @Override
-    public void Operation() &#123;
-        System.out.println(&quot;具体实现B的方法执行。&quot;);
-    &#125;
-&#125;
-</code></pre>
-<p>Abstraction类</p>
-<pre><code class="java">public class Abstraction &#123;
-    protected Implementor implementor;
+        <h1 id="简单梳理解释器模式"><a href="#简单梳理解释器模式" class="headerlink" title="简单梳理解释器模式"></a>简单梳理解释器模式</h1><h2 id="解释器模式的实现"><a href="#解释器模式的实现" class="headerlink" title="解释器模式的实现"></a>解释器模式的实现</h2><p>首先我们定义个Context类，用来保存一些解释器之外的全局信息</p>
+<pre><code class="java">//包含解释器之外的一些全局信息
+public class Context &#123;
+    private String input;
+    private String output;
 
-    public void setImplementor(Implementor implementor) &#123;
-        this.implementor = implementor;
+    public String getInput() &#123;
+        return input;
     &#125;
 
-    public void Operation()&#123;
-        implementor.Operation();
+    public void setInput(String input) &#123;
+        this.input = input;
+    &#125;
+
+    public String getOutput() &#123;
+        return output;
+    &#125;
+
+    public void setOutput(String output) &#123;
+        this.output = output;
     &#125;
 &#125;
 </code></pre>
-<p>RefinedAbstraction类</p>
-<pre><code class="java">public class RefinedAbstraction extends Abstraction&#123;
-    public void Operation()&#123;
-        implementor.Operation();
+<p>再定义一个抽象表达式的基类</p>
+<pre><code class="java">//抽象表达式
+public abstract class AbstractExpression &#123;
+    public abstract void Interpret(Context context);
+&#125;
+</code></pre>
+<p>定义两个具体实现类</p>
+<pre><code class="java">public class TerminalExpression extends AbstractExpression&#123;
+    @Override
+    public void Interpret(Context context) &#123;
+        System.out.println(&quot;终端解释器&quot;);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">public class NonterminalExpression extends AbstractExpression&#123;
+    @Override
+    public void Interpret(Context context) &#123;
+        System.out.println(&quot;非终端解释器&quot;);
     &#125;
 &#125;
 </code></pre>
 <p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
 <h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class BridgeTest &#123;
+<pre><code class="java">public class InterpreterTest &#123;
     public static void main(String[] args) &#123;
-        //桥接模式
+        //解释器模式
         func1();
     &#125;
 
     public static void func1()&#123;
-        Abstraction ab = new RefinedAbstraction();
-        ab.setImplementor(new ConcreteImplementorA());
-        ab.Operation();
+        Context context = new Context();
+        List&lt;AbstractExpression&gt; list = new ArrayList&lt;&gt;();
+        list.add(new TerminalExpression());
+        list.add(new NonterminalExpression());
+        list.add(new TerminalExpression());
+        list.add(new TerminalExpression());
 
-        ab.setImplementor(new ConcreteImplementorB());
-        ab.Operation();
+        for(AbstractExpression ae: list)&#123;
+            ae.Interpret(context);
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>具体实现A的方法执行。
-具体实现B的方法执行。
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>终端解释器
+非终端解释器
+终端解释器
+终端解释器
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>桥接模式，将抽象部分与它的实现部分分离，使它们都可以独立的变化。
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>解释器模式，给定一个语言，定义它文法的一种表示，并定义一个解释器，
+这个解释器使用该表示来解释语言中的句子。
 
-那什么叫抽象与它的实现分离呢？这并不是说让抽象类与派生类分离，这没有任何意义。
-实现指的是抽象类和派生类用来实现自己的对象。
+解释器模式的优点：可以很容易的改变和扩展文法。
+因为该模式使用类来表示文法规则，可以使用继承来改变和扩展文法规则。
+
+当然，解释器模式也有不足之处，因为每一个文法规则至少需要定义一个类，
+因此包含许多规则的文法可能会难以维护。
 </code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
