@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之组合模式 | 青春纪念册</title>
+  <title>设计模式之总结 | 青春纪念册</title>
   <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之组合模式 | 青春纪念册">
+  <meta name="description" content="设计模式之总结 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -646,9 +646,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之组合模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-设计模式之总结" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之组合模式</h1>
+        <h1 class="article-title">设计模式之总结</h1>
     
     <div class="article-meta">
         
@@ -675,7 +675,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:51:59'>2022-12-07 19:29</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-16 12:02:56'>2022-12-16 11:20</time>
         
     </div>
     <div class="article-meta">
@@ -708,7 +708,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理组合模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">组合模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="toc-text">设计模式分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%9E%8B"><span class="toc-text">创建型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">单例模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单工厂模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">工厂方法模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">抽象工厂模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">原型模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">建造者模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%9E%8B"><span class="toc-text">结构型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">适配器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">装饰器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="toc-text">代理模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">外观模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">桥接模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="toc-text">组合模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F"><span class="toc-text">享元模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E4%B8%BA%E5%9E%8B"><span class="toc-text">行为型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">观察者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">模板方法模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F"><span class="toc-text">职责链模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F"><span class="toc-text">状态模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">访问者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="toc-text">策略模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">备忘录模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">迭代器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">中介模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-text">解释器模式</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -724,193 +724,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理组合模式"><a href="#简单梳理组合模式" class="headerlink" title="简单梳理组合模式"></a>简单梳理组合模式</h1><h2 id="组合模式实现"><a href="#组合模式实现" class="headerlink" title="组合模式实现"></a>组合模式实现</h2><p>一般大点的公司，下面会有分公司，部门之类的，大体呈现树状结构。<br>那假如需要梳理出这样的树状结构，该怎么处理呢？<br>这里就可以用到一种设计模式，组合模式。  </p>
-<p>首先我们定义基本类，公司基类。  </p>
-<pre><code class="java">//公司类 抽象类或接口
-public abstract class Company &#123;
-    protected String name;
-
-    public Company(String name) &#123;
-        this.name = name;
-    &#125;
-
-    //增加
-    public abstract void Add(Company c);
-    //删除
-    public abstract void Remove(Company c);
-    //展示
-    public abstract void Display(int depth);
-    //履行职责
-    public abstract void LineOfDuty();
-
-&#125;
-</code></pre>
-<p>定义具体的公司类</p>
-<pre><code class="java">//具体公司类 实现接口
-public class ConcreteCompany extends Company &#123;
-    private List&lt;Company&gt; children = new ArrayList();
-
-    public ConcreteCompany(String name) &#123;
-        super(name);
-    &#125;
-
-    @Override
-    public void Add(Company c) &#123;
-        children.add(c);
-    &#125;
-
-    @Override
-    public void Remove(Company c) &#123;
-        children.remove(c);
-    &#125;
-
-    @Override
-    public void Display(int depth) &#123;
-        for(int i=0; i&lt;depth; i++)&#123;
-            System.out.print(&quot;-&quot;);
-        &#125;
-        System.out.println(name);
-        for(Company company: children)&#123;
-            company.Display(depth+2);
-        &#125;
-    &#125;
-
-    @Override
-    public void LineOfDuty() &#123;
-        for(Company company: children)&#123;
-            company.LineOfDuty();
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>定义通用的人力资源部及财务部</p>
-<pre><code class="java">//人力资源部
-public class HRDepartment extends Company &#123;
-    public HRDepartment(String name) &#123;
-        super(name);
-    &#125;
-
-    @Override
-    public void Add(Company c) &#123;
-
-    &#125;
-
-    @Override
-    public void Remove(Company c) &#123;
-
-    &#125;
-
-    @Override
-    public void Display(int depth) &#123;
-        for(int i=0; i&lt;depth; i++)&#123;
-            System.out.print(&quot;-&quot;);
-        &#125;
-        System.out.println(name);
-    &#125;
-
-    @Override
-    public void LineOfDuty() &#123;
-        System.out.println(name+&quot;员工招聘培训管理&quot;);
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">public class FinanceDepartment extends Company &#123;
-    public FinanceDepartment(String name) &#123;
-        super(name);
-    &#125;
-
-    @Override
-    public void Add(Company c) &#123;
-
-    &#125;
-
-    @Override
-    public void Remove(Company c) &#123;
-
-    &#125;
-
-    @Override
-    public void Display(int depth) &#123;
-        for(int i=0; i&lt;depth; i++)&#123;
-            System.out.print(&quot;-&quot;);
-        &#125;
-        System.out.println(name);
-    &#125;
-
-    @Override
-    public void LineOfDuty() &#123;
-        System.out.println(name+&quot;公司财务收支管理&quot;);
-    &#125;
-&#125;
-</code></pre>
-<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class CompositeTest &#123;
-    public static void main(String[] args) &#123;
-        //组合模式
-        func1();
-    &#125;
-
-    public static void func1()&#123;
-        ConcreteCompany root = new ConcreteCompany(&quot;北京总公司&quot;);
-        root.Add(new HRDepartment(&quot;总公司人力资源部&quot;));
-        root.Add(new FinanceDepartment(&quot;总公司财务部&quot;));
-
-        ConcreteCompany comp = new ConcreteCompany(&quot;上海华东分公司&quot;);
-        comp.Add(new HRDepartment(&quot;华东分公司人力资源部&quot;));
-        comp.Add(new FinanceDepartment(&quot;华东分公司财务部&quot;));
-        root.Add(comp);
-
-        ConcreteCompany comp1 = new ConcreteCompany(&quot;南京办事处&quot;);
-        comp1.Add(new HRDepartment(&quot;南京办事处人力资源部&quot;));
-        comp1.Add(new FinanceDepartment(&quot;南京办事处财务部&quot;));
-        comp.Add(comp1);
-
-        ConcreteCompany comp2 = new ConcreteCompany(&quot;杭州办事处&quot;);
-        comp2.Add(new HRDepartment(&quot;杭州办事处人力资源部&quot;));
-        comp2.Add(new FinanceDepartment(&quot;杭州办事处财务部&quot;));
-        comp.Add(comp2);
-
-        System.out.println(&quot;结构图：&quot;);
-        root.Display(1);
-
-        System.out.println(&quot;职责：&quot;);
-        root.LineOfDuty();
-    &#125;
-&#125;
-</code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>结构图：
--北京总公司
----总公司人力资源部
----总公司财务部
----上海华东分公司
------华东分公司人力资源部
------华东分公司财务部
------南京办事处
--------南京办事处人力资源部
--------南京办事处财务部
------杭州办事处
--------杭州办事处人力资源部
--------杭州办事处财务部
-职责：
-总公司人力资源部员工招聘培训管理
-总公司财务部公司财务收支管理
-华东分公司人力资源部员工招聘培训管理
-华东分公司财务部公司财务收支管理
-南京办事处人力资源部员工招聘培训管理
-南京办事处财务部公司财务收支管理
-杭州办事处人力资源部员工招聘培训管理
-杭州办事处财务部公司财务收支管理
-</code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>组合模式：将对象组合成树形结构来表示 部分-整体 的层次结构。  
-组合模式使得用户对单个对象和组合对象的使用具有一致性。
-
-那什么时候使用组合模式呢？
-需求中是体现部分与整体层次结构时，以及希望用户可以忽略组合对象与单个对象的不同，
-统一的使用组合结构中的所有对象时，就应该考虑使用组合模式了。
-</code></pre>
-<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+        <p>这章我们来简单总结下这二十几种设计模式</p>
+<h1 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h1><p>23种设计模式大体分为如下3类</p>
+<p><img src="/images/sjms.png"></p>
+<p><strong>特点：</strong>封装，继承，多态  </p>
+<p><strong>好处：</strong>可维护，可复用，可扩展，灵活性好  </p>
+<p><strong>遵循设计原则</strong><br><strong>开发-封闭原则</strong><br>对扩展开放，对修改关闭  </p>
+<p><strong>依赖倒置原则</strong><br>高层模块不应该依赖底层模块，两个都应该依赖抽象<br>抽象不应该依赖细节，细节应该依赖抽象</p>
+<p><strong>里氏替换原则</strong><br>子类型必须能够替换掉他们的父类型</p>
+<p><strong>合成&#x2F;聚合复用原则</strong><br>尽量使用合成&#x2F;聚合，尽量不要使用继承</p>
+<p><strong>迪米特原则</strong><br>如果这两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。<br>如果其中的一个类需要调用另外一个类的某个方法的话，可以通过第三者转发这个调用。</p>
+<p><strong>单一职责原则</strong><br>就一个类而言，应该只有一个引起它变化的原因。</p>
+<h2 id="创建型"><a href="#创建型" class="headerlink" title="创建型"></a>创建型</h2><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>保证一个类只有一个实例，并提供一个访问它的全局访问点。</p>
+<h3 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h3><p>根据不同的状态实例化不同的类。</p>
+<h3 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h3><p>定义一个用于创建对象的接口，让子类决定实例化哪一个类，工厂方法使一个类的实例化延迟到子类。</p>
+<h3 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h3><p>提供创建一系列相关或相互依赖对象的接口，而无需指定他们的具体类。</p>
+<h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><p>用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象。</p>
+<h3 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h3><p>将一个复杂对象的构建与它的表示分离，使得同样的创造过程可以创建不同的表示。</p>
+<h2 id="结构型"><a href="#结构型" class="headerlink" title="结构型"></a>结构型</h2><h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p>将一个类的接口转换成客服希望的另一个接口，Adapter 模式使得原本接口不兼容而不能一起工作的类可以一起工作。</p>
+<h3 id="装饰器模式"><a href="#装饰器模式" class="headerlink" title="装饰器模式"></a>装饰器模式</h3><p>动态地给一个对象添加一些额外的功能，装饰器模式比生成子类更为灵活。</p>
+<h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>为其他对象提供一种代理，以控制对这个对象的访问。</p>
+<h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><p>为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。</p>
+<h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><p>将抽象部分与它的实现部分抽离，使它们都可以独立的变化。<br>实现系统可能有多角度分类，每一种分类都有可能变化，那么就把这种多角度分离出来让它们独立变化，减少它们之间的耦合</p>
+<h3 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h3><p>将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
+<h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><p>运用共享技术有效的支持大量细粒度的对象。</p>
+<h2 id="行为型"><a href="#行为型" class="headerlink" title="行为型"></a>行为型</h2><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象，这个主题对象在状态发生变化时，会通知所有观察者对象，使他们能够自动更新自己。</p>
+<h3 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h3><p>定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，模板方法使得可以不改变一个算法的结构即可以重定义算法的某些特定步骤。</p>
+<h3 id="职责链模式"><a href="#职责链模式" class="headerlink" title="职责链模式"></a>职责链模式</h3><p>使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这个对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它为止。</p>
+<h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><p>当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。<br>状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂的情况。把状态的判断逻辑转移道表示不同状态的一系列类当中，可以把复杂逻辑简单化。</p>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>将一个请求封装为要给对象，从而使你可用不同的请求对客户进行参数化：对请求排队或记录请求日记，以及支持可撤销操作。</p>
+<h3 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h3><p>表示作用于某对象结构中的各元素的操作，它使你可以在不改变各元素的类的前提下定义作用于这些元素的新操作。</p>
+<h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p>它定义了算法家族，分别封装起来，让之间可以互相替换，此模式让算法的变化，不会影响到用算法的用户。</p>
+<h3 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h3><p>在不破坏封装性地前提下，捕获一个对象地内部状态，并在该对象之外保存这个状态。这样以后就可将该对象回复到原先保存地状态。</p>
+<h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露对象的内部表示。</p>
+<h3 id="中介模式"><a href="#中介模式" class="headerlink" title="中介模式"></a>中介模式</h3><p>用一个中介对象来封装一些列的对象交互，中介者使对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间地交互。</p>
+<h3 id="解释器模式"><a href="#解释器模式" class="headerlink" title="解释器模式"></a>解释器模式</h3><p>给定一个语言，定义它文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
