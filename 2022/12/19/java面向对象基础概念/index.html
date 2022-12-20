@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之备忘录模式 | 青春纪念册</title>
-  <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之备忘录模式 | 青春纪念册">
+  <title>java面向对象基础概念 | 青春纪念册</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="java面向对象基础概念 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -684,9 +684,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之备忘录模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-java面向对象基础概念" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之备忘录模式</h1>
+        <h1 class="article-title">java面向对象基础概念</h1>
     
     <div class="article-meta">
         
@@ -698,22 +698,15 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;设计模式">设计模式</a>
+            <a  data-rel="java&lt;---&gt;日常问题">日常问题</a>
             
         </span>
         
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color5">设计模式</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:54:42'>2022-12-07 07:56</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-20 09:09:16'>2022-12-19 19:06</time>
         
     </div>
     <div class="article-meta">
@@ -746,7 +739,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理备忘录模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">备忘录模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E4%B8%8E%E5%AE%9E%E4%BE%8B"><span class="toc-text">类与实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD"><span class="toc-text">重载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81%E4%B9%8B%E5%B0%81%E8%A3%85%EF%BC%88%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7%EF%BC%89"><span class="toc-text">面向对象四大特征之封装（隐藏属性）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">封装的意义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81%E4%B9%8B%E6%8A%BD%E8%B1%A1%EF%BC%88%E9%9A%90%E8%97%8F%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-text">面向对象四大特征之抽象（隐藏方法）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">抽象的意义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81%E4%B9%8B%E7%BB%A7%E6%89%BF"><span class="toc-text">面向对象四大特征之继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">继承的意义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81%E4%B9%8B%E5%A4%9A%E6%80%81"><span class="toc-text">面向对象四大特征之多态</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">多态的意义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81%E6%80%BB%E7%BB%93"><span class="toc-text">面向对象四大特征总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -762,174 +755,245 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理备忘录模式"><a href="#简单梳理备忘录模式" class="headerlink" title="简单梳理备忘录模式"></a>简单梳理备忘录模式</h1><h2 id="备忘录模式实现"><a href="#备忘录模式实现" class="headerlink" title="备忘录模式实现"></a>备忘录模式实现</h2><p>我们在打游戏的时候，经常会遇到大Boss，打不过的时候，想恢复到打Boss之前的状态。  </p>
-<p>这种恢复到之前某个时间点的状态可以用备忘录模式来实现。  </p>
-<p>首先我们定义基本类，游戏角色类。  </p>
-<pre><code class="java">public class GameRole &#123;
-    //生命力
-    private int vit;
-    //攻击力
-    private int atk;
-    //防御力
-    private int def;
+        <h1 id="类与实例"><a href="#类与实例" class="headerlink" title="类与实例"></a>类与实例</h1><p>要理解面向对象的概念，首先我们要搞清楚类是什么？对象是什么？<br>对象就是一个看得到摸得着闻得到的一个具体的概念。<br>准确的说，对象自包含的实体，用一组可识别的特征和行为来标识。  </p>
+<p>那类呢？类就属于一个抽象的概念了，是具有相同的属性和功能的对象的抽象的集合。  </p>
+<p>具体到代码中，class标记着一个类，而用new出来的，就是一个真实的对象，也就是实例。</p>
+<p>如下代码示例：</p>
+<pre><code class="java">public class Cat&#123;
+  public void Shout()&#123;
+    System.out.println(&quot;喵&quot;);
+  &#125;
+&#125;
 
-    public int getVit() &#123;
-        return vit;
+Cat cat = new Cat();
+</code></pre>
+<p>其中Cat就是一个类， cat是用类Cat的一个对象，也就是一个真实的对象实例。</p>
+<h1 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h1><p>构造方法，又叫构造函数，其实就是对类进行初始化，<br>构造方法无返回值，也不需要void，在new对象的时候调用</p>
+<p>如下代码示例：</p>
+<pre><code class="java">public class Cat&#123;
+  private String name;
+  public Cat(String name)&#123;
+    this.name = name;
+  &#125;
+
+  public void Shout()&#123;
+    System.out.println(&quot;喵&quot;);
+  &#125;
+
+  Cat cat = new Cat(&quot;小猫1&quot;);
+&#125;
+</code></pre>
+<p>类Cat中的方法public Cat(String name)就是一个构造函数。<br>这样我们在新建一个对象的时候，就可以给Cat对象传递一个名字。  </p>
+<h1 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h1><p>方法重载，提供了创建多个同名方法的能力，但是这些同名方法需要使用不同的参数来进行区分。  </p>
+<p>如下代码示例：</p>
+<pre><code class="java">public class Cat&#123;
+  private String name;
+  public Cat(String name)&#123;
+    this.name = name;
+  &#125;
+
+  public Cat()&#123;
+    this.name = &quot;无名&quot;;
+  &#125;
+
+  public void Shout()&#123;
+    System.out.println(&quot;喵&quot;);
+  &#125;
+
+  Cat cat = new Cat(&quot;小猫1&quot;);
+&#125;
+</code></pre>
+<p>我们可以看到在类Cat中，有两个构造方法Cat()，只不过两个方法参数不同。<br>ps： 重载不一定非要构造方法，其他函数也可以重载。</p>
+<h1 id="面向对象四大特征之封装（隐藏属性）"><a href="#面向对象四大特征之封装（隐藏属性）" class="headerlink" title="面向对象四大特征之封装（隐藏属性）"></a>面向对象四大特征之封装（隐藏属性）</h1><p>封装也叫数据隐藏或数据访问保护。  </p>
+<p>类通过public、protect、private等关键字，暴漏出有限的方法，授权外部仅能通过类提供的方法来访问内部数据。  </p>
+<p>我们可以分析一段示例代码来看下封装的特性。  </p>
+<pre><code class="java">public class Account &#123;
+    //账户唯一ID
+    private String id;
+    //创建时间
+    private long createTime;
+    //账户余额
+    private BigDecimal balance;
+    //账户最后变动日期
+    private long balanceLastModifiedTime;
+
+    public Account() &#123;
+        this.id = UUID.randomUUID().toString();
+        this.createTime = System.currentTimeMillis();
+        this.balance = BigDecimal.ZERO;
+        this.balanceLastModifiedTime = System.currentTimeMillis();
     &#125;
 
-    public void setVit(int vit) &#123;
-        this.vit = vit;
+    public String getId() &#123; return this.id; &#125;
+    public long getCreateTime() &#123; return this.createTime; &#125;
+    public BigDecimal getBalance() &#123; return this.balance; &#125;
+    public long getBalanceLastModifiedTime() &#123; return this.balanceLastModifiedTime;  &#125;
+
+    public void increaseBalance(BigDecimal increasedAmount) throws Exception&#123;
+        this.balance.add(increasedAmount);
+        this.balanceLastModifiedTime = System.currentTimeMillis();
     &#125;
 
-    public int getAtk() &#123;
-        return atk;
-    &#125;
-
-    public void setAtk(int atk) &#123;
-        this.atk = atk;
-    &#125;
-
-    public int getDef() &#123;
-        return def;
-    &#125;
-
-    public void setDef(int def) &#123;
-        this.def = def;
-    &#125;
-
-    public void StateDisplay()&#123;
-        System.out.println(&quot;角色当前状态：&quot;);
-        System.out.println(&quot;体力：&quot;+this.vit);
-        System.out.println(&quot;攻击力：&quot;+this.atk);
-        System.out.println(&quot;防御力：&quot;+this.def);
-    &#125;
-
-    //初始状态
-    public void GetInitState()&#123;
-        this.vit=100;
-        this.atk=100;
-        this.def=100;
-    &#125;
-
-    //战斗后
-    public void Fight()&#123;
-        this.vit=0;
-        this.atk=0;
-        this.def=0;
-    &#125;
-
-    //保存角色状态
-    public RoleStateMemento SaveState()&#123;
-        return new RoleStateMemento(vit, atk, def);
-    &#125;
-
-    //恢复角色状态
-    public void RecoveryState(RoleStateMemento roleStateMemento)&#123;
-        this.vit = roleStateMemento.getVit();
-        this.atk = roleStateMemento.getAtk();
-        this.def = roleStateMemento.getDef();
+    public void decreaseBalance(BigDecimal decreasedAmount) throws Exception&#123;
+        this.balance.subtract(decreasedAmount);
+        this.balanceLastModifiedTime = System.currentTimeMillis();
     &#125;
 &#125;
 </code></pre>
-<p>定义存储之前状态的类</p>
-<pre><code class="java">//状态存储类
-public class RoleStateMemento &#123;
-    private int vit;
-    private int atk;
-    private int def;
+<p>从代码实现上，我们可以看到代码包含四个属性。  </p>
+<p>我们参照封装特性，对账户这四个属性的访问方式进行了限制。调用者只允许通过暴漏的六个方法来访问或者修改账户里的数据。  </p>
+<p>之所以这样设计，是因为从业务的角度来说，id、createTime 在创建账户的时候就确定好了，之后不应该再被改动。  </p>
+<p>对于账户余额 balance这个属性，从业务的角度来说，只能增或者减，不会被重新设置。所以，我们在Account类中，只暴露了increaseBalance()和decreaseBalance()方法，并没有暴露set方法。  </p>
+<p>例子中的 private、public等关键字就是Java语言中的访问权限控制语法。private关键字修饰的属性只能该类本身访问，可以保护其不被类之外的代码直接访问。  </p>
+<h2 id="封装的意义"><a href="#封装的意义" class="headerlink" title="封装的意义"></a>封装的意义</h2><p>如果我们对类中属性的访问不做限制，那任何代码都可以访问、修改类中的属性，虽然这样看起来更加灵活，但从另一方面来说，过度灵活也意味着不可控，属性可以随意被以各种奇葩的方式修改，而且修改逻辑可能散落在代码中的各个角落，势必影响代码的可读性、可维护性。  </p>
+<p>除此之外，类仅仅通过有限的方法暴露必要的操作，也能提高类的易用性。如果我们把类属性都暴露给类的调用者，调用者想要正确地操作这些属性，就势必要对业务细节有足够的了解。而这对于调用者来说也是一种负担。相反，如果我们将属性封装起来，暴露少许的几个必要的方法给调用者使用，调用者就不需要了解太多背后的业务细节，用错的概率就减少很多。  </p>
+<h1 id="面向对象四大特征之抽象（隐藏方法）"><a href="#面向对象四大特征之抽象（隐藏方法）" class="headerlink" title="面向对象四大特征之抽象（隐藏方法）"></a>面向对象四大特征之抽象（隐藏方法）</h1><p>封装主要讲的是如何隐藏信息、保护数据，而抽象讲的是如何隐藏方法的具体实现，让调用者只需要关心方法提供了哪些功能，并不需要知道这些功能是如何实现的。  </p>
+<p>常借助编程语言提供的接口类（比如 Java 中的 interface关键字语法）或者抽象类（比如 Java 中的 abstract关键字语法）这两种语法机制，来实现抽象这一特性。  </p>
+<p>示例代码：</p>
+<pre><code class="java">public interface IPictureStorage &#123;
+  void savePicture(Picture picture);
+  Image getPicture(String pictureId);
+  void deletePicture(String pictureId);
+  void modifyMetaInfo(String pictureId, PictureMetaInfo metaInfo);
+&#125;
 
-    public RoleStateMemento(int vit, int atk, int def) &#123;
-        this.vit = vit;
-        this.atk = atk;
-        this.def = def;
-    &#125;
-
-    public int getVit() &#123;
-        return vit;
-    &#125;
-
-    public void setVit(int vit) &#123;
-        this.vit = vit;
-    &#125;
-
-    public int getAtk() &#123;
-        return atk;
-    &#125;
-
-    public void setAtk(int atk) &#123;
-        this.atk = atk;
-    &#125;
-
-    public int getDef() &#123;
-        return def;
-    &#125;
-
-    public void setDef(int def) &#123;
-        this.def = def;
-    &#125;
+public class PictureStorage implements IPictureStorage &#123;
+  // ...省略其他属性...
+  @Override
+  public void savePicture(Picture picture) &#123; ... &#125;
+  @Override
+  public Image getPicture(String pictureId) &#123; ... &#125;
+  @Override
+  public void deletePicture(String pictureId) &#123; ... &#125;
+  @Override
+  public void modifyMetaInfo(String pictureId, PictureMetaInfo metaInfo) &#123; ... &#125;
 &#125;
 </code></pre>
-<p>定义状态恢复类</p>
-<pre><code class="java">public class RoleStateCaretaker &#123;
-    private RoleStateMemento roleStateMemento;
+<p>在上面的这段代码中，我们利用Java中的interface接口语法来实现抽象特性。调用者在使用图片存储功能的时候，只需要了解IPictureStorage这个接口类暴露了哪些方法就可以了，不需要去查看PictureStorage类里的具体实现逻辑。  </p>
+<h2 id="抽象的意义"><a href="#抽象的意义" class="headerlink" title="抽象的意义"></a>抽象的意义</h2><p>抽象作为一种只关注功能点不关注实现的设计思路，正好帮我们的大脑过滤掉许多非必要的信息。  </p>
+<p>换一个角度来考虑，我们在定义（或者叫命名）类的方法的时候，也要有抽象思维，不要在方法定义中，暴露太多的实现细节，以保证在某个时间点需要改变方法的实现逻辑的时候，不用去修改其定义。  </p>
+<h1 id="面向对象四大特征之继承"><a href="#面向对象四大特征之继承" class="headerlink" title="面向对象四大特征之继承"></a>面向对象四大特征之继承</h1><p>继承是用来表示类之间的is-a关系，比如猫是一种哺乳动物。从继承关系上来讲，继承可以分为两种模式，单继承和多继承。单继承表示一个子类只继承一个父类，多继承表示一个子类可以继承多个父类，比如猫既是哺乳动物，又是爬行动物。  </p>
+<p>为了实现继承这个特性，编程语言需要提供特殊的语法机制来支持，比如 Java 使用 extends 关键字来实现继承  </p>
+<h2 id="继承的意义"><a href="#继承的意义" class="headerlink" title="继承的意义"></a>继承的意义</h2><p>继承最大的一个好处就是代码复用。假如两个类有一些相同的属性和方法，我们就可以将这些相同的部分，抽取到父类中，让两个子类继承父类。这样，两个子类就可以重用父类中的代码，避免代码重复写多遍。  </p>
+<p>不过，过度使用继承，继承层次过深过复杂，就会导致代码可读性、可维护性变差。为了了解一个类的功能，我们不仅需要查看这个类的代码，还需要按照继承关系一层一层地往上查看“父类、父类的父类……”的代码。  </p>
+<p>所以，继承这个特性也是一个非常有争议的特性。很多人觉得继承是一种反模式。我们应该尽量少用，甚至不用。  </p>
+<h1 id="面向对象四大特征之多态"><a href="#面向对象四大特征之多态" class="headerlink" title="面向对象四大特征之多态"></a>面向对象四大特征之多态</h1><p>多态是指，子类可以替换父类，在实际的代码运行过程中，调用子类的方法实现。对于多态这种特性，纯文字解释不好理解，我们还是看一个具体的例子。</p>
+<p>示例代码：</p>
+<pre><code class="java">public class DynamicArray &#123;
+  private static final int DEFAULT_CAPACITY = 10;
+  protected int size = 0;
+  protected int capacity = DEFAULT_CAPACITY;
+  protected Integer[] elements = new Integer[DEFAULT_CAPACITY];
+  
+  public int size() &#123; return this.size; &#125;
+  public Integer get(int index) &#123; return elements[index];&#125;
+  //...省略n多方法...
+  
+  public void add(Integer e) &#123;
+    ensureCapacity();
+    elements[size++] = e;
+  &#125;
+  
+  protected void ensureCapacity() &#123;
+    //...如果数组满了就扩容...代码省略...
+  &#125;
+&#125;
 
-    public RoleStateMemento getRoleStateMemento() &#123;
-        return roleStateMemento;
+public class SortedDynamicArray extends DynamicArray &#123;
+  @Override
+  public void add(Integer e) &#123;
+    ensureCapacity();
+    int i;
+    for (i = size-1; i&gt;=0; --i) &#123; //保证数组中的数据有序
+      if (elements[i] &gt; e) &#123;
+        elements[i+1] = elements[i];
+      &#125; else &#123;
+        break;
+      &#125;
     &#125;
+    elements[i+1] = e;
+    ++size;
+  &#125;
+&#125;
 
-    public void setRoleStateMemento(RoleStateMemento roleStateMemento) &#123;
-        this.roleStateMemento = roleStateMemento;
+public class Example &#123;
+  public static void test(DynamicArray dynamicArray) &#123;
+    dynamicArray.add(5);
+    dynamicArray.add(1);
+    dynamicArray.add(3);
+    for (int i = 0; i &lt; dynamicArray.size(); ++i) &#123;
+      System.out.println(dynamicArray.get(i));
     &#125;
+  &#125;
+  
+  public static void main(String args[]) &#123;
+    DynamicArray dynamicArray = new SortedDynamicArray();
+    test(dynamicArray); // 打印结果：1、3、5
+  &#125;
 &#125;
 </code></pre>
-<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class MementoTest &#123;
-    public static void main(String[] args) &#123;
-        //备忘录模式
-        func1();
+<p>在上面的例子中，我们用到了三个语法机制来实现多态。  </p>
+<ul>
+<li>第一个语法机制是编程语言要支持父类对象可以引用子类对象，也就是可以将 SortedDynamicArray 传递给 DynamicArray。</li>
+<li>第二个语法机制是编程语言要支持继承，也就是 SortedDynamicArray 继承了 DynamicArray，才能将 SortedDyamicArray 传递给 DynamicArray。</li>
+<li>第三个语法机制是编程语言要支持子类可以重写（override）父类中的方法，也就是 SortedDyamicArray 重写了 DynamicArray 中的 add() 方法。</li>
+</ul>
+<p>通过这三种语法机制配合在一起，我们就实现了在test()方法中，子类SortedDyamicArray 替换父类 DynamicArray，执行子类 SortedDyamicArray 的 add() 方法，也就是实现了多态特性。</p>
+<p>对于多态特性的实现方式，除了利用“继承加方法重写”这种实现方式之外，我们还有利用接口类语法去实现。</p>
+<p><strong>接下来，我们先来看如何利用接口类来实现多态特性。</strong></p>
+<p>我们还是先来看一段代码。</p>
+<pre><code class="java">public interface Iterator &#123;
+  boolean hasNext();
+  String next();
+  String remove();
+&#125;
+
+public class Array implements Iterator &#123;
+  private String[] data;
+  
+  public boolean hasNext() &#123; ... &#125;
+  public String next() &#123; ... &#125;
+  public String remove() &#123; ... &#125;
+  //...省略其他方法...
+&#125;
+
+public class LinkedList implements Iterator &#123;
+  private LinkedListNode head;
+  
+  public boolean hasNext() &#123; ... &#125;
+  public String next() &#123; ... &#125;
+  public String remove() &#123; ... &#125;
+  //...省略其他方法... 
+&#125;
+
+public class Demo &#123;
+  private static void print(Iterator iterator) &#123;
+    while (iterator.hasNext()) &#123;
+      System.out.println(iterator.next());
     &#125;
-
-    public static void func1()&#123;
-        //大战前
-        GameRole lixiaoyao = new GameRole();
-        lixiaoyao.GetInitState();
-        lixiaoyao.StateDisplay();
-
-        //保存进度
-        RoleStateCaretaker stateAdmin = new RoleStateCaretaker();
-        stateAdmin.setRoleStateMemento(lixiaoyao.SaveState());
-
-        //大战Boss,损耗严重
-        lixiaoyao.Fight();
-        lixiaoyao.StateDisplay();
-
-        //恢复之前的状态
-        lixiaoyao.RecoveryState(stateAdmin.getRoleStateMemento());
-        lixiaoyao.StateDisplay();
-    &#125;
+  &#125;
+  
+  public static void main(String[] args) &#123;
+    Iterator arrayIterator = new Array();
+    print(arrayIterator);
+    
+    Iterator linkedListIterator = new LinkedList();
+    print(linkedListIterator);
+  &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>角色当前状态：
-体力：100
-攻击力：100
-防御力：100
-角色当前状态：
-体力：0
-攻击力：0
-防御力：0
-角色当前状态：
-体力：100
-攻击力：100
-防御力：100
-</code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>备忘录模式，在不破坏封装的前提下，捕获一个对象的内部状态，
-并在该对象之外，保存这个状态。
-这样就可以将该对象恢复到之前的某个状态。
-
-备忘录模式适用于功能比较复杂的，但需要记录和维护属性历史的类。
-或者需要保存的属性是众多属性中的一小部分时，可以根据保存的信息还原到前一状态。
-</code></pre>
+<p>在这段代码中，Iterator是一个接口类，定义了一个可以遍历集合数据的迭代器。Array 和 LinkedList都实现了接口类Iterator。我们通过传递不同类型的实现类（Array、LinkedList）到 print(Iterator iterator) 函数中，支持动态的调用不同的 next()、hasNext() 实现。  </p>
+<p>具体点讲就是，当我们往 print(Iterator iterator) 函数传递 Array 类型的对象的时候，print(Iterator iterator) 函数就会调用 Array 的 next()、hasNext() 的实现逻辑；当我们往 print(Iterator iterator) 函数传递 LinkedList 类型的对象的时候，print(Iterator iterator) 函数就会调用 LinkedList 的 next()、hasNext() 的实现逻辑。  </p>
+<h2 id="多态的意义"><a href="#多态的意义" class="headerlink" title="多态的意义"></a>多态的意义</h2><p>多态特性能提高代码的可扩展性和复用性。为什么这么说呢？我们回过头去看讲解多态特性的时候，举的第二个代码实例（Iterator 的例子）。  </p>
+<p>在那个例子中，我们利用多态的特性，仅用一个 print() 函数就可以实现遍历打印不同类型（Array、LinkedList）集合的数据。当再增加一种要遍历打印的类型的时候，比如 HashMap，我们只需让 HashMap 实现 Iterator 接口，重新实现自己的 hasNext()、next() 等方法就可以了，完全不需要改动 print() 函数的代码。所以说，多态提高了代码的可扩展性。  </p>
+<p>如果我们不使用多态特性，我们就无法将不同的集合类型（Array、LinkedList）传递给相同的函数（print(Iterator iterator) 函数）。我们需要针对每种要遍历打印的集合，分别实现不同的 print() 函数，比如针对 Array，我们要实现 print(Array array) 函数，针对 LinkedList，我们要实现 print(LinkedList linkedList) 函数。而利用多态特性，我们只需要实现一个 print() 函数的打印逻辑，就能应对各种集合数据的打印操作，这显然提高了代码的复用性。  </p>
+<p>除此之外，多态也是很多设计模式、设计原则、编程技巧的代码实现基础，比如策略模式、基于接口而非实现编程、依赖倒置原则、里式替换原则、利用多态去掉冗长的 if-else 语句等等。  </p>
+<h1 id="面向对象四大特征总结"><a href="#面向对象四大特征总结" class="headerlink" title="面向对象四大特征总结"></a>面向对象四大特征总结</h1><ul>
+<li>封装：隐藏属性</li>
+<li>抽象：隐藏方法具体实现</li>
+<li>继承：支持代码复用，但要避免过度使用</li>
+<li>多态：支持代码扩展</li>
+</ul>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
