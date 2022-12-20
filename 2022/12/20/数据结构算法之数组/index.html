@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之享元模式 | 青春纪念册</title>
-  <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之享元模式 | 青春纪念册">
+  <title>数据结构算法之数组 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之数组 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -693,9 +693,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之享元模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构算法之数组" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之享元模式</h1>
+        <h1 class="article-title">数据结构算法之数组</h1>
     
     <div class="article-meta">
         
@@ -707,7 +707,7 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;设计模式">设计模式</a>
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
             
         </span>
         
@@ -715,14 +715,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">设计模式</a>
+            <a class="color2">数据结构算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:52:56'>2022-12-13 09:53</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-20 11:49:20'>2022-12-20 11:03</time>
         
     </div>
     <div class="article-meta">
@@ -755,7 +755,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理享元模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">享元模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-java%E6%95%B0%E7%BB%84%E4%BB%8B%E7%BB%8D"><span class="toc-text">1 java数组介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F"><span class="toc-text">1.1 数组的声明方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%95%B0%E7%BB%84%E7%9A%84%E8%AE%BF%E9%97%AE%E5%8F%8A%E8%B5%8B%E5%80%BC"><span class="toc-text">1.2 数组的访问及赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86"><span class="toc-text">1.3 数组遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%94%A8%E7%B1%BB%E5%B0%81%E8%A3%85%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">2 用类封装数组实现数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%86%E6%9E%90%E6%95%B0%E7%BB%84%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-text">3 分析数组的局限性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%80%BB%E7%BB%93"><span class="toc-text">4 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -771,107 +771,202 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理享元模式"><a href="#简单梳理享元模式" class="headerlink" title="简单梳理享元模式"></a>简单梳理享元模式</h1><h2 id="享元模式的实现"><a href="#享元模式的实现" class="headerlink" title="享元模式的实现"></a>享元模式的实现</h2><p>如果你是个程序员，经常接私活，可能会遇到如下的问题，<br>比如A客户找你做个网站，B客户又找你做个网站，大体相同但又有细微差异，该怎么做的？<br>没错，复制一份改改，但是又来个C客户找你做个网站呢？D客户E客户F客户呢？<br>总不能来一个客户就复制一份，那后期的维护工作累就爆发式增加了。    </p>
-<p>我们来看下这种场景如何用设计模式来实现。</p>
-<p>首先我们定义个User类，用来维护不同的客户</p>
-<pre><code class="java">public class User &#123;
-    private String name;
-
-    public User(String name) &#123;
-        this.name = name;
-    &#125;
-
-    public String getName() &#123;
-        return name;
-    &#125;
-
-    public void setName(String name) &#123;
-        this.name = name;
-    &#125;
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>上篇我们简单介绍了数据结构和算法的概念，对此模糊很正常，后面会慢慢通过具体的实例来介绍。<br>本篇我们介绍数据结构的鼻祖——数组，可以说数组几乎能表示一切的数据结构，<br>在每一门编程语言中，数组都是重要的数据结构，当然每种语言对数组的实现和处理也不相同，<br>但是本质是都是用来存放数据的的结构，这里我们以Java语言为例，来详细介绍Java语言中数组的用法。</p>
+<h2 id="1-java数组介绍"><a href="#1-java数组介绍" class="headerlink" title="1 java数组介绍"></a>1 java数组介绍</h2><p>在Java中，数组是用来存放同一种数据类型的集合，注意只能存放同一种数据类型(Object类型数组除外)。</p>
+<h3 id="1-1-数组的声明方式"><a href="#1-1-数组的声明方式" class="headerlink" title="1.1 数组的声明方式"></a>1.1 数组的声明方式</h3><ul>
+<li>第一种方式</li>
+</ul>
+<pre><code>数据类型 [] 数组名称 = new 数据类型[数组长度];
+</code></pre>
+<p>这里 [] 可以放在数组名称的前面，也可以放在数组名称的后面，我们推荐放在数组名称的前面，<br>这样看上去 数据类型 [] 表示的很明显是一个数组类型，而放在数组名称后面，则不是那么直观。</p>
+<ul>
+<li>第二种方式</li>
+</ul>
+<pre><code>数据类型 [] 数组名称 = &#123;数组元素1，数组元素2，...&#125;
+</code></pre>
+<p>这种方式声明数组的同时直接给定了数组的元素，数组的大小由给定的数组元素个数决定。</p>
+<pre><code class="java">//声明数组1,声明一个长度为3，只能存放int类型的数据
+int [] myArray = new int[3];
+//声明数组2,声明一个数组元素为 1,2,3的int类型数组
+int [] myArray2 = &#123;1,2,3&#125;;
+</code></pre>
+<h3 id="1-2-数组的访问及赋值"><a href="#1-2-数组的访问及赋值" class="headerlink" title="1.2 数组的访问及赋值"></a>1.2 数组的访问及赋值</h3><p>数组是存在下标索引的，通过下标可以获取指定位置的元素，数组小标是从0开始的，也就是说下标0对应的就<br>是数组中第1个元素，可以很方便的对数组中的元素进行存取操作。  </p>
+<p>前面数组的声明第二种方式，我们在声明数组的同时，也进行了初始化赋值。</p>
+<pre><code class="java">//声明数组,声明一个长度为3，只能存放int类型的数据
+int [] myArray = new int[3];
+//给myArray第一个元素赋值1
+myArray[0] = 1;
+//访问myArray的第一个元素
+System.out.println(myArray[0]);
+</code></pre>
+<p>上面的myArray 数组，我们只能赋值三个元素，也就是下标从0到2，<br>如果你访问 myArray[3] ，那么会报数组下标越界异常。</p>
+<h3 id="1-3-数组遍历"><a href="#1-3-数组遍历" class="headerlink" title="1.3 数组遍历"></a>1.3 数组遍历</h3><p>数组有个 length 属性，是记录数组的长度的，我们可以利用length属性来遍历数组。</p>
+<pre><code class="java">//声明数组2,声明一个数组元素为 1,2,3的int类型数组
+int [] myArray2 = &#123;1,2,3&#125;;
+for(int i = 0 ; i &lt; myArray2.length ; i++)&#123;
+    System.out.println(myArray2[i]);
 &#125;
 </code></pre>
-<p>网站基类</p>
-<pre><code class="java">//网站抽象类
-public abstract class Website &#123;
-    public abstract void Use(User user);
-&#125;
-</code></pre>
-<p>网站的具体实现类，当然，继承自网站基类</p>
-<pre><code class="java">public class ConcreteWebsite extends Website&#123;
-    private String name;
-
-    public ConcreteWebsite(String name) &#123;
-        this.name = name;
+<h2 id="2-用类封装数组实现数据结构"><a href="#2-用类封装数组实现数据结构" class="headerlink" title="2 用类封装数组实现数据结构"></a>2 用类封装数组实现数据结构</h2><p>上一篇我们介绍了一个数据结构必须具有以下基本功能：</p>
+<ul>
+<li>如何插入一条新的数据项</li>
+<li>如何寻找某一特定的数据项</li>
+<li>如何删除某一特定的数据项</li>
+<li>如何迭代的访问各个数据项，以便进行显示或其他操作<br>而我们知道了数组的简单用法，现在用类的思想封装一个数组，实现上面的四个基本功能：</li>
+</ul>
+<p>ps:假设操作人是不会添加重复元素的，这里没有考虑重复元素，如果添加重复元素了，后面的查找，删除，<br>修改等操作只会对第一次出现的元素有效。</p>
+<pre><code class="java">public class MyArray &#123;
+    //定义一个数组
+    private int [] intArray;
+    //定义数组的实际有效长度
+    private int elems;
+    //定义数组的最大长度
+    private int length;
+    //默认构造一个长度为50的数组
+    public MyArray()&#123;
+        elems = 0;
+        length = 50;
+        intArray = new int[length];
     &#125;
-
-    @Override
-    public void Use(User user) &#123;
-        System.out.println(&quot;网站分类：&quot;+name+&quot;，用户：&quot;+user.getName());
+    //构造函数，初始化一个长度为length 的数组
+    public MyArray(int length)&#123;
+        elems = 0;
+        this.length = length;
+        intArray = new int[length];
     &#125;
-&#125;
-</code></pre>
-<p>再来个网站工厂，用来生成客户要求的网站</p>
-<pre><code class="java">//网站工厂
-public class WebsiteFactory &#123;
-    public Hashtable flyweights = new Hashtable();
-
-    public Website GetWebsiteCategory(String key)&#123;
-        if(!flyweights.containsKey(key))&#123;
-            flyweights.put(key, new ConcreteWebsite(key));
+    //获取数组的有效长度
+    public int getSize()&#123;
+        return elems;
+    &#125;
+    /**
+    * 遍历显示元素
+    */
+    public void display()&#123;
+        for(int i = 0 ; i &lt; elems ; i++)&#123;
+            System.out.print(intArray[i]+&quot; &quot;);
         &#125;
-        return (Website) flyweights.get(key);
+        System.out.println();
     &#125;
-
-    public int GetWebsiteCount()&#123;
-        return flyweights.size();
+    /**
+    * 添加元素
+    * @param value,假设操作人是不会添加重复元素的，如果有重复元素对于后面的操作都会有影响。
+    * @return添加成功返回true,添加的元素超过范围了返回false
+    */
+    public boolean add(int value)&#123;
+        if(elems == length)&#123;
+            return false;
+        &#125;else&#123;
+            intArray[elems] = value;
+            elems++;
+        &#125;
+        return true;
+    &#125;
+    /**
+    * 根据下标获取元素
+    * @param i
+    * @return查找下标值在数组下标有效范围内，返回下标所表示的元素
+    * 查找下标超出数组下标有效值，提示访问下标越界
+    */
+    public int get(int i)&#123;
+        if(i&lt;0 || i&gt;elems)&#123;
+            System.out.println(&quot;访问下标越界&quot;);
+        &#125;
+        return intArray[i];
+    &#125;
+    /**
+    * 查找元素
+    * @param searchValue
+    * @return查找的元素如果存在则返回下标值，如果不存在，返回 ‐1
+    */
+    public int find(int searchValue)&#123;
+        int i ;
+        for(i = 0 ; i &lt; elems ;i++)&#123;
+            if(intArray[i] == searchValue)&#123;
+                break;
+            &#125;
+        &#125;
+        if(i == elems)&#123;
+            return ‐1;
+        &#125;
+        return i;
+    &#125;
+    /**
+    * 删除元素
+    * @param value
+    * @return如果要删除的值不存在，直接返回 false;否则返回true，删除成功
+    */
+    public boolean delete(int value)&#123;
+        int k = find(value);
+        if(k == ‐1)&#123;
+            return false;
+        &#125;else&#123;
+            if(k == elems‐1)&#123;
+                elems‐‐;
+            &#125;else&#123;
+                for(int i = k; i&lt; elems‐1 ; i++)&#123;
+                    intArray[i] = intArray[i+1];
+                &#125;
+                elems‐‐;
+            &#125;
+            return true;
+        &#125;
+    &#125;
+    /**
+    * 修改数据
+    * @param oldValue原值
+    * @param newValue新值
+    * @return修改成功返回true，修改失败返回false
+    */
+    public boolean modify(int oldValue,int newValue)&#123;
+        int i = find(oldValue);
+        if(i == ‐1)&#123;
+            System.out.println(&quot;需要修改的数据不存在&quot;);
+            return false;
+        &#125;else&#123;
+            intArray[i] = newValue;
+            return true;
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class FlyweightTest &#123;
+<p>测试用例：</p>
+<pre><code class="java">public class MyArrayTest &#123;
     public static void main(String[] args) &#123;
-        //享元模式
-        func1();
-    &#125;
-
-    public static void func1()&#123;
-        WebsiteFactory wf = new WebsiteFactory();
-        Website w1 = wf.GetWebsiteCategory(&quot;产品展示&quot;);
-        w1.Use(new User(&quot;用户1&quot;));
-
-        Website w2 = wf.GetWebsiteCategory(&quot;产品展示&quot;);
-        w2.Use(new User(&quot;用户2&quot;));
-
-        Website w3 = wf.GetWebsiteCategory(&quot;产品展示&quot;);
-        w3.Use(new User(&quot;用户3&quot;));
-
-        Website w4 = wf.GetWebsiteCategory(&quot;博客&quot;);
-        w4.Use(new User(&quot;用户4&quot;));
-
-        Website w5 = wf.GetWebsiteCategory(&quot;博客&quot;);
-        w5.Use(new User(&quot;用户5&quot;));
-
-        Website w6 = wf.GetWebsiteCategory(&quot;博客&quot;);
-        w6.Use(new User(&quot;用户6&quot;));
-
-        System.out.println(&quot;网站分类总数为：&quot;+wf.GetWebsiteCount());
-
+        //创建自定义封装数组结构，数组大小为4
+        MyArray array = new MyArray(4);
+        //添加4个元素分别是1,2,3,4
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        array.add(4);
+        //显示数组元素
+        array.display();
+        //根据下标为0的元素
+        int i = array.get(0);
+        System.out.println(i);
+        //删除4的元素
+        array.delete(4);
+        //将元素3修改为33
+        array.modify(3, 33);
+        array.display();
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>网站分类：产品展示，用户：用户1
-网站分类：产品展示，用户：用户2
-网站分类：产品展示，用户：用户3
-网站分类：博客，用户：用户4
-网站分类：博客，用户：用户5
-网站分类：博客，用户：用户6
-网站分类总数为：2
+<p>执行结果</p>
+<pre><code>1 2 3 4
+1
+1 2 33
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>享元模式，用共享技术，有效的支持大量细粒度的对象。
-
-享元模式可以避免大量非常相似类的开销
-</code></pre>
+<h2 id="3-分析数组的局限性"><a href="#3-分析数组的局限性" class="headerlink" title="3 分析数组的局限性"></a>3 分析数组的局限性</h2><p>通过上面的代码，我们发现数组是能完成一个数据结构所有的功能的，而且实现起来也不难，<br>那数据既然能完成所有的工作，我们实际应用中为啥不用它来进行所有的数据存储呢？那肯定是有原因呢。  </p>
+<p>数组的局限性分析：  </p>
+<ul>
+<li>插入快，对于无序数组，上面我们实现的数组就是无序的，即元素没有按照从大到小或者某个特定的顺序排列，只是按照插入的顺序排列。<br>无序数组增加一个元素很简单，只需要在数组末尾添加元素即可，但是有序数组却不一定了，它需要在指定的位置插入。</li>
+<li>查找慢，当然如果根据下标来查找是很快的。但是通常我们都是根据元素值来查找，给定一个元素值，对<br>于无序数组，我们需要从数组第一个元素开始遍历，直到找到那个元素。有序数组通过特定的算法查找的速度会比<br>无需数组快，后面我们会讲各种排序算法。</li>
+<li>删除慢，根据元素值删除，我们要先找到该元素所处的位置，然后将元素后面的值整体向前面移动一个位<br>置。也需要比较多的时间。</li>
+<li>数组一旦创建后，大小就固定了，不能动态扩展数组的元素个数。如果初始化你给一个很大的数组大小，<br>那会白白浪费内存空间，如果给小了，后面数据个数增加了又添加不进去了。</li>
+</ul>
+<p>很显然，数组虽然插入快，但是查找和删除都比较慢，而且扩展性差，所以我们一般不会用数组来存储数据，<br>那有没有什么数据结构插入、查找、删除都很快，而且还能动态扩展存储个数大小呢，答案是有的，但是这是建立<br>在很复杂的算法基础上，后面我们也会详细讲解。</p>
+<h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4 总结"></a>4 总结</h2><p>本篇我们讲解了数组的基本用法，以及用Java语言中的类实现了一个数组的数据结构，但是我们分析该数<br>据结构，发现存在很多性能问题，后面会讲解别的数据结构，看看那些数据结构是如何处理这些问题的。当然在讲<br>解数据结构之前，下篇我们会简单的介绍几种常用的排序算法。</p>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
