@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之抽象工厂模式 | 青春纪念册</title>
-  <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之抽象工厂模式 | 青春纪念册">
+  <title>数据结构算法之队列 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之队列 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -729,9 +729,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之抽象工厂模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构算法之队列" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之抽象工厂模式</h1>
+        <h1 class="article-title">数据结构算法之队列</h1>
     
     <div class="article-meta">
         
@@ -743,7 +743,7 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;设计模式">设计模式</a>
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
             
         </span>
         
@@ -751,14 +751,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">设计模式</a>
+            <a class="color2">数据结构算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:54:31'>2022-12-04 17:02</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-21 09:28:34'>2022-12-21 09:14</time>
         
     </div>
     <div class="article-meta">
@@ -791,7 +791,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E5%8F%8D%E5%B0%84%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">利用反射技术简单梳理抽象工厂模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">工厂模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%9F%E5%88%97"><span class="toc-text">队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%98%9F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">1.队列的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-java%E6%A8%A1%E6%8B%9F%E5%8D%95%E5%90%91%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0"><span class="toc-text">2.java模拟单向队列实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="toc-text">3.双端队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97"><span class="toc-text">4.优先级队列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -807,176 +807,184 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="利用反射技术简单梳理抽象工厂模式"><a href="#利用反射技术简单梳理抽象工厂模式" class="headerlink" title="利用反射技术简单梳理抽象工厂模式"></a>利用反射技术简单梳理抽象工厂模式</h1><h2 id="工厂模式实现"><a href="#工厂模式实现" class="headerlink" title="工厂模式实现"></a>工厂模式实现</h2><p>通常我们在实际工作中，经常遇到需要访问数据库的场景。<br>而常见的数据库又多种多样，怎么样针对不同的数据库来建立不同的数据库连接呢？<br>我们可以看下用抽象工厂模式加上反射技术来如何实现。  </p>
-<p>首先我们定义基本类，假设数据库中有用户表和部门表，我们定义两张基本的javabean对象。  </p>
-<pre><code class="java">package designpattem.abstractfactory;
+        <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>前面一篇博客我们讲解了并不像数组一样完全作为存储数据功能，而是作为构思算法的辅助工具的数据结构——<br>栈，本篇博客我们介绍另外一个这样的工具——队列。栈是后进先出，而队列刚好相反，是先进先出。</p>
+<h2 id="1-队列的基本概念"><a href="#1-队列的基本概念" class="headerlink" title="1.队列的基本概念"></a>1.队列的基本概念</h2><p>队列（queue）是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端<br>（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表。进行插入操作的端称为队尾，进行删除操作<br>的端称为队头。队列中没有元素时，称为空队列。  </p>
+<p>队列的数据元素又称为队列元素。在队列中插入一个队列元素称为入队，从队列中删除一个队列元素称为出<br>队。因为队列只允许在一端插入，在另一端删除，所以只有最早进入队列的元素才能最先从队列中删除，故队列又<br>称为先进先出（FIFO—first in first out）线性表。  </p>
+<p>比如我们去电影院排队买票，第一个进入排队序列的都是第一个买到票离开队列的人，而最后进入排队序列排<br>队的都是最后买到票的。  </p>
+<p>再比如在计算机操作系统中，有各种队列在安静的工作着，比如打印机在打印列队中等待打印。  </p>
+<p><strong>队列分为：</strong></p>
+<ul>
+<li>单向队列（Queue）：只能在一端插入数据，另一端删除数据。</li>
+<li>双向队列（Deque）：每一端都可以进行插入数据和删除数据操作。</li>
+</ul>
+<p>这里我们还会介绍一种队列——优先级队列，优先级队列是比栈和队列更专用的数据结构，在优先级队列中，<br>数据项按照关键字进行排序，关键字最小（或者最大）的数据项往往在队列的最前面，而数据项在插入的时候都会<br>插入到合适的位置以确保队列的有序。  </p>
+<h2 id="2-java模拟单向队列实现"><a href="#2-java模拟单向队列实现" class="headerlink" title="2.java模拟单向队列实现"></a>2.java模拟单向队列实现</h2><p>在实现之前，我们先看下面几个问题：  </p>
+<ul>
+<li>与栈不同的是，队列中的数据不总是从数组的0下标开始的，移除一些队头front的数据后，队头指针会指<br>向一个较高的下标位置</li>
+<li>我们再设计时，队列中新增一个数据时，队尾的指针rear 会向上移动，也就是向下标大的方向。移除数据项<br>时，队头指针 front 向上移动。那么这样设计好像和现实情况相反，比如排队买电影票，队头的买完票就离开了，<br>然后队伍整体向前移动。在计算机中也可以在队列中删除一个数之后，队列整体向前移动，但是这样做效率很差。<br>我们选择的做法是移动队头和队尾的指针。</li>
+<li>如果向第2步这样移动指针，相信队尾指针很快就移动到数据的最末端了，这时候可能移除过数据，那么<br>队头会有空着的位置，然后新来了一个数据项，由于队尾不能再向上移动了，那该怎么办呢？<br>为了避免队列不满却不能插入新的数据，我们可以让队尾指针绕回到数组开始的位置，这也称为“循环队列”。</li>
+</ul>
+<p>java实现代码如下：</p>
+<pre><code class="java">public class MyQueue &#123;
+    private Object[] queArray;
+    //队列总大小
+    private int maxSize;
+    //前端
+    private int front;
+    //后端
+    private int rear;
+    //队列中元素的实际数目
+    private int nItems;
+    public MyQueue(int s)&#123;
+        maxSize = s;
+        queArray = new Object[maxSize];
+        front = 0;
+        rear = -1;
+        nItems = 0;
+    &#125;
+    //队列中新增数据
+    public void insert(int value)&#123;
+        if(isFull())&#123;
+            System.out.println(&quot;队列已满！！！&quot;);
+        &#125;else&#123;
+            //如果队列尾部指向顶了，那么循环回来，执行队列的第一个元素
+            if(rear == maxSize -1)&#123;
+                rear = -1;
+            &#125;
+            //队尾指针加1，然后在队尾指针处插入新的数据
+            queArray[++rear] = value;
+            nItems++;
+        &#125;
+    &#125;
+    //移除数据
+    public Object remove()&#123;
+        Object removeValue = null ;
+        if(!isEmpty())&#123;
+            removeValue = queArray[front];
+            queArray[front] = null;
+            front++;
+            if(front == maxSize)&#123;
+                front = 0;
+            &#125;
+            nItems--;
+            return removeValue;
+        &#125;
+        return removeValue;
+    &#125;
 
-public class User &#123;
-    private int id;
-    private String name;
-    public int getId() &#123;
-        return id;
+    //查看对头数据
+    public Object peekFront()&#123;
+        return queArray[front];
     &#125;
-    public void setId(int id) &#123;
-        this.id = id;
+    //判断队列是否满了
+    public boolean isFull()&#123;
+        return (nItems == maxSize);
     &#125;
-    public String getName() &#123;
-        return name;
+    //判断队列是否为空
+    public boolean isEmpty()&#123;
+        return (nItems ==0);
     &#125;
-    public void setName(String name) &#123;
-        this.name = name;
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class Department &#123;
-    private int id;
-    private String name;
-    public int getId() &#123;
-        return id;
-    &#125;
-    public void setId(int id) &#123;
-        this.id = id;
-    &#125;
-    public String getName() &#123;
-        return name;
-    &#125;
-    public void setName(String name) &#123;
-        this.name = name;
-    &#125;
-&#125;
-</code></pre>
-<p>针对两个bean对象，我们定义对应的两个访问接口。</p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public interface IUser &#123;
-    public void Insert(User user);
-    public User GetUser(int id);
-&#125;
-</code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public interface IDepartment &#123;
-    public void Insert(Department department);
-    public Department GetDepartment(int id);
-&#125;
-</code></pre>
-<p>同样，我们以sqlserver和access两种不同的数据库来作为样例，来看下怎么访问User和Department<br>我们先定义sqlserver的访问user和department的方法  </p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class SqlserverUser implements IUser &#123;
-
-    @Override
-    public void Insert(User user) &#123;
-        System.out.println(&quot;在 SQL Server中给User表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public User GetUser(int id) &#123;
-        System.out.println(&quot;在SQL Server中根据ID得到User表一条记录&quot;);
-        return null;
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class SqlserverDepartment implements IDepartment &#123;
-
-    @Override
-    public void Insert(Department department) &#123;
-        System.out.println(&quot;在 SQL Server中给Department表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public Department GetDepartment(int id) &#123;
-        System.out.println(&quot;在SQL Server中根据ID得到Department表一条记录&quot;);
-        return null;
+    //返回队列的大小
+    public int getSize()&#123;
+        return nItems;
     &#125;
 &#125;
 </code></pre>
-<p>同理我们定义Access数据库对user和department的访问</p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class AccessUser implements IUser &#123;
-
-    @Override
-    public void Insert(User user) &#123;
-        System.out.println(&quot;在 Access 中给User表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public User GetUser(int id) &#123;
-        System.out.println(&quot;在Access 中根据ID得到Access表一条记录&quot;);
-        return null;
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class AccessDepartment implements IDepartment &#123;
-
-    @Override
-    public void Insert(Department department) &#123;
-        System.out.println(&quot;在 Access 中给Department表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public Department GetDepartment(int id) &#123;
-        System.out.println(&quot;在Access 中根据ID得到Department表一条记录&quot;);
-        return null;
+<p>测试代码如下：</p>
+<pre><code class="java">public class MyQueueTest &#123;
+    public static void main(String[] args) &#123;
+        MyQueue queue = new MyQueue(3);
+        queue.insert(1);
+        queue.insert(2);
+        queue.insert(3);//queArray数组数据为[1,2,3]
+        System.out.println(queue.peekFront()); //1
+        queue.remove();//queArray数组数据为[null,2,3]
+        System.out.println(queue.peekFront()); //2
+        queue.insert(4);//queArray数组数据为[4,2,3]
+        queue.insert(5);//队列已满,queArray数组数据为[4,2,3]
     &#125;
 &#125;
 </code></pre>
-<p>好了，前期准备工作都处理完了，我们看下利用反射技术怎么对去创建以及读取user和department数据。  </p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class DataAccess &#123;
-    private static String AssemblyName=&quot;designpattem.abstractfactory&quot;;
-    private static String db=&quot;Sqlserver&quot;;
-
-    public static IUser CreateUser() throws InstantiationException, IllegalAccessException, ClassNotFoundException&#123;
-        String className=AssemblyName+&quot;.&quot;+db+&quot;User&quot;;
-        return (IUser)Class.forName(className).newInstance();
+<p>运行结果：</p>
+<pre><code>1
+2
+队列已满！！！
+</code></pre>
+<h2 id="3-双端队列"><a href="#3-双端队列" class="headerlink" title="3.双端队列"></a>3.双端队列</h2><p>双端队列就是一个两端都是结尾或者开头的队列， 队列的每一端都可以进行插入数据项和移除数据项，这些方<br>法可以叫做：<br>insertRight()、insertLeft()、removeLeft()、removeRight()<br>如果严格禁止调用insertLeft()和removeLeft()（或禁用右端操作），那么双端队列的功能就和前面讲的栈功能<br>一样。  </p>
+<p>如果严格禁止调用insertLeft()和removeRight(或相反的另一对方法)，那么双端队列的功能就和单向队列一样<br>了。  </p>
+<h2 id="4-优先级队列"><a href="#4-优先级队列" class="headerlink" title="4.优先级队列"></a>4.优先级队列</h2><p>优先级队列（priority queue）是比栈和队列更专用的数据结构，在优先级队列中，数据项按照关键字进行排序，<br>关键字最小（或者最大）的数据项往往在队列的最前面，而数据项在插入的时候都会插入到合适的位置以确保队列<br>的有序。<br>优先级队列 是0个或多个元素的集合，每个元素都有一个优先权，对优先级队列执行的操作有：  </p>
+<ul>
+<li>查找</li>
+<li>插入一个新元素</li>
+<li>删除</li>
+</ul>
+<p>一般情况下，查找操作用来搜索优先权最大的元素，删除操作用来删除该元素 。对于优先权相同的元素，可按<br>先进先出次序处理或按任意优先权进行。  </p>
+<p>这里我们用数组实现优先级队列，这种方法插入比较慢，但是它比较简单，适用于数据量比较小并且不是特别<br>注重插入速度的情况。  </p>
+<p>后面我们会讲解堆，用堆的数据结构来实现优先级队列，可以相当快的插入数据。  </p>
+<p>数组实现优先级队列，声明为int类型的数组，关键字是数组里面的元素，在插入的时候按照从大到小的顺序排<br>列，也就是越小的元素优先级越高。  </p>
+<pre><code class="java">public class PriorityQueue &#123;
+    private int maxSize;
+    private int[] priQueArray;
+    private int nItems;
+    public PriorityQueue(int s)&#123;
+        maxSize = s;
+        priQueArray = new int[maxSize];
+        nItems = 0;
     &#125;
-    public static IDepartment CreateDepartment() throws InstantiationException, IllegalAccessException, ClassNotFoundException&#123;
-        String className=AssemblyName+&quot;.&quot;+db+&quot;Department&quot;;
-        return (IDepartment)Class.forName(className).newInstance();
+    //插入数据
+    public void insert(int value)&#123;
+        int j;
+        if(nItems == 0)&#123;
+            priQueArray[nItems++] = value;
+        &#125;else&#123;
+            j = nItems -1;
+            //选择的排序方法是插入排序，按照从大到小的顺序排列，越小的越在队列的顶端
+            while(j &gt;=0 &amp;&amp; value &gt; priQueArray[j])&#123;
+                priQueArray[j+1] = priQueArray[j];
+                j--;
+            &#125;
+            priQueArray[j+1] = value;
+            nItems++;
+        &#125;
+    &#125;
+
+    //移除数据,由于是按照大小排序的，所以移除数据我们指针向下移动
+    //被移除的地方由于是int类型的，不能设置为null，这里的做法是设置为 ‐1
+    public int remove()&#123;
+        int k = nItems -1;
+        int value = priQueArray[k];
+        priQueArray[k] = -1;//‐1表示这个位置的数据被移除了
+        nItems--;
+        return value;
+    &#125;
+    //查看优先级最高的元素
+    public int peekMin()&#123;
+        return priQueArray[nItems-1];
+    &#125;
+    //判断是否为空
+    public boolean isEmpty()&#123;
+        return (nItems == 0);
+    &#125;
+
+    //判断是否满了
+    public boolean isFull()&#123;
+        return (nItems == maxSize);
     &#125;
 &#125;
 </code></pre>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class AbstractFactoryTest &#123;
-    public static void main(String[] args) throws Exception &#123;
-        //抽象工厂模式
-        func1();
-    &#125;
-
-    public static void func1() throws Exception&#123;
-        User user = new User();
-        Department dept = new Department();
-
-        IUser iu = DataAccess.CreateUser();
-        iu.Insert(user);
-        iu.GetUser(1);
-        IDepartment  id = DataAccess.CreateDepartment() ;
-        id.Insert(dept);
-        id.GetDepartment(1);
-    &#125;
-&#125;
-</code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>在 SQL Server中给User表增加一条记录。
-在SQL Server中根据ID得到User表一条记录
-在 SQL Server中给Department表增加一条记录。
-在SQL Server中根据ID得到Department表一条记录
-</code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>抽象工厂模式，提供一个创建一系列相关或者相互依赖对象的接口，而无需指定它们的具体类。  
-
-抽象工厂模式最大的好处便是易于交换产品系列，由于具体工厂类在一个应用中只需要在初始化的时候出现一次，
-这使得改变一个应用的具体工厂变得非常容易，它只需要改变具体工厂即可使用不同的产品配置。
-
-
-第二个好处就是它让具体的创建实例过程与客户端分离，客户端是通过他们的抽象接口操纵实例，
-产品的具体类名也被具体工厂的实现分离，不会出现在客户端代码中。
-</code></pre>
+<p>insert() 方法，先检查队列中是否有数据项，如果没有，则直接插入到下标为0的单元里，否则，从数组顶部开始比<br>较，找到比插入值小的位置进行插入，并把 nItems 加1.  </p>
+<p>remove 方法直接获取顶部元素。  </p>
+<p>优先级队列的插入操作需要 O(N)的时间，而删除操作则需要O(1) 的时间，后面会讲解如何通过 堆 来改进插入<br>时间。  </p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本篇博客我们介绍了队列的三种形式，分别是单向队列、双向队列以及优先级队列。其实大家听名字也可以听得出<br>来他们之间的区别，单向队列遵循先进先出的原则，而且一端只能插入，另一端只能删除。双向队列则两端都可插<br>入和删除，如果限制双向队列的某一段的方法，则可以达到和单向队列同样的功能。最后优先级队列，则是在插入<br>元素的时候进行了优先级别排序，在实际应用中单项队列和优先级队列使用的比较多。后面讲解了堆这种数据结<br>构，我们会用堆来实现优先级队列，改善优先级队列插入元素的时间。  </p>
+<p>通过前面讲的栈以及本篇讲的队列这两种数据结构，我们稍微总结一下：  </p>
+<ul>
+<li>栈、队列（单向队列）、优先级队列通常是用来简化某些程序操作的数据结构，而不是主要作为存储数据<br>的。</li>
+<li>在这些数据结构中，只有一个数据项可以被访问。</li>
+<li>栈允许在栈顶压入（插入）数据，在栈顶弹出（移除）数据，但是只能访问最后一个插入的数据项，也就<br>是栈顶元素。</li>
+<li>队列（单向队列）只能在队尾插入数据，对头删除数据，并且只能访问对头的数据。而且队列还可以实现<br>循环队列，它基于数组，数组下标可以从数组末端绕回到数组的开始位置。</li>
+<li>优先级队列是有序的插入数据，并且只能访问当前元素中优先级别最大（或最小）的元素。</li>
+<li>这些数据结构都能由数组实现，但是可以用别的机制（后面讲的链表、堆等数据结构）实现。</li>
+</ul>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 

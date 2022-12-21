@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之抽象工厂模式 | 青春纪念册</title>
-  <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之抽象工厂模式 | 青春纪念册">
+  <title>数据结构算法之栈 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之栈 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -729,9 +729,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之抽象工厂模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构算法之栈" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之抽象工厂模式</h1>
+        <h1 class="article-title">数据结构算法之栈</h1>
     
     <div class="article-meta">
         
@@ -743,7 +743,7 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;设计模式">设计模式</a>
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
             
         </span>
         
@@ -751,14 +751,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">设计模式</a>
+            <a class="color2">数据结构算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:54:31'>2022-12-04 17:02</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-21 09:04:02'>2022-12-21 08:35</time>
         
     </div>
     <div class="article-meta">
@@ -791,7 +791,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E5%8F%8D%E5%B0%84%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">利用反射技术简单梳理抽象工厂模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">工厂模式实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%88"><span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E6%A0%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">1栈的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-java%E6%A8%A1%E6%8B%9F%E7%AE%80%E5%8D%95%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%A0%88%E5%AE%9E%E7%8E%B0"><span class="toc-text">2 java模拟简单的顺序栈实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E7%89%88%E6%A0%88"><span class="toc-text">3增强功能版栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E5%88%A9%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%80%86%E8%BD%AC"><span class="toc-text">4利用栈实现字符串逆转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E5%88%A9%E7%94%A8%E6%A0%88%E5%88%A4%E6%96%AD%E5%88%86%E9%9A%94%E7%AC%A6%E6%98%AF%E5%90%A6%E5%8C%B9%E9%85%8D"><span class="toc-text">5利用栈判断分隔符是否匹配</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -807,176 +807,238 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="利用反射技术简单梳理抽象工厂模式"><a href="#利用反射技术简单梳理抽象工厂模式" class="headerlink" title="利用反射技术简单梳理抽象工厂模式"></a>利用反射技术简单梳理抽象工厂模式</h1><h2 id="工厂模式实现"><a href="#工厂模式实现" class="headerlink" title="工厂模式实现"></a>工厂模式实现</h2><p>通常我们在实际工作中，经常遇到需要访问数据库的场景。<br>而常见的数据库又多种多样，怎么样针对不同的数据库来建立不同的数据库连接呢？<br>我们可以看下用抽象工厂模式加上反射技术来如何实现。  </p>
-<p>首先我们定义基本类，假设数据库中有用户表和部门表，我们定义两张基本的javabean对象。  </p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class User &#123;
-    private int id;
-    private String name;
-    public int getId() &#123;
-        return id;
+        <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><p>前面我们讲解了数组，数组更多的是用来进行数据的存储，纯粹用来存储数据的数据结构，我们期望的是插入、<br>删除和查找性能都比较好。对于无序数组，插入快，但是删除和查找都很慢，为了解决这些问题，后面我们会讲解<br>比如二叉树、哈希表的数据结构。  </p>
+<p>而本篇博客讲解的数据结构和算法更多是用作程序员的工具，它们作为构思算法的辅助工具，而不是完全的数<br>据存储工具。这些数据结构的生命周期比数据库类型的结构要短得多，在程序执行期间它们才被创建，通常用它们<br>去执行某项特殊的业务，执行完成之后，它们就被销毁。这里的它们就是——栈和队列。本篇博客我们先介绍栈。</p>
+<h2 id="1栈的基本概念"><a href="#1栈的基本概念" class="headerlink" title="1栈的基本概念"></a>1栈的基本概念</h2><p><strong>栈</strong>（英语：stack）又称为堆栈或堆叠，栈作为一种数据结构，是一种只能在一端进行插入和删除操作的特殊线性<br>表。它按照先进后出的原则存储数据，先进入的数据被压入栈底，最后的数据在栈顶，需要读数据的时候从栈顶开<br>始弹出数据（最后一个数据被第一个读出来）。栈具有记忆作用，对栈的插入与删除操作中，不需要改变栈底指<br>针。  </p>
+<p>栈是允许在同一端进行插入和删除操作的特殊线性表。允许进行插入和删除操作的一端称为栈顶(top)，另一端<br>为栈底(bottom)；栈底固定，而栈顶浮动；栈中元素个数为零时称为空栈。插入一般称为进栈（PUSH），删除则<br>称为退栈（POP）。  </p>
+<p>由于堆叠数据结构只允许在一端进行操作，因而按照后进先出（LIFO, Last In First Out）的原理运作。栈也称<br>为后进先出表。  </p>
+<p>这里以羽毛球筒为例，羽毛球筒就是一个栈，刚开始羽毛球筒是空的，也就是空栈，然后我们一个一个放入羽<br>毛球，也就是一个一个push进栈，当我们需要使用羽毛球的时候，从筒里面拿，也就是pop出栈，但是第一个拿到<br>的羽毛球是我们最后放进去的。  </p>
+<h2 id="2-java模拟简单的顺序栈实现"><a href="#2-java模拟简单的顺序栈实现" class="headerlink" title="2 java模拟简单的顺序栈实现"></a>2 java模拟简单的顺序栈实现</h2><pre><code class="java">public class MyStack &#123;
+    private int[] array;
+    private int maxSize;
+    private int top;
+    public MyStack(int size)&#123;
+        this.maxSize = size;
+        array = new int[size];
+        top = -1;
     &#125;
-    public void setId(int id) &#123;
-        this.id = id;
+    //压入数据
+    public void push(int value)&#123;
+        if(top &lt; maxSize-1)&#123;
+            array[++top] = value;
+        &#125;
     &#125;
-    public String getName() &#123;
-        return name;
+    //弹出栈顶数据
+    public int pop()&#123;
+        return array[top--];
     &#125;
-    public void setName(String name) &#123;
-        this.name = name;
+    //访问栈顶数据
+    public int peek()&#123;
+        return array[top];
     &#125;
-&#125;
-</code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class Department &#123;
-    private int id;
-    private String name;
-    public int getId() &#123;
-        return id;
+    //判断栈是否为空
+    public boolean isEmpty()&#123;
+        return (top == -1);
     &#125;
-    public void setId(int id) &#123;
-        this.id = id;
-    &#125;
-    public String getName() &#123;
-        return name;
-    &#125;
-    public void setName(String name) &#123;
-        this.name = name;
-    &#125;
-&#125;
-</code></pre>
-<p>针对两个bean对象，我们定义对应的两个访问接口。</p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public interface IUser &#123;
-    public void Insert(User user);
-    public User GetUser(int id);
-&#125;
-</code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public interface IDepartment &#123;
-    public void Insert(Department department);
-    public Department GetDepartment(int id);
-&#125;
-</code></pre>
-<p>同样，我们以sqlserver和access两种不同的数据库来作为样例，来看下怎么访问User和Department<br>我们先定义sqlserver的访问user和department的方法  </p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class SqlserverUser implements IUser &#123;
-
-    @Override
-    public void Insert(User user) &#123;
-        System.out.println(&quot;在 SQL Server中给User表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public User GetUser(int id) &#123;
-        System.out.println(&quot;在SQL Server中根据ID得到User表一条记录&quot;);
-        return null;
+    //判断栈是否满了
+    public boolean isFull()&#123;
+        return (top == maxSize-1);
     &#125;
 &#125;
 </code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class SqlserverDepartment implements IDepartment &#123;
-
-    @Override
-    public void Insert(Department department) &#123;
-        System.out.println(&quot;在 SQL Server中给Department表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public Department GetDepartment(int id) &#123;
-        System.out.println(&quot;在SQL Server中根据ID得到Department表一条记录&quot;);
-        return null;
+<pre><code class="java">public class MyStackTest &#123;
+    public static void main(String[] args) &#123;
+        MyStack stack = new MyStack(3);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.peek());
+        while(!stack.isEmpty())&#123;
+            System.out.println(stack.pop());
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<p>同理我们定义Access数据库对user和department的访问</p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class AccessUser implements IUser &#123;
-
-    @Override
-    public void Insert(User user) &#123;
-        System.out.println(&quot;在 Access 中给User表增加一条记录。&quot;);
+<p>运行结果：</p>
+<pre><code>3
+3
+2
+1
+</code></pre>
+<p>这个栈是用数组实现的，内部定义了一个数组，一个表示最大容量的值以及一个指向栈顶元素的top变量。构造方<br>法根据参数规定的容量创建一个新栈，push()方法是向栈中压入元素，指向栈顶的变量top加一，使它指向原顶端<br>数据项上面的一个位置，并在这个位置上存储一个数据。pop()方法返回top变量指向的元素，然后将top变量减<br>一，便移除了数据项。要知道 top 变量指向的始终是栈顶的元素。</p>
+<p><strong>产生的问题：</strong></p>
+<ul>
+<li>上面栈的实现初始化容量之后，后面是不能进行扩容的（虽然栈不是用来存储大量数据的），如果说后期<br>数据量超过初始容量之后怎么办？（自动扩容）</li>
+<li>我们是用数组实现栈，在定义数组类型的时候，也就规定了存储在栈中的数据类型，那么同一个栈能不能<br>存储不同类型的数据呢？（声明为Object）</li>
+<li>栈需要初始化容量，而且数组实现的栈元素都是连续存储的，那么能不能不初始化容量呢？（改为由链表<br>实现）</li>
+</ul>
+<h2 id="3增强功能版栈"><a href="#3增强功能版栈" class="headerlink" title="3增强功能版栈"></a>3增强功能版栈</h2><p>对于上面出现的问题，第一个能自动扩容，第二个能存储各种不同类型的数据，解决办法如下：（第三个在讲链表<br>的时候在介绍）<br>这个模拟的栈在JDK源码中，大家可以参考 Stack 类的实现。  </p>
+<pre><code class="java">public class Stack&lt;E&gt; extends Vector&lt;E&gt;&#123;...&#125;
+</code></pre>
+<pre><code class="java">import java.util.Arrays;
+import java.util.EmptyStackException;
+public class ArrayStack &#123;
+    //存储元素的数组,声明为Object类型能存储任意类型的数据
+    private Object[] elementData;
+    //指向栈顶的指针
+    private int top;
+    //栈的总容量
+    private int size;
+    //默认构造一个容量为10的栈
+    public ArrayStack()&#123;
+        this.elementData = new Object[10];
+        this.top = -1;
+        this.size = 10;
     &#125;
-    @Override
-    public User GetUser(int id) &#123;
-        System.out.println(&quot;在Access 中根据ID得到Access表一条记录&quot;);
-        return null;
+    public ArrayStack(int initialCapacity)&#123;
+        if(initialCapacity &lt; 0)&#123;
+            throw new IllegalArgumentException(&quot;栈初始容量不能小于0: &quot;+initialCapacity);
+        &#125;
+        this.elementData = new Object[initialCapacity];
+        this.top = -1;
+        this.size = initialCapacity;
+    &#125;
+    //压入元素
+    public Object push(Object item)&#123;
+    //是否需要扩容
+        isGrow(top+1);
+        elementData[++top] = item;
+        return item;
+    &#125;
+    //弹出栈顶元素
+    public Object pop()&#123;
+        Object obj = peek();
+        remove(top);
+        return obj;
+    &#125;
+
+    //获取栈顶元素
+    public Object peek()&#123;
+        if(top == -1)&#123;
+            throw new EmptyStackException();
+        &#125;
+        return elementData[top];
+    &#125;
+
+    //判断栈是否为空
+    public boolean isEmpty()&#123;
+        return (top == -1);
+    &#125;
+    //删除栈顶元素
+    public void remove(int top)&#123;
+    //栈顶元素置为null
+        elementData[top] = null;
+        this.top--;
+    &#125;
+    /**
+     * 是否需要扩容，如果需要，则扩大一倍并返回true，不需要则返回false
+     * @param minCapacity
+     * @return
+     */
+    public boolean isGrow(int minCapacity)&#123;
+        int oldCapacity = size;
+        //如果当前元素压入栈之后总容量大于前面定义的容量，则需要扩容
+        if(minCapacity &gt;= oldCapacity)&#123;
+            //定义扩大之后栈的总容量
+            int newCapacity = 0;
+            //栈容量扩大两倍(左移一位)看是否超过int类型所表示的最大范围
+            if((oldCapacity&lt;&lt;1) - Integer.MAX_VALUE &gt;0)&#123;
+                newCapacity = Integer.MAX_VALUE;
+            &#125;else&#123;
+                newCapacity = (oldCapacity&lt;&lt;1);//左移一位，相当于*2
+            &#125;
+            this.size = newCapacity;
+            int[] newArray = new int[size];
+            elementData = Arrays.copyOf(elementData, size);
+            return true;
+        &#125;else&#123;
+            return false;
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class AccessDepartment implements IDepartment &#123;
-
-    @Override
-    public void Insert(Department department) &#123;
-        System.out.println(&quot;在 Access 中给Department表增加一条记录。&quot;);
-    &#125;
-    @Override
-    public Department GetDepartment(int id) &#123;
-        System.out.println(&quot;在Access 中根据ID得到Department表一条记录&quot;);
-        return null;
-    &#125;
-&#125;
-</code></pre>
-<p>好了，前期准备工作都处理完了，我们看下利用反射技术怎么对去创建以及读取user和department数据。  </p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class DataAccess &#123;
-    private static String AssemblyName=&quot;designpattem.abstractfactory&quot;;
-    private static String db=&quot;Sqlserver&quot;;
-
-    public static IUser CreateUser() throws InstantiationException, IllegalAccessException, ClassNotFoundException&#123;
-        String className=AssemblyName+&quot;.&quot;+db+&quot;User&quot;;
-        return (IUser)Class.forName(className).newInstance();
-    &#125;
-    public static IDepartment CreateDepartment() throws InstantiationException, IllegalAccessException, ClassNotFoundException&#123;
-        String className=AssemblyName+&quot;.&quot;+db+&quot;Department&quot;;
-        return (IDepartment)Class.forName(className).newInstance();
+<p>测试用例：</p>
+<pre><code class="java">public class ArrayStackTest &#123;
+    public static void main(String[] args) &#123;
+        ArrayStack arrayStack = new ArrayStack(3);
+        arrayStack.push(1);
+        //System.out.println(stack.peek());
+        arrayStack.push(2);
+        arrayStack.push(3);
+        arrayStack.push(&quot;abc&quot;);
+        System.out.println(arrayStack.peek());
+        arrayStack.pop();
+        arrayStack.pop();
+        arrayStack.pop();
+        System.out.println(arrayStack.peek());
     &#125;
 &#125;
 </code></pre>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">package designpattem.abstractfactory;
-
-public class AbstractFactoryTest &#123;
-    public static void main(String[] args) throws Exception &#123;
-        //抽象工厂模式
-        func1();
+<p>运行结果：</p>
+<pre><code>abc
+1
+</code></pre>
+<h2 id="4利用栈实现字符串逆转"><a href="#4利用栈实现字符串逆转" class="headerlink" title="4利用栈实现字符串逆转"></a>4利用栈实现字符串逆转</h2><p>我们知道栈是后进先出，我们可以将一个字符串分隔为单个的字符，然后将字符一个一个push()进栈，在一个一<br>个pop()出栈就是逆序显示了。如下：  </p>
+<p>将字符串“how are you” 反转！！！  </p>
+<p>ps：这里我们是用上面自定的栈来实现的，大家可以将ArrayStack替换为JDK自带的栈类Stack试试</p>
+<pre><code class="java">    @Test
+    public void testStringReversal()&#123;
+        ArrayStack stack = new ArrayStack();
+        String str = &quot;how are you&quot;;
+        char[] cha = str.toCharArray();
+        for(char c : cha)&#123;
+            stack.push(c);
+        &#125;
+        while(!stack.isEmpty())&#123;
+            System.out.print(stack.pop());
+        &#125;
     &#125;
-
-    public static void func1() throws Exception&#123;
-        User user = new User();
-        Department dept = new Department();
-
-        IUser iu = DataAccess.CreateUser();
-        iu.Insert(user);
-        iu.GetUser(1);
-        IDepartment  id = DataAccess.CreateDepartment() ;
-        id.Insert(dept);
-        id.GetDepartment(1);
+</code></pre>
+<p>其中需要引入maven依赖</p>
+<pre><code>        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.10&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<p>运行结果：</p>
+<pre><code>uoy era woh
+</code></pre>
+<h2 id="5利用栈判断分隔符是否匹配"><a href="#5利用栈判断分隔符是否匹配" class="headerlink" title="5利用栈判断分隔符是否匹配"></a>5利用栈判断分隔符是否匹配</h2><p>写过xml标签或者html标签的，我们都知道&lt;必须和最近的&gt;进行匹配，[ 也必须和最近的 ] 进行匹配。<br>比如：这是符号相匹配的，如果是 abc] 那就是不匹配的。<br>对于 12，我们分析在栈中的数据：遇到匹配正确的就消除<br>最后栈中的内容为空则匹配成功，否则匹配失败！！！</p>
+<pre><code class="java">    //分隔符匹配
+    //遇到左边分隔符了就push进栈，遇到右边分隔符了就pop出栈，看出栈的分隔符是否和这个有分隔符匹配
+    @Test
+    public void testMatch()&#123;
+        ArrayStack stack = new ArrayStack(3);
+        String str = &quot;12&lt;a[b&#123;c&#125;]&gt;&quot;;
+        char[] cha = str.toCharArray();
+        for(char c : cha)&#123;
+            switch (c) &#123;
+                case &#39;&#123;&#39;:
+                case &#39;[&#39;:
+                case &#39;&lt;&#39;:
+                    stack.push(c);
+                    break;
+                case &#39;&#125;&#39;:
+                case &#39;]&#39;:
+                case &#39;&gt;&#39;:
+                    if(!stack.isEmpty())&#123;
+                        char ch = stack.pop().toString().toCharArray()[0];
+                        if(c==&#39;&#125;&#39; &amp;&amp; ch != &#39;&#123;&#39;
+                                || c==&#39;]&#39; &amp;&amp; ch != &#39;[&#39;
+                                || c==&#39;)&#39; &amp;&amp; ch != &#39;(&#39;)&#123;
+                            System.out.println(&quot;Error:&quot;+ch+&quot;‐&quot;+c);
+                        &#125;
+                    &#125;
+                    break;
+                default:
+                    break;
+            &#125;
+        &#125;
     &#125;
-&#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>在 SQL Server中给User表增加一条记录。
-在SQL Server中根据ID得到User表一条记录
-在 SQL Server中给Department表增加一条记录。
-在SQL Server中根据ID得到Department表一条记录
-</code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>抽象工厂模式，提供一个创建一系列相关或者相互依赖对象的接口，而无需指定它们的具体类。  
-
-抽象工厂模式最大的好处便是易于交换产品系列，由于具体工厂类在一个应用中只需要在初始化的时候出现一次，
-这使得改变一个应用的具体工厂变得非常容易，它只需要改变具体工厂即可使用不同的产品配置。
-
-
-第二个好处就是它让具体的创建实例过程与客户端分离，客户端是通过他们的抽象接口操纵实例，
-产品的具体类名也被具体工厂的实现分离，不会出现在客户端代码中。
-</code></pre>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>根据栈后进先出的特性，我们实现了单词逆序以及分隔符匹配。所以其实栈是一个概念上的工具，具体能实现什么<br>功能可以由我们去想象。栈通过提供限制性的访问方法push()和pop()，使得程序不容易出错。  </p>
+<p>对于栈的实现，我们稍微分析就知道，数据入栈和出栈的时间复杂度都为O(1)，也就是说栈操作所耗的时间不<br>依赖栈中数据项的个数，因此操作时间很短。而且需要注意的是栈不需要比较和移动操作，我们不要画蛇添足。</p>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
