@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之单例模式 | 青春纪念册</title>
-  <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之单例模式 | 青春纪念册">
+  <title>数据结构算法之递归 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之递归 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -747,9 +747,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之单例模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构算法之递归" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之单例模式</h1>
+        <h1 class="article-title">数据结构算法之递归</h1>
     
     <div class="article-meta">
         
@@ -761,7 +761,7 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;设计模式">设计模式</a>
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
             
         </span>
         
@@ -769,14 +769,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">设计模式</a>
+            <a class="color2">数据结构算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:54:21'>2022-12-10 16:07</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-22 13:55:08'>2022-12-22 11:55</time>
         
     </div>
     <div class="article-meta">
@@ -809,7 +809,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理单例模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0"><span class="toc-text">单例模式的几种实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-text">递归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%92%E5%BD%92%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">1.递归的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%B1%82%E4%B8%80%E4%B8%AA%E6%95%B0%E7%9A%84%E9%98%B6%E4%B9%98-n"><span class="toc-text">2.求一个数的阶乘 n!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%80%92%E5%BD%92%E7%9A%84%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-text">3.递归的二分查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95"><span class="toc-text">4.分治算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98"><span class="toc-text">5.汉诺塔问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">6.归并排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%B6%88%E9%99%A4%E9%80%92%E5%BD%92"><span class="toc-text">7.消除递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%89%E8%B6%A3%E5%BA%94%E7%94%A8"><span class="toc-text">8.递归的有趣应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1%E6%B1%82%E4%B8%80%E4%B8%AA%E6%95%B0%E7%9A%84%E4%B9%98%E6%96%B9"><span class="toc-text">8.1求一个数的乘方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-text">8.2背包问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3%E7%BB%84%E5%90%88%EF%BC%9A%E9%80%89%E6%8B%A9%E4%B8%80%E6%94%AF%E9%98%9F%E4%BC%8D"><span class="toc-text">8.3组合：选择一支队伍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E6%80%BB%E7%BB%93"><span class="toc-text">9.总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -825,90 +825,365 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理单例模式"><a href="#简单梳理单例模式" class="headerlink" title="简单梳理单例模式"></a>简单梳理单例模式</h1><h2 id="单例模式的几种实现"><a href="#单例模式的几种实现" class="headerlink" title="单例模式的几种实现"></a>单例模式的几种实现</h2><p>单例模式分为三种实现方法，具体如下  </p>
-<p>饿汉式  </p>
-<pre><code class="java">//饿汉式
-public class SingleDemo &#123;
-    private static SingleDemo singleDemo = new SingleDemo();
-
-    private SingleDemo() &#123;
-
-    &#125;
-
-    public static SingleDemo getInstance() &#123;
-        return singleDemo;
-    &#125;
-&#125;
+        <h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>记得小时候经常讲的一个故事：从前有座山，山上有座庙，庙里有一个老和尚和一个小和尚，一天，老和尚给小和<br>尚讲了一个故事，故事内容是“从前有座山，山上有座庙，庙里有一个老和尚和一个小和尚，一天，老和尚给小和<br>尚讲了一个故事，故事内容……”<br>什么是递归，上面的小故事就是一个明显的递归。以编程的角度来看，程序调用自身的编程技巧称为递归（<br>recursion）。  </p>
+<h2 id="1-递归的定义"><a href="#1-递归的定义" class="headerlink" title="1.递归的定义"></a>1.递归的定义</h2><p>递归，就是在运行的过程中调用自己。<br>递归必须要有三个要素：  </p>
+<ul>
+<li>边界条件</li>
+<li>递归前进段</li>
+<li>递归返回段<br>当边界条件不满足时，递归前进；当边界条件满足时，递归返回。</li>
+</ul>
+<h2 id="2-求一个数的阶乘-n"><a href="#2-求一个数的阶乘-n" class="headerlink" title="2.求一个数的阶乘 n!"></a>2.求一个数的阶乘 n!</h2><pre><code>n! = n*(n‐1)*(n‐2)*......1
 </code></pre>
-<p>懒汉式</p>
-<pre><code class="java">//懒汉式
-public class SingleDemo2 &#123;
-    private static SingleDemo2 singleDemo2 = null;
-
-    private SingleDemo2() &#123;
-
+<p>规定：</p>
+<ol>
+<li>0！&#x3D;1</li>
+<li>1！&#x3D;1</li>
+<li>负数没有阶乘<br>上面的表达式我们先用for循环改写：</li>
+</ol>
+<pre><code class="java">    /**
+     * 0！=1 1！=1
+     * 负数没有阶乘,如果输入负数返回‐1
+     * @param n
+     * @return
+     */
+    public static int getFactorialFor(int n)&#123;
+        int temp = 1;
+        if(n &gt;=0)&#123;
+            for(int i = 1 ; i &lt;= n ; i++)&#123;
+                temp = temp*i;
+            &#125;
+        &#125;else&#123;
+            return -1;
+        &#125;
+        return temp;
     &#125;
-
-    public static SingleDemo2 getInstance() &#123;
-        if (null == singleDemo2) &#123;
-            synchronized (SingleDemo2.class) &#123;
-                if (null == singleDemo2) &#123;
-                    return singleDemo2 = new SingleDemo2();
-                &#125;
+</code></pre>
+<p>如果求阶乘的表达式是这样的呢？</p>
+<pre><code>n! = n*(n‐1)！
+</code></pre>
+<p>我们用递归来改写：</p>
+<pre><code class="java">    /**
+     * 0！=1 1！=1
+     * 负数没有阶乘,如果输入负数返回‐1
+     * @param n
+     * @return
+     */
+    public static int getFactorial(int n)&#123;
+        if(n &gt;= 0)&#123;
+            if(n==0)&#123;
+                System.out.println(n+&quot;!=1&quot;);
+                return 1;
+            &#125;else&#123;
+                System.out.println(n);
+                int temp = n*getFactorial(n-1);
+                System.out.println(n+&quot;!=&quot;+temp);
+                return temp;
             &#125;
         &#125;
-        return singleDemo2;
+        return -1;
     &#125;
-&#125;
 </code></pre>
-<p>内部类 饿汉式</p>
-<pre><code class="java">public class SingleDemo3 &#123;
-    private SingleDemo3() &#123;
-
-    &#125;
-
-    private static class SingleHold &#123;
-        private static SingleDemo3 singleDemo3 = new SingleDemo3();
-    &#125;
-
-    public static SingleDemo3 getInstance() &#123;
-        return SingleHold.singleDemo3;
-    &#125;
-&#125;
+<p>我们调用该方法getFactorial(4);即求4！打印如下：</p>
+<pre><code>4
+3
+2
+1
+0!=1
+1!=1
+2!=2
+3!=6
+4!=24
 </code></pre>
-<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class SingletonTest &#123;
+<h2 id="3-递归的二分查找"><a href="#3-递归的二分查找" class="headerlink" title="3.递归的二分查找"></a>3.递归的二分查找</h2><p>注意：二分查找的数组一定是有序的！！！  </p>
+<p>在有序数组array[] 中，不断将数组的中间值（mid）和被查找的值比较，如果被查找的值等于array[mid],就返<br>回下标mid; 否则，就将查找范围缩小一半。如果被查找的值小于array[mid], 就继续在左半边查找;如果被查找的值<br>大于array[mid], 就继续在右半边查找。 直到查找到该值或者查找范围为空时， 查找结束。  </p>
+<p>不用递归的二分查找如下：</p>
+<pre><code class="java">    /**
+     * 找到目标值返回数组下标，找不到返回‐1
+     * @param array
+     * @param key
+     * @return
+     */
+    public static int findTwoPoint(int[] array,int key)&#123;
+        int start = 0;
+        int last = array.length-1;
+        while(start &lt;= last)&#123;
+            int mid = (last-start)/2+start;//防止直接相加造成int范围溢出
+            if(key == array[mid])&#123;//查找值等于当前值，返回数组下标
+                return mid;
+            &#125;
+            if(key &gt; array[mid])&#123;//查找值比当前值大
+                start = mid+1;
+            &#125;
+            if(key &lt; array[mid])&#123;//查找值比当前值小
+                last = mid-1;
+            &#125;
+        &#125;
+        return -1;
+    &#125;
+</code></pre>
+<p>二分查找用递归来改写，相信也很简单。边界条件是找到当前值，或者查找范围为空。否则每一次查找都将范围缩<br>小一半。  </p>
+<pre><code class="java">public static int search(int[] array,int key,int low,int high)&#123;
+        int mid = (high-low)/2+low;
+        if(key == array[mid])&#123;//查找值等于当前值，返回数组下标
+            return mid;
+        &#125;else if(low &gt; high)&#123;//找不到查找值，返回‐1
+            return -1;
+        &#125;else&#123;
+            if(key &lt; array[mid])&#123;//查找值比当前值小
+                return search(array,key,low,mid-1);
+            &#125;
+            if(key &gt; array[mid])&#123;//查找值比当前值大
+                return search(array,key,mid+1,high);
+            &#125;
+        &#125;
+        return -1;
+    &#125;
+</code></pre>
+<p>递归的二分查找和非递归的二分查找效率都为O(logN)，递归的二分查找更加简洁，便于理解，但是速度会比非<br>递归的慢。  </p>
+<h2 id="4-分治算法"><a href="#4-分治算法" class="headerlink" title="4.分治算法"></a>4.分治算法</h2><p>当我们求解某些问题时，由于这些问题要处理的数据相当多，或求解过程相当复杂，使得直接求解法在时间上相当<br>长，或者根本无法直接求出。对于这类问题，我们往往先把它分解成几个子问题，找到求出这几个子问题的解法<br>后，再找到合适的方法，把它们组合成求整个问题的解法。如果这些子问题还较大，难以解决，可以再把它们分成<br>几个更小的子问题，以此类推，直至可以直接求出解为止。这就是分治策略的基本思想。  </p>
+<p>上面讲的递归的二分查找法就是一个分治算法的典型例子，分治算法常常是一个方法，在这个方法中含有两个<br>对自身的递归调用，分别对应于问题的两个部分。  </p>
+<p>二分查找中，将查找范围分成比查找值大的一部分和比查找值小的一部分，每次递归调用只会有一个部分执<br>行。  </p>
+<h2 id="5-汉诺塔问题"><a href="#5-汉诺塔问题" class="headerlink" title="5.汉诺塔问题"></a>5.汉诺塔问题</h2><p>汉诺塔问题是由很多放置在三个塔座上的盘子组成的一个古老的难题。所有盘子的直径是不同的，并<br>且盘子中央都有一个洞使得它们刚好可以放在塔座上。所有的盘子刚开始都放置在A 塔座上。这个难题的目标是将<br>所有的盘子都从塔座A移动到塔座C上，每次只可以移动一个盘子，并且任何一个盘子都不可以放置在比自己小的盘<br>子之上。</p>
+<pre><code class="java">    /**
+     * 汉诺塔问题
+     * @param dish 盘子个数(也表示名称)
+     * @param from 初始塔座
+     * @param temp 中介塔座
+     * @param to 目标塔座
+     */
+    public static void move(int dish,String from,String temp,String to)&#123;
+        if(dish == 1)&#123;
+            System.out.println(&quot;将盘子&quot;+dish+&quot;从塔座&quot;+from+&quot;移动到目标塔座&quot;+to);
+        &#125;else&#123;
+            move(dish-1,from,to,temp);//A为初始塔座，B为目标塔座，C为中介塔座
+            System.out.println(&quot;将盘子&quot;+dish+&quot;从塔座&quot;+from+&quot;移动到目标塔座&quot;+to);
+            move(dish-1,temp,from,to);//B为初始塔座，C为目标塔座，A为中介塔座
+        &#125;
+    &#125;
+</code></pre>
+<p>测试：</p>
+<pre><code>move(3,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;);
+</code></pre>
+<p>测试结果：</p>
+<pre><code>将盘子1从塔座A移动到目标塔座C
+将盘子2从塔座A移动到目标塔座B
+将盘子1从塔座C移动到目标塔座B
+将盘子3从塔座A移动到目标塔座C
+将盘子1从塔座B移动到目标塔座A
+将盘子2从塔座B移动到目标塔座C
+将盘子1从塔座A移动到目标塔座C
+</code></pre>
+<h2 id="6-归并排序"><a href="#6-归并排序" class="headerlink" title="6.归并排序"></a>6.归并排序</h2><p>归并算法的中心是归并两个已经有序的数组。归并两个有序数组A和B，就生成了第三个有序数组C。数组C包含数<br>组A和B的所有数据项。  </p>
+<p>非递归算法为：  </p>
+<pre><code class="java">    /**
+     * 传入两个有序数组a和b，返回一个排好序的合并数组
+     * @param a
+     * @param b
+     * @return
+     */
+    public static int[] sort(int[] a,int[] b)&#123;
+        int[] c = new int[a.length+b.length];
+        int aNum = 0,bNum = 0,cNum=0;
+        while(aNum&lt;a.length &amp;&amp; bNum &lt; b.length)&#123;
+            if(a[aNum] &gt;= b[bNum])&#123;//比较a数组和b数组的元素，谁更小将谁赋值到c数组
+                c[cNum++] = b[bNum++];
+            &#125;else&#123;
+                c[cNum++] = a[aNum++];
+            &#125;
+        &#125;
+        //如果a数组全部赋值到c数组了，但是b数组还有元素，则将b数组剩余元素按顺序全部复制到c数组
+        while(aNum == a.length &amp;&amp; bNum &lt; b.length)&#123;
+            c[cNum++] = b[bNum++];
+        &#125;
+        //如果b数组全部赋值到c数组了，但是a数组还有元素，则将a数组剩余元素按顺序全部复制到c数组
+        while(bNum == b.length &amp;&amp; aNum &lt; a.length)&#123;
+            c[cNum++] = a[aNum++];
+        &#125;
+        return c;
+    &#125;
+</code></pre>
+<p>该方法有三个while循环，第一个while比较数组a和数组b的元素，并将较小的赋值到数组c；第二个while循环当a<br>数组所有元素都已经赋值到c数组之后，而b数组还有元素，那么直接把b数组剩余的元素赋值到c数组；第三个<br>while循环则是b数组所有元素都已经赋值到c数组了，而a数组还有剩余元素，那么直接把a数组剩余的元素全部赋<br>值到c数组。  </p>
+<p>归并排序的思想是把一个数组分成两半，排序每一半，然后用上面的sort()方法将数组的两半归并成为一个有<br>序的数组。如何来为每一部分排序呢？这里我们利用递归的思想：  </p>
+<p>把每一半都分为四分之一，对每个四分之一进行排序，然后把它们归并成一个有序的一半。类似的，如何给每<br>个四分之一数组排序呢？把每个四分之一分成八分之一，对每个八分之一进行排序，以此类推，反复的分割数组，<br>直到得到的子数组是一个数据项，那这就是这个递归算法的边界值，也就是假定一个数据项的元素是有序的。  </p>
+<pre><code class="java">    public static int[] mergeSort(int[] c,int start,int last)&#123;
+        if(last &gt; start)&#123;
+            //也可以是(start+last)/2，这样写是为了防止数组长度很大造成两者相加超过int范围，导致溢出
+            int mid = start + (last - start)/2;
+            mergeSort(c,start,mid);//左边数组排序
+            mergeSort(c,mid+1,last);//右边数组排序
+            merge(c,start,mid,last);//合并左右数组
+        &#125;
+        return c;
+    &#125;
+    public static void merge(int[] c,int start,int mid,int last)&#123;
+        int[] temp = new int[last-start+1];//定义临时数组
+        int i = start;//定义左边数组的下标
+        int j = mid + 1;//定义右边数组的下标
+        int k = 0;
+        while(i &lt;= mid &amp;&amp; j &lt;= last)&#123;
+            if(c[i] &lt; c[j])&#123;
+                temp[k++] = c[i++];
+            &#125;else&#123;
+                temp[k++] = c[j++];
+            &#125;
+        &#125;
+        //把左边剩余数组元素移入新数组中
+        while(i &lt;= mid)&#123;
+            temp[k++] = c[i++];
+        &#125;
+        //把右边剩余数组元素移入到新数组中
+        while(j &lt;= last)&#123;
+            temp[k++] = c[j++];
+        &#125;
+        //把新数组中的数覆盖到c数组中
+        for(int k2 = 0 ; k2 &lt; temp.length ; k2++)&#123;
+            c[k2+start] = temp[k2];
+        &#125;
+    &#125;
+</code></pre>
+<p>测试:</p>
+<pre><code class="java">int[] c = &#123;2,7,8,3,1,6,9,0,5,4&#125;;
+c = mergeSort(c,0,c.length-1);
+System.out.println(Arrays.toString(c));
+</code></pre>
+<p>结果：</p>
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+<h2 id="7-消除递归"><a href="#7-消除递归" class="headerlink" title="7.消除递归"></a>7.消除递归</h2><p>一个算法作为一个递归的方法通常通概念上很容易理解，但是递归的使用在方法的调用和返回都会有额外的开销，<br>通常情况下，用递归能实现的，用循环都可以实现，而且循环的效率会更高，所以在实际应用中，把递归的算法转<br>换为非递归的算法是非常有用的。这种转换通常会使用到栈.  </p>
+<p><strong>递归和栈</strong></p>
+<p>递归和栈有这紧密的联系，而且大多数编译器都是用栈来实现递归的，当调用一个方法时，编译器会把这个方<br>法的所有参数和返回地址都压入栈中，然后把控制转移给这个方法。当这个方法返回时，这些值退栈。参数消失<br>了，并且控制权重新回到返回地址处.  </p>
+<p>调用一个方法时所发生的事:  </p>
+<ul>
+<li>当一个方法被调用时，它的参数和返回地址被压入一个栈中；</li>
+<li>这个方法可以通过获取栈顶元素的值来访问它的参数；</li>
+<li>当这个方法要返回时，它查看栈以获得返回地址，然后这个地址以及方法的所有参数退栈，并且销毁。</li>
+</ul>
+<h2 id="8-递归的有趣应用"><a href="#8-递归的有趣应用" class="headerlink" title="8.递归的有趣应用"></a>8.递归的有趣应用</h2><h3 id="8-1求一个数的乘方"><a href="#8-1求一个数的乘方" class="headerlink" title="8.1求一个数的乘方"></a>8.1求一个数的乘方</h3><pre><code>x^y= (x^2)^(y/2)，定义a=x^2,b=y/2, 则得到形如： x^y= a^b;
+</code></pre>
+<p>利用上面的等式，我们可以很方便的将乘方运算转换为乘法运算。  </p>
+<p>求xy的值，当y是偶数的时候，最后能转换成两个数相乘，当时当y是奇数的时候，最后我们必须要在返回值后<br>面额外的乘以一个x。  </p>
+<p>具体算法：</p>
+<pre><code class="java">    public static int pow(int x,int y)&#123;
+        if(x == 0 || x == 1)&#123;
+            return x;
+        &#125;
+        if(y &gt; 1)&#123;
+            int b = y/2;
+            int a = x*x;
+            if(y%2 == 1)&#123;//y为奇数
+                return pow(a,b)*x;
+            &#125;else&#123;//y为偶数
+                return pow(a,b);
+            &#125;
+        &#125;else if(y == 0)&#123;
+            return 1;
+        &#125;else&#123;//y==1
+            return x;
+        &#125;
+    &#125;
+</code></pre>
+<h3 id="8-2背包问题"><a href="#8-2背包问题" class="headerlink" title="8.2背包问题"></a>8.2背包问题</h3><p>背包问题也是计算机中的经典问题。在最简单的形式中，包括试图将不同重量的数据项放到背包中，以使得背包最<br>后达到指定的总重量.  </p>
+<p>比如：假设想要让背包精确地承重20磅，并且有 5 个可以放入的数据项，它们的重量分别是 11 磅，8 磅，7<br>磅，6 磅，5 磅。这个问题可能对于人类来说很简单，我们大概就可以计算出 8 磅+ 7 磅 + 5 磅 &#x3D; 20 磅。但是如果<br>让计算机来解决这个问题，就需要给计算机设定详细的指令了。  </p>
+<p>算法如下：  </p>
+<ul>
+<li>如果在这个过程的任何时刻，选择的数据项的总和符合目标重量，那么工作便完成了。</li>
+<li>从选择的第一个数据项开始，剩余的数据项的加和必须符合背包的目标重量减去第一个数据项的重量，这<br>是一个新的目标重量。</li>
+<li>逐个的试每种剩余数据项组合的可能性，但是注意不要去试所有的组合，因为只要数据项的和大于目标重<br>量的时候，就停止添加数据。</li>
+<li>如果没有合适的组合，放弃第一个数据项，并且从第二个数据项开始再重复一遍整个过程。</li>
+<li>继续从第三个数据项开始，如此下去直到你已经试验了所有的组合，这时才知道有没有解决方案。</li>
+</ul>
+<p>具体实现过程：</p>
+<pre><code class="java">public class Knapsack &#123;
+    private int[] weights; //可供选择的重量
+    private boolean[] selects; //记录是否被选择
+    public Knapsack(int[] weights)&#123;
+        this.weights = weights;
+        selects = new boolean[weights.length];
+    &#125;
+    /**
+     * 找出符合承重重量的组合
+     * @param total 总重量
+     * @param index 可供选择的重量下标
+     */
+    public void knapsack(int total,int index)&#123;
+        if(total &lt; 0 || total &gt; 0 &amp;&amp; index &gt;= weights.length)&#123;
+            return;//没找到解决办法，直接返回
+        &#125;
+        if(total == 0)&#123;//总重量为0，则找到解决办法了
+            for(int i = 0 ; i &lt; index ; i++)&#123;
+                if(selects[i] == true)&#123;
+                    System.out.println(weights[i]+&quot; &quot;);
+                &#125;
+            &#125;
+            System.out.println();
+            return;
+        &#125;
+        selects[index] = true;
+        knapsack(total-weights[index], index+1);
+        selects[index] = false;
+        knapsack(total, index+1);
+    &#125;
     public static void main(String[] args) &#123;
-        //单例模式
-        func1();
-    &#125;
-
-    public static void func1()&#123;
-        SingleDemo singleDemo = SingleDemo.getInstance();
-        SingleDemo singleDemo1 = SingleDemo.getInstance();
-        System.out.println(singleDemo == singleDemo1);
-
-        SingleDemo2 singleDemo2 = SingleDemo2.getInstance();
-        SingleDemo2 singleDemo21 = SingleDemo2.getInstance();
-        System.out.println(singleDemo2 == singleDemo21);
-
-        SingleDemo3 singleDemo3 = SingleDemo3.getInstance();
-        SingleDemo3 singleDemo31 = SingleDemo3.getInstance();
-        System.out.println(singleDemo3 == singleDemo31);
+        int array[] = &#123;11,9,7,6,5&#125;;
+        int total = 20;
+        Knapsack k = new Knapsack(array);
+        k.knapsack(total, 0);
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>true
-true
-true
+<h3 id="8-3组合：选择一支队伍"><a href="#8-3组合：选择一支队伍" class="headerlink" title="8.3组合：选择一支队伍"></a>8.3组合：选择一支队伍</h3><p>在数学中，组合是对事物的一种选择，而不考虑他们的顺序。  </p>
+<p>比如有5个登山队员，名称为 A,B,C,D和E。想要从这五个队员中选择三个队员去登峰，这时候如何列出所有的<br>队员组合。（不考虑顺序）  </p>
+<p>还是以递归的思想来解决：首先这五个人的组合选择三个人分成两个部分，第一部分包含A队员，第二部分不<br>包含A队员。假设把从 5 个人中选出 3 个人的组合简写为（5,3），规定 n 是这群人的大小，并且 k 是组队的大<br>小。那么根据法则可以有：  </p>
+<p>(n,k) &#x3D; (n-1,k-1) + (n-1,k)  </p>
+<p>对于从 5 个人中选择 3 个人，有：  </p>
+<p>(5,3) &#x3D; (4,2)+(4,3)  </p>
+<p>(4,2)表示已经有A队员了，然后从剩下的4个队员中选择2个队员，(4,3)表示从5个人中剔除A队员，从剩下的4<br>个队员中选择3个队员，这两种情况相加就是从5个队员中选择3个队员。  </p>
+<p>现在已经把一个大问题转换为两个小问题了。从4个人的人群中做两次选择（一次选择2个，一次选择3个），<br>而不是从5个人的人群中选择3个。  </p>
+<p>从4个人的人群中选择2个人，又可以表示为：(4,2) &#x3D; (3,1) + (3,2)，以此类推，很容易想到递归的思想。  </p>
+<p>具体实现代码：</p>
+<pre><code class="java">public class Combination &#123;
+    private char[] persons;//组中所有可供选择的人员
+    private boolean[] selects;//标记成员是否被选中，选中为true
+    public Combination(char[] persons)&#123;
+        this.persons = persons;
+        selects = new boolean[persons.length];
+    &#125;
+    public void showTeams(int teamNumber)&#123;
+        combination(teamNumber,0);
+    &#125;
+    /**
+     *
+     * @param teamNumber 需要选择的队员数
+     * @param index 从第几个队员开始选择
+     */
+    public void combination(int teamNumber,int index)&#123;
+        if(teamNumber == 0)&#123;//当teamNumber=0时，找到一组
+            for(int i = 0 ; i &lt; selects.length ; i++)&#123;
+                if(selects[i] == true)&#123;
+                    System.out.print(persons[i]+&quot; &quot;);
+                &#125;
+            &#125;
+            System.out.println();
+            return;
+        &#125;
+        //index超过组中人员总数，表示未找到
+        if(index &gt;= persons.length )&#123;
+            return;
+        &#125;
+        selects[index] = true;
+        combination(teamNumber-1, index+1);
+        selects[index] = false;
+        combination(teamNumber, index+1);
+    &#125;
+    public static void main(String[] args) &#123;
+        char[] persons = &#123;&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;&#125;;
+        Combination cb = new Combination(persons);
+        cb.showTeams(3);
+    &#125;
+&#125;
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>单例模式，保证一个类仅有一个实例，并提供一个访问它的全局访问点。  
-
-单例模式除了可以保证唯一的实例外，还有什么好处呢？
-单例模式因为Singleton类封装它的唯一实例，这样它可以严格的控制客户怎样访问它以及合适访问它。
-简单点说就是对唯一实例的受控访问。
-</code></pre>
+<h2 id="9-总结"><a href="#9-总结" class="headerlink" title="9.总结"></a>9.总结</h2><p>一个递归方法每次都是用不同的参数值反复调用自己，当某种参数值使得递归的方法返回，而不再调用自身，这种<br>情况称为边界值，也叫基值。当递归方法返回时，递归过程通过逐渐完成各层方法实例的未执行部分，而从最内层<br>返回到最外层的原始调用处。  </p>
+<p>阶乘、汉诺塔、归并排序等都可以用递归来实现，但是要注意任何可以用递归完成的算法用栈都能实现。当我<br>们发现递归的方法效率比较低时，可以考虑用循环或者栈来代替它。</p>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
