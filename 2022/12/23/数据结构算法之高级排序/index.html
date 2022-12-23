@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>设计模式之职责链模式 | 青春纪念册</title>
-  <meta name="keywords" content=" 设计模式 ">
-  <meta name="description" content="设计模式之职责链模式 | 青春纪念册">
+  <title>数据结构算法之高级排序 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之高级排序 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -756,9 +756,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-设计模式之职责链模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构算法之高级排序" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">设计模式之职责链模式</h1>
+        <h1 class="article-title">数据结构算法之高级排序</h1>
     
     <div class="article-meta">
         
@@ -770,7 +770,7 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;设计模式">设计模式</a>
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
             
         </span>
         
@@ -778,14 +778,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">设计模式</a>
+            <a class="color2">数据结构算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-15 15:52:41'>2022-12-12 11:41</time>
+            发布时间 : <time class="date" title='最后更新: 2022-12-23 11:38:29'>2022-12-23 11:12</time>
         
     </div>
     <div class="article-meta">
@@ -818,7 +818,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%A2%B3%E7%90%86%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F"><span class="toc-text">简单梳理职责链模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">职责链模式的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95"><span class="toc-text">定义业务方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F"><span class="toc-text">高级排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="toc-text">1希尔排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">1.1直接插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="toc-text">1.2希尔排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3knuth%E9%97%B4%E9%9A%94%E5%BA%8F%E5%88%97%E7%9A%84%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">1.3knuth间隔序列的希尔排序算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4%E9%97%B4%E9%9A%94%E4%B8%BA2h%E7%9A%84%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F"><span class="toc-text">1.4间隔为2h的希尔排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">2快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF"><span class="toc-text">2.1快速排序的基本思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0"><span class="toc-text">2.2快速排序的算法实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-text">2.3快速排序完整代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4%E4%BC%98%E5%8C%96%E5%88%86%E6%9E%90"><span class="toc-text">2.4优化分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -834,160 +834,227 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单梳理职责链模式"><a href="#简单梳理职责链模式" class="headerlink" title="简单梳理职责链模式"></a>简单梳理职责链模式</h1><h2 id="职责链模式的实现"><a href="#职责链模式的实现" class="headerlink" title="职责链模式的实现"></a>职责链模式的实现</h2><p>我们在公司中，经常需要提交各种申请流程，比如休假或者涨薪申请。<br>但通常我们得申请也并是都能被我们得直属领导直接审批，而是需要层层请示。  </p>
-<p>我们来看下这种生活场景如何用设计模式来实现。</p>
-<p>请求类，用来记录请求类型内容和数量等</p>
-<pre><code class="java">public class Request &#123;
-    private String requestType;
-    private String requestContent;
-    private int number;
-
-    public String getRequestType() &#123;
-        return requestType;
+        <h1 id="高级排序"><a href="#高级排序" class="headerlink" title="高级排序"></a>高级排序</h1><p>在Java数据结构和算法（三）——冒泡、选择、插入排序算法中我们介绍了三种简单的排序算法，它们的时间复杂<br>度大O表示法都是O(N2)，如果数据量少，我们还能忍受，但是数据量大，那么这三种简单的排序所需要的时间则<br>是我们所不能接受的。接着我们在讲解递归 的时候，介绍了归并排序，归并排序需要O(NlogN)，这比简单排序要<br>快了很多，但是归并排序有个缺点，它需要的空间是原始数组空间的两倍，当我们需要排序的数据占据了整个内存<br>的一半以上的空间，那么是不能使用归并排序的。  </p>
+<p>本篇博客将介绍几种高级的排序算法：希尔排序和快速排序。  </p>
+<h2 id="1希尔排序"><a href="#1希尔排序" class="headerlink" title="1希尔排序"></a>1希尔排序</h2><p>希尔排序是基于直接插入排序的，它在直接插入排序中增加了一个新特性，大大的提高了插入排序的执行效率。所<br>以在讲解希尔排序之前，我们先回顾一下直接插入排序。  </p>
+<h3 id="1-1直接插入排序"><a href="#1-1直接插入排序" class="headerlink" title="1.1直接插入排序"></a>1.1直接插入排序</h3><p>直接插入排序基本思想是每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有元素<br>为止。  </p>
+<p>实现代码为：</p>
+<pre><code class="java">  public static int[] InsertSort(int[] array)&#123;
+        int j;
+        //从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的
+        for(int i = 1 ; i &lt; array.length ; i++)&#123;
+            int tmp = array[i];//记录要插入的数据
+            j = i;
+            while(j &gt; 0 &amp;&amp; tmp &lt; array[j-1])&#123;
+                //从已经排序的序列最右边的开始比较，找到比其小的数
+                array[j] = array[j-1];
+                //向后挪动
+                j--;
+            &#125;
+            array[j] = tmp;//存在比其小的数，插入
+        &#125;
+        return array;
     &#125;
-
-    public void setRequestType(String requestType) &#123;
-        this.requestType = requestType;
-    &#125;
-
-    public String getRequestContent() &#123;
-        return requestContent;
-    &#125;
-
-    public void setRequestContent(String requestContent) &#123;
-        this.requestContent = requestContent;
-    &#125;
-
-    public int getNumber() &#123;
-        return number;
-    &#125;
-
-    public void setNumber(int number) &#123;
-        this.number = number;
-    &#125;
-&#125;
 </code></pre>
-<p>抽象管理人类，用来给各种领导类继承实现</p>
-<pre><code class="java">public abstract class Manager &#123;
-    protected String name;
-    protected Manager superior;
-
-    public Manager(String name) &#123;
-        this.name = name;
+<p>我们可以分析一下这个直接插入排序，首先我们将需要插入的数放在一个临时变量中，这也是一个标记符，标记符<br>左边的数是已经排好序的，标记符右边的数是需要排序的。接着将标记的数和左边排好序的数进行比较，假如比目<br>标数大则将左边排好序的数向右边移动一位，直到找到比其小的位置进行插入。  </p>
+<p>这里就存在一个效率问题了，如果一个很小的数在很靠近右边的位置，比如上图右边待排序的数据 1 ，那么想<br>让这个很小的数 1 插入到左边排好序的位置，那么左边排好序的数据项都必须向右移动一位，这个步骤就是将近执<br>行了N次复制，虽然不是每个数据项都必须移动N个位置，但是每个数据项平均移动了N&#x2F;2次，总共就是N2&#x2F;2，因<br>此插入排序的效率是O(N2)。  </p>
+<p><strong>那么如果以某种方式不必一个一个移动中间所有的数据项，就能把较小的数据项移动到左边，那么这个算法的执行效率会有很大的改进。</strong></p>
+<h3 id="1-2希尔排序"><a href="#1-2希尔排序" class="headerlink" title="1.2希尔排序"></a>1.2希尔排序</h3><p><strong>希尔排序应运而生了，希尔排序通过加大插入排序中元素的间隔，并在这些有间隔的元素中进行插入排序，从而使数据项能够大跨度的移动。当这些数据项排过一趟序后，希尔排序算法减小数据项的间隔再进行排序，依次进行下去，最后间隔为1时，就是我们上面说的简单的直接插入排序。</strong></p>
+<h3 id="1-3knuth间隔序列的希尔排序算法实现"><a href="#1-3knuth间隔序列的希尔排序算法实现" class="headerlink" title="1.3knuth间隔序列的希尔排序算法实现"></a>1.3knuth间隔序列的希尔排序算法实现</h3><pre><code class="java">  //希尔排序 knuth 间隔序列 3h+1
+    public static void shellKnuthSort(int[] array)&#123;
+        System.out.println(&quot;原数组为&quot;+ Arrays.toString(array));
+        int step = 1 ;
+        int len = array.length;
+        while(step &lt;= len/3)&#123;
+            step = step*3 + 1;//1,4,13,40......
+        &#125;
+        while(step &gt; 0)&#123;
+            //分别对每个增量间隔进行排序
+            for(int i = step ; i &lt; len ; i++)&#123;
+                int temp = array[i];
+                int j = i;
+                while(j &gt; step-1 &amp;&amp; temp &lt;= array[j-step])&#123;
+                    array[j] = array[j-step];
+                    j -= step;
+                &#125;
+                array[j] = temp;
+            &#125;//end for
+            System.out.println(&quot;间隔为&quot;+step+&quot;的排序结果为&quot;+Arrays.toString(array));
+            step = (step-1)/3;
+        &#125;//end while(step&gt;0)
+        System.out.println(&quot;最终排序：&quot;+Arrays.toString(array));
     &#125;
-
-    public void setSuperior(Manager superior) &#123;
-        this.superior = superior;
-    &#125;
-
-    public abstract void RequestApplication(Request request);
-&#125;
 </code></pre>
-<p>经理类，作为直属领导得实现</p>
-<pre><code class="java">//经理
-public class CommonManager extends Manager&#123;
-    public CommonManager(String name) &#123;
-        super(name);
+<p>测试用例：</p>
+<pre><code class="java">    public static void main(String[] args) &#123;
+        int[] array = &#123;4,2,8,9,5,7,6,1,3,10&#125;;
+        shellKnuthSort(array);
+    &#125;
+</code></pre>
+<p>测试结果：</p>
+<pre><code>原数组为[4, 2, 8, 9, 5, 7, 6, 1, 3, 10]
+间隔为4的排序结果为[3, 2, 6, 1, 4, 7, 8, 9, 5, 10]
+间隔为1的排序结果为[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+最终排序：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre>
+<h3 id="1-4间隔为2h的希尔排序"><a href="#1-4间隔为2h的希尔排序" class="headerlink" title="1.4间隔为2h的希尔排序"></a>1.4间隔为2h的希尔排序</h3><pre><code class="java">    //希尔排序 间隔序列2h
+    public static void shellSort(int[] array)&#123;
+        System.out.println(&quot;原数组为&quot;+Arrays.toString(array));
+        int step;
+        int len = array.length;
+        for(step = len/2 ;step &gt; 0 ; step /= 2)&#123;
+            //分别对每个增量间隔进行排序
+            for(int i = step ; i &lt; array.length ; i++)&#123;
+                int j = i;
+                int temp = array[j];
+                if(array[j] &lt; array[j-step])&#123;
+                    while(j-step &gt;=0 &amp;&amp; temp &lt; array[j-step])&#123;
+                        array[j] = array[j-step];
+                        j -= step;
+                    &#125;
+                    array[j] = temp;
+                &#125;
+            &#125;
+            System.out.println(&quot;间隔为&quot;+step+&quot;的排序结果为&quot;+Arrays.toString(array));
+        &#125;
+    &#125;
+</code></pre>
+<p>测试结果：</p>
+<pre><code>原数组为[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+间隔为5的排序结果为[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+间隔为2的排序结果为[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+间隔为1的排序结果为[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre>
+<h2 id="2快速排序"><a href="#2快速排序" class="headerlink" title="2快速排序"></a>2快速排序</h2><p>快速排序是对冒泡排序的一种改进，由C. A. R. Hoare在1962年提出的一种划分交换排序，采用的是分治策略（一<br>般与递归结合使用），以减少排序过程中的比较次数。  </p>
+<h3 id="2-1快速排序的基本思路"><a href="#2-1快速排序的基本思路" class="headerlink" title="2.1快速排序的基本思路"></a>2.1快速排序的基本思路</h3><ul>
+<li>先通过第一趟排序，将数组原地划分为两部分，其中一部分的所有数据都小于另一部分的所有数据。原数组被<br>划分为2份</li>
+<li>通过递归的处理，再对原数组分割的两部分分别划分为两部分，同样是使得其中一部分的所有数据都小于<br>另一部分的所有数据。这个时候原数组被划分为了4份</li>
+<li>就1,2被划分后的最小单元子数组来看，它们仍然是无序的，但是！ 它们所组成的原数组却逐渐向有序的<br>方向前进。</li>
+<li>这样不断划分到最后，数组就被划分为多个由一个元素或多个相同元素组成的单元，这样数组就有序了。</li>
+</ul>
+<h3 id="2-2快速排序的算法实现"><a href="#2-2快速排序的算法实现" class="headerlink" title="2.2快速排序的算法实现"></a>2.2快速排序的算法实现</h3><p>我们用[6,1,2,7,9,3,4,5,10,8]表示的是一个无序数组，选取第一个元素 6 作为基准元素。左游标是 i 哨兵，右游标是 j 哨兵。然后左游标向<br>右移动，右游标向左移动，它们遵循的规则如下：  </p>
+<ul>
+<li>左游标向右扫描，跨过所有小于基准元素的数组元素, 直到遇到一个大于或等于基准元素的数组元素，在那个位置停下。</li>
+<li>右游标向左扫描，跨过所有大于基准元素的数组元素, 直到遇到一个小于或等于基准元素的数组元素，在那个位置停下。</li>
+</ul>
+<p><strong>第一步：</strong>哨兵 j 先开始出动。因为此处设置的基准数是最左边的数，所以需要让哨兵 j 先开始出动，哨兵 j 一<br>步一步的向左挪动，直到找到一个小于 6 的元素停下来。接下来，哨兵 i 再一步一步的向右挪动，直到找到一个大<br>于 6 的元素停下来。最后哨兵 i 停在了数字 7 面前，哨兵 j 停在了数字 5 面前。  </p>
+<p><strong>交换i和j的值，即交换5和7</strong><br>此时数组为[6,1,2,5,9,3,4,7,10,8], i哨兵指向5的位置，j哨兵指向7的位置。  </p>
+<p>到此，第一次交换结束，接着哨兵 j 继续向左移动，它发现 4 比基准数 6 要小，那么在数字4面前停下来。哨兵 i<br>也接着向右移动，然后在数字 9 面前停下来，然后哨兵 i 和 哨兵 j 再次进行交换。<br>此时数组为[6,1,2,5,4,3,9,7,10,8], i哨兵指向4的位置，j哨兵指向9的位置。   </p>
+<p>第二次交换结束，哨兵 j 继续向左移动，然后在数字 3 面前停下来；哨兵 i 继续向右移动，但是它发现和哨兵 j 相<br>遇了。那么此时说明探测结束，将数字 3 和基准数字 6 进行交换.  </p>
+<p>此时数组为[3,1,2,5,4,6,9,7,10,8], i哨兵和j哨兵指向6的位置。     </p>
+<p>到此，第一次探测真正结束，此时已基准点 6 为分界线，6 左边的数组元素都小于等于6,6右边的数组元素都大于<br>等于6。  </p>
+<p>左边序列为【3,1,2,5,4】,右边序列为【9,7,10,8】。接着对于左边序列而言，以数字 3 为基准元素，重复上面<br>的探测操作，探测完毕之后的序列为【2,1,3,5,4】；对于右边序列而言，以数字 9 位基准元素，也重复上面的探测<br>操作。然后一步一步的划分，最后排序完全结束。  </p>
+<p><strong>通过这一步一步的分解，我们发现快速排序的每一轮操作就是将基准数字归位，知道所有的数都归位完成，排序就结束了。</strong>  </p>
+<h3 id="2-3快速排序完整代码"><a href="#2-3快速排序完整代码" class="headerlink" title="2.3快速排序完整代码"></a>2.3快速排序完整代码</h3><pre><code class="java">public class QuickSort &#123;
+    //数组array中下标为i和j位置的元素进行交换
+    private static void swap(int[] array , int i , int j)&#123;
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     &#125;
 
-    @Override
-    public void RequestApplication(Request request) &#123;
-        if(request.getRequestType().equals(&quot;请假&quot;)&amp;&amp;request.getNumber()&lt;=2)&#123;
-            System.out.println(name+&quot;:&quot;+request.getRequestContent()+&quot;数量 &quot;+request.getNumber()+&quot;被批准。&quot;);
+    private static void recQuickSort(int[] array,int left,int right)&#123;
+        if(right &lt;= left)&#123;
+            return;//终止递归
         &#125;else&#123;
-            if(superior!=null)&#123;
-                superior.RequestApplication(request);
+            int partition = partitionIt(array,left,right);
+            recQuickSort(array,left,partition-1);// 对上一轮排序(切分)时，基准元素左边的子数组进行递归
+            recQuickSort(array,partition+1,right);// 对上一轮排序(切分)时，基准元素右边的子数组进行递归
+        &#125;
+    &#125;
+
+    private static int partitionIt(int[] array,int left,int right) &#123;
+        //为什么 j加一个1，而i没有加1,是因为下面的循环判断是从‐‐j和++i开始的.
+        //而基准元素选的array[left],即第一个元素，所以左游标从第二个元素开始比较
+        int i = left;
+        int j = right + 1;
+        int pivot = array[left];// pivot 为选取的基准元素（头元素）
+        while (true) &#123;
+            while (i &lt; right &amp;&amp; array[++i] &lt; pivot) &#123;
+            &#125;
+            while (j &gt; 0 &amp;&amp; array[--j] &gt;pivot)&#123;
+            &#125;
+            if (i &gt;= j) &#123;// 左右游标相遇时候停止， 所以跳出外部while循环
+                break;
+            &#125; else &#123;
+                swap(array, i, j);// 左右游标未相遇时停止, 交换各自所指元素，循环继续
             &#125;
         &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>总监类，作为经理类得上级</p>
-<pre><code class="java">//总监
-public class Majordomo extends Manager&#123;
-    public Majordomo(String name) &#123;
-        super(name);
+        swap(array, left, j);//基准元素和游标相遇时所指元素交换，为最后一次交换
+        return j;// 一趟排序完成， 返回基准元素位置(注意这里基准元素已经交换位置了)
     &#125;
 
-    @Override
-    public void RequestApplication(Request request) &#123;
-        if(request.getRequestType().equals(&quot;请假&quot;)&amp;&amp;request.getNumber()&lt;=5)&#123;
-            System.out.println(name+&quot;:&quot;+request.getRequestContent()+&quot;数量 &quot;+request.getNumber()+&quot;被批准。&quot;);
-        &#125;else&#123;
-            if(superior!=null)&#123;
-                superior.RequestApplication(request);
-            &#125;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>总经理类，作为最高领导，有权决定一切</p>
-<pre><code class="java">//总经理
-public class GeneraManager extends Manager&#123;
-    public GeneraManager(String name) &#123;
-        super(name);
+    public static void sort(int[] array)&#123;
+        recQuickSort(array, 0, array.length-1);
     &#125;
 
-    @Override
-    public void RequestApplication(Request request) &#123;
-        if(request.getRequestType().equals(&quot;请假&quot;))&#123;
-            System.out.println(name+&quot;:&quot;+request.getRequestContent()+&quot;数量 &quot;+request.getNumber()+&quot;被批准。&quot;);
-        &#125;else if(request.getRequestType().equals(&quot;加薪&quot;)&amp;&amp;request.getNumber()&lt;=500)&#123;
-            System.out.println(name+&quot;:&quot;+request.getRequestContent()+&quot;数量 &quot;+request.getNumber()+&quot;被批准。&quot;);
-        &#125;else if(request.getRequestType().equals(&quot;加薪&quot;)&amp;&amp;request.getNumber()&gt;500)&#123;
-            System.out.println(name+&quot;:&quot;+request.getRequestContent()+&quot;数量 &quot;+request.getNumber()+&quot;再说吧。&quot;);
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>这样我们前期的定义就算做完了,<br>然后我们看具体应用中的使用。</p>
-<h3 id="定义业务方法"><a href="#定义业务方法" class="headerlink" title="定义业务方法"></a>定义业务方法</h3><p>看在具体业务逻辑中如何使用</p>
-<pre><code class="java">public class ChainTest &#123;
+    //测试
     public static void main(String[] args) &#123;
-        //职责链模式
-        func1();
-    &#125;
-
-    public static void func1()&#123;
-        CommonManager jingli = new CommonManager(&quot;经理&quot;);
-        Majordomo zongjian = new Majordomo(&quot;总监&quot;);
-        GeneraManager zongjingli = new GeneraManager(&quot;总经理&quot;);
-        jingli.setSuperior(zongjian);
-        zongjian.setSuperior(zongjingli);
-
-        Request request = new Request();
-        request.setRequestType(&quot;请假&quot;);
-        request.setRequestContent(&quot;员工请假&quot;);
-        request.setNumber(1);
-        jingli.RequestApplication(request);
-
-        Request request2 = new Request();
-        request2.setRequestType(&quot;请假&quot;);
-        request2.setRequestContent(&quot;员工请假&quot;);
-        request2.setNumber(4);
-        jingli.RequestApplication(request2);
-
-        Request request3 = new Request();
-        request3.setRequestType(&quot;加薪&quot;);
-        request3.setRequestContent(&quot;员工加薪申请&quot;);
-        request3.setNumber(500);
-        jingli.RequestApplication(request3);
-
-        Request request4 = new Request();
-        request4.setRequestType(&quot;加薪&quot;);
-        request4.setRequestContent(&quot;员工加薪申请&quot;);
-        request4.setNumber(1000);
-        jingli.RequestApplication(request4);
+        int[] array = &#123;9,9,8,7,6,5,4,3,2,1&#125;;
+        sort(array);
+        for(int i : array)&#123;
+            System.out.print(i+&quot; &quot;);
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><pre><code>经理:员工请假数量 1被批准。
-总监:员工请假数量 4被批准。
-总经理:员工加薪申请数量 500被批准。
-总经理:员工加薪申请数量 1000再说吧。
+<h3 id="2-4优化分析"><a href="#2-4优化分析" class="headerlink" title="2.4优化分析"></a>2.4优化分析</h3><p>假设我们是对一个逆序数组进行排序，选取第一个元素作为基准点，即最大的元素是基准点，那么第一次循环，左<br>游标要执行到最右边，而右游标执行一次，然后两者进行交换。这也会划分成很多的子数组。  </p>
+<p>那么怎么解决呢？理想状态下，应该选择被排序数组的中值数据作为基准，也就是说一半的数大于基准数，一<br>般的数小于基准数，这样会使得数组被划分为两个大小相等的子数组，对快速排序来说，<strong>拥有两个大小相等的子数组是最优的情况。</strong>  </p>
+<p><strong>三项取中划分</strong>  </p>
+<p>为了找到一个数组中的中值数据，一般是取数组中第一个、中间的、最后一个，选择这三个数中位于中间的数。 </p>
+<pre><code class="java">    //取数组下标第一个数、中间的数、最后一个数的中间值
+    private static int medianOf3(int[] array,int left,int right)&#123;
+        int center = (right-left)/2+left;
+        if(array[left] &gt; array[right])&#123; //得到 array[left] &lt; array[right]
+            swap(array, left, right);
+        &#125;
+        if(array[center] &gt; array[right])&#123; //得到 array[left] array[center] &lt; array[right]
+            swap(array, center, right);
+        &#125;
+        if(array[center] &gt; array[left])&#123; //得到 array[center] &lt; array[left] &lt; array[right]
+            swap(array, center, left);
+        &#125;
+        return array[left]; //array[left]的值已经被换成三数中的中位数， 将其返回
+    &#125;
 </code></pre>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><pre><code>职责链模式，使多个对象都有机会处理请求，从而避免请求得发起者和接收者之间耦合。
-将这个对象连城一条链，并沿着这条链传递请求，直到有一个对象处理它为止。
+<pre><code class="java">    private static int partitionIt(int[] array,int left,int right)&#123;
+        //为什么 j加一个1，而i没有加1,是因为下面的循环判断是从‐‐j和++i开始的.
+        //而基准元素选的array[left],即第一个元素，所以左游标从第二个元素开始比较
+        int i = left;
+        int j = right+1;
+        int pivot = array[left];// pivot 为选取的基准元素（头元素）
+        int size = right - left + 1;
+        if(size &gt;= 3)&#123;
+            pivot = medianOf3(array, left, right); //数组范围大于3，基准元素选择中间值。
+        &#125;
+        while(true)&#123;
+            while(i&lt;right &amp;&amp; array[++i] &lt; pivot)&#123;&#125;
+            while(j &gt; 0 &amp;&amp; array[--j] &gt; pivot)&#123;&#125;
+            if(i &gt;= j)&#123;// 左右游标相遇时候停止， 所以跳出外部while循环
+                break;
+            &#125;else&#123;
+                swap(array, i, j);// 左右游标未相遇时停止, 交换各自所指元素，循环继续
+            &#125;
+        &#125;
+        swap(array, left, j);//基准元素和游标相遇时所指元素交换，为最后一次交换
+        return j;// 一趟排序完成， 返回基准元素位置(注意这里基准元素已经交换位置了)
+    &#125;
+</code></pre>
+<p><strong>处理小划分</strong>  </p>
+<p>如果使用三数据取中划分方法，则必须遵循快速排序算法不能执行三个或者少于三个的数据，如果大量的子数<br>组都小于3个，那么使用快速排序是比较耗时的。联想到前面我们讲过简单的排序（冒泡、选择、插入）。  </p>
+<p>当数组长度小于M的时候（high-low &lt;&#x3D; M）， 不进行快排，而进行插入排序。转换参数M的最佳值和系统是<br>相关的，一般来说， 5到15间的任意值在多数情况下都能令人满意。  </p>
+<pre><code class="java">    //插入排序
+    private static void insertSort(int[] array)&#123;
+        for(int i = 1 ; i &lt; array.length ; i++)&#123;
+            int temp = array[i];
+            int j = i;
+            while(j &gt; 0 &amp;&amp; array[j-1] &gt; temp)&#123;
+                array[j] = array[j-1];
+                j--;
+            &#125;
+            array[j] = temp;
+        &#125;
+    &#125;
 </code></pre>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
