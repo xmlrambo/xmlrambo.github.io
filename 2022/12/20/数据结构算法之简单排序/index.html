@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>数据结构算法之简单排序 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之简单排序 | 青春纪念册">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="青春纪念册">
+<meta property="og:description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-09T13:19:10.000Z">
+<meta property="article:modified_time" content="2022-12-01T09:58:56.731Z">
+<meta property="article:author" content="BossLiu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/IMG_1706.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/IMG_1706.jpg"/>
+</a>
+<div class="author">
+    <span>BossLiu</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/xmlrambo"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="weibo"
+               href="https://weibo.com/u/2234281571"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/acd0a68dff7e"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/wananyanyucheng"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/ForeverLucky_"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/u/263448"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:384276224@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=384276224&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=369320275"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+    <a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(38)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="java">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        java
+                        <small>(37)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="java<--->数据结构算法">
+                                        
+                                        数据结构算法
+                                        
+                                            <small>(10
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="java<--->日常问题">
+                                        
+                                        日常问题
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="java<--->设计模式">
+                                        
+                                        设计模式
+                                        
+                                            <small>(25
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="sql">
+                        
+                        sql
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+        
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+        
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="38">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://xmlrambo.github.io/">青春纪念册</a></li>
+            
+            <li><a target="_blank" href="http://xmlrambo.gitee.io/">青春纪念册（备用地址）</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构算法</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>设计模式</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之二叉树">数据结构算法之二叉树</span>
+            <span class="post-date" title="2022-12-29 08:59:02">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之高级排序">数据结构算法之高级排序</span>
+            <span class="post-date" title="2022-12-23 11:12:52">2022/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%80%92%E5%BD%92/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之递归">数据结构算法之递归</span>
+            <span class="post-date" title="2022-12-22 11:55:46">2022/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之链表">数据结构算法之链表</span>
+            <span class="post-date" title="2022-12-22 09:10:41">2022/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%89%8D%E4%B8%AD%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之前中后缀表达式">数据结构算法之前中后缀表达式</span>
+            <span class="post-date" title="2022-12-21 09:36:11">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%98%9F%E5%88%97/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之队列">数据结构算法之队列</span>
+            <span class="post-date" title="2022-12-21 09:14:07">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A0%88/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之栈">数据结构算法之栈</span>
+            <span class="post-date" title="2022-12-21 08:35:00">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之简单排序">数据结构算法之简单排序</span>
+            <span class="post-date" title="2022-12-20 18:55:41">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之数组">数据结构算法之数组</span>
+            <span class="post-date" title="2022-12-20 11:03:58">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A6%82%E8%BF%B0/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之概述">数据结构算法之概述</span>
+            <span class="post-date" title="2022-12-20 09:10:15">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 日常问题 "
+           href="/2022/12/19/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java面向对象基础概念">java面向对象基础概念</span>
+            <span class="post-date" title="2022-12-19 19:06:58">2022/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/16/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%80%BB%E7%BB%93/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之总结">设计模式之总结</span>
+            <span class="post-date" title="2022-12-16 11:20:33">2022/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之解释器模式">设计模式之解释器模式</span>
+            <span class="post-date" title="2022-12-14 08:37:17">2022/12/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之访问者模式">设计模式之访问者模式</span>
+            <span class="post-date" title="2022-12-13 15:57:06">2022/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之享元模式">设计模式之享元模式</span>
+            <span class="post-date" title="2022-12-13 09:53:29">2022/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之中介者模式">设计模式之中介者模式</span>
+            <span class="post-date" title="2022-12-12 15:35:49">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之职责链模式">设计模式之职责链模式</span>
+            <span class="post-date" title="2022-12-12 11:41:49">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之命令模式">设计模式之命令模式</span>
+            <span class="post-date" title="2022-12-12 09:22:46">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之桥接模式">设计模式之桥接模式</span>
+            <span class="post-date" title="2022-12-11 17:45:08">2022/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之单例模式">设计模式之单例模式</span>
+            <span class="post-date" title="2022-12-10 16:07:17">2022/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之迭代器模式">设计模式之迭代器模式</span>
+            <span class="post-date" title="2022-12-08 07:50:03">2022/12/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之组合模式">设计模式之组合模式</span>
+            <span class="post-date" title="2022-12-07 19:29:54">2022/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之备忘录模式">设计模式之备忘录模式</span>
+            <span class="post-date" title="2022-12-07 07:56:31">2022/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之适配器模式">设计模式之适配器模式</span>
+            <span class="post-date" title="2022-12-06 08:53:46">2022/12/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之状态模式">设计模式之状态模式</span>
+            <span class="post-date" title="2022-12-05 14:01:16">2022/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之抽象工厂模式">设计模式之抽象工厂模式</span>
+            <span class="post-date" title="2022-12-04 17:02:36">2022/12/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之观察者模式">设计模式之观察者模式</span>
+            <span class="post-date" title="2022-12-03 10:14:52">2022/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之建造者模式">设计模式之建造者模式</span>
+            <span class="post-date" title="2022-12-02 14:38:06">2022/12/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之外观模式">设计模式之外观模式</span>
+            <span class="post-date" title="2022-12-01 14:39:56">2022/12/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之模板方法模式">设计模式之模板方法模式</span>
+            <span class="post-date" title="2022-11-30 10:04:08">2022/11/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之原型模式">设计模式之原型模式</span>
+            <span class="post-date" title="2022-11-28 22:05:57">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之工厂方法模式">设计模式之工厂方法模式</span>
+            <span class="post-date" title="2022-11-28 09:28:33">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之代理模式">设计模式之代理模式</span>
+            <span class="post-date" title="2022-11-25 11:25:11">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之装饰模式">设计模式之装饰模式</span>
+            <span class="post-date" title="2022-11-25 11:24:58">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之策略模式">设计模式之策略模式</span>
+            <span class="post-date" title="2022-11-24 17:40:34">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之简单工厂模式">设计模式之简单工厂模式</span>
+            <span class="post-date" title="2022-11-24 13:56:56">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 日常问题 "
+           href="/2022/11/23/java%E8%A7%A3%E6%9E%90%E8%AF%BB%E5%8F%96xml%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java解析读取xml文件的几种方式.md">java解析读取xml文件的几种方式.md</span>
+            <span class="post-date" title="2022-11-23 13:45:51">2022/11/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 sql "
+           href="/2022/11/21/%E8%A7%A3%E5%86%B3plsql%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E5%8F%B7%E9%97%AE%E9%A2%98/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="解决plsql中文显示问号问题">解决plsql中文显示问号问题</span>
+            <span class="post-date" title="2022-11-21 18:05:55">2022/11/21</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-数据结构算法之简单排序" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">数据结构算法之简单排序</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="java">java</a> > 
+            
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">数据结构算法</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-12-29 08:57:53'>2022-12-20 18:55</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E3%80%81%E9%80%89%E6%8B%A9%E3%80%81%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">冒泡、选择、插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-text">1冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-text">2选择排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">3插入排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E6%80%BB%E7%BB%93"><span class="toc-text">4总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="冒泡、选择、插入排序"><a href="#冒泡、选择、插入排序" class="headerlink" title="冒泡、选择、插入排序"></a>冒泡、选择、插入排序</h1><p>上一篇我们实现的数组结构是无序的，也就是纯粹按照插入顺序进行排列，<br>那么如何进行元素排序，本篇 我们介绍几种简单的排序算法。</p>
+<h2 id="1冒泡排序"><a href="#1冒泡排序" class="headerlink" title="1冒泡排序"></a>1冒泡排序</h2><p>这个名词的由来很好理解，一般河水中的冒泡，水底刚冒出来的时候是比较小的，随着慢慢向水面浮起会逐渐增大，这物理规律不作过多解释，大家只需要了解即可。</p>
+<p>冒泡算法的运作规律如下：</p>
+<ul>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的 数（也就是第一波冒泡完成）。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ul>
+<p>示例代码如下：</p>
+<pre><code class="java">public class InsertSort &#123;
+    public static int[] sort(int[] array)&#123;
+        int j;
+        //从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的
+        for(int i = 1 ; i &lt; array.length ; i++)&#123;
+            int tmp = array[i];//记录要插入的数据
+            j = i;
+            while(j &gt; 0 &amp;&amp; tmp &lt; array[j-1])&#123;
+                //从已经排序的序列最右边的开始比较，找到比其小的数
+                array[j] = array[j-1];
+                //向后挪动
+                j--;
+            &#125;
+            array[j] = tmp;//存在比其小的数，插入
+        &#125;
+        return array;
+    &#125;
+
+    //遍历显示数组
+    public static void display(int[] array)&#123;
+        for(int i = 0 ; i &lt; array.length ; i++)&#123;
+            System.out.print(array[i]+&quot; &quot;);
+        &#125;
+        System.out.println();
+    &#125;
+
+    public static void main(String[] args)&#123;
+        int[] array = &#123;4,2,8,9,5,7,6,1,3&#125;;
+        //未排序数组顺序为
+        System.out.println(&quot;未排序数组顺序为：&quot;);
+        display(array);
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        array = sort(array);
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        System.out.println(&quot;经过插入排序后的数组顺序为：&quot;);
+        display(array);
+    &#125;
+&#125;
+</code></pre>
+<p>执行结果如下：</p>
+<pre><code>未排序数组顺序为：
+4 2 8 9 5 7 6 1 3 
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+第1轮排序后的结果为:2 4 8 5 7 6 1 3 9 
+第2轮排序后的结果为:2 4 5 7 6 1 3 8 9 
+第3轮排序后的结果为:2 4 5 6 1 3 7 8 9 
+第4轮排序后的结果为:2 4 5 1 3 6 7 8 9 
+第5轮排序后的结果为:2 4 1 3 5 6 7 8 9 
+第6轮排序后的结果为:2 1 3 4 5 6 7 8 9 
+第7轮排序后的结果为:1 2 3 4 5 6 7 8 9 
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+经过冒泡排序后的数组顺序为：
+1 2 3 4 5 6 7 8 9 
+</code></pre>
+<p>本来应该是 8 轮排序的，这里我们只进行了 7 轮排序，因为第 7 轮排序之后已经是有序数组了。</p>
+<p><strong>冒泡排序解释</strong><br>冒泡排序是由两个for循环构成，第一个for循环的变量 i 表示总共需要多少轮比较，第二个for循环的变量 j 表示每轮参与比较的元素下标【0,1，……，length-i】，因为每轮比较都会出现一个最大值放在最右边，所以每轮比 较后的元素个数都会少一个，这也是为什么 j 的范围是逐渐减小的。相信大家理解之后快速写出一个冒泡排序并不难。</p>
+<p><strong>冒泡排序性能分析</strong><br>假设参与比较的数组元素个数为 N，则第一轮排序有 N-1 次比较，第二轮有 N-2 次，如此类推，这种序列的 求和公式为：<br>（N-1）+（N-2）+…+1 &#x3D; N*（N-1）&#x2F;2<br>当 N 的值很大时，算法比较次数约为 N2&#x2F;2次比较，忽略减1。  </p>
+<p>假设数据是随机的，那么每次比较可能要交换位置，可能不会交换，假设概率为50%，那么交换次数为 N2&#x2F;4。不过如果是最坏的情况，初始数据是逆序的，那么每次比较都要交换位置。  </p>
+<p>交换和比较次数都和N2 成正比。由于常数不算大 O 表示法中，忽略 2 和 4，那么冒泡排序运行都需要 O(N2) 时间级别。  </p>
+<p>其实无论何时，只要看见一个循环嵌套在另一个循环中，我们都可以怀疑这个算法的运行时间为 O(N2)级，外层循环执行 N 次，内层循环对每一次外层循环都执行N次（或者几分之N次）。这就意味着大约需要执行N2次某个基本操作。</p>
+<h2 id="2选择排序"><a href="#2选择排序" class="headerlink" title="2选择排序"></a>2选择排序</h2><p>选择排序是每一次从待排序的数据元素中选出最小的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。<br>分为三步： </p>
+<ul>
+<li>从待排序序列中，找到关键字最小的元素 </li>
+<li>如果最小元素不是待排序序列的第一个元素，将其和第一个元素互换 </li>
+<li>从余下的 N - 1 个元素中，找出关键字最小的元素，重复(1)、(2)步，直到排序结束</li>
+</ul>
+<p>示例代码如下：</p>
+<pre><code class="java">public class ChoiceSort &#123;
+    public static int[] sort(int[] array) &#123;
+        //总共要经过N‐1轮比较
+        for (int i = 0; i &lt; array.length-1; i++)&#123;
+            int min = i;
+            //每轮需要比较的次数
+            for (int j = i + 1; j &lt; array.length; j++) &#123;
+                if (array[j] &lt; array[min]) &#123;
+                    min = j;//记录目前能找到的最小值元素的下标
+                &#125;
+            &#125;
+            //将找到的最小值和i位置所在的值进行交换
+            if (i != min) &#123;
+                int temp = array[i];
+                array[i] = array[min];
+                array[min] = temp;
+            &#125;
+            //第 i轮排序的结果为
+            System.out.print(&quot;第&quot; + (i + 1) + &quot;轮排序后的结果为:&quot;);
+            display(array);
+        &#125;
+        return array;
+    &#125;
+
+    //遍历显示数组
+    public static void display(int[] array)&#123;
+        for(int i = 0 ; i &lt; array.length ; i++)&#123;
+            System.out.print(array[i]+&quot; &quot;);
+        &#125;
+        System.out.println();
+    &#125;
+
+    public static void main(String[] args)&#123;
+        int[] array = &#123;4,2,8,9,5,7,6,1,3&#125;;
+        //未排序数组顺序为
+        System.out.println(&quot;未排序数组顺序为：&quot;);
+        display(array);
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        array = sort(array);
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        System.out.println(&quot;经过选择排序后的数组顺序为：&quot;);
+        display(array);
+    &#125;
+&#125;
+</code></pre>
+<p>运行结果：</p>
+<pre><code>未排序数组顺序为：
+4 2 8 9 5 7 6 1 3 
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+第1轮排序后的结果为:1 2 8 9 5 7 6 4 3 
+第2轮排序后的结果为:1 2 8 9 5 7 6 4 3 
+第3轮排序后的结果为:1 2 3 9 5 7 6 4 8 
+第4轮排序后的结果为:1 2 3 4 5 7 6 9 8 
+第5轮排序后的结果为:1 2 3 4 5 7 6 9 8 
+第6轮排序后的结果为:1 2 3 4 5 6 7 9 8 
+第7轮排序后的结果为:1 2 3 4 5 6 7 9 8 
+第8轮排序后的结果为:1 2 3 4 5 6 7 8 9 
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+经过选择排序后的数组顺序为：
+1 2 3 4 5 6 7 8 9 
+</code></pre>
+<p><strong>选择排序性能分析</strong><br>选择排序和冒泡排序执行了相同次数的比较：N*（N-1）&#x2F;2，但是至多只进行了N次交换。  </p>
+<p>当 N 值很大时，比较次数是主要的，所以和冒泡排序一样，用大O表示是O(N2)时间级别。但是由于选择排序交换的次数少，所以选择排序无疑是比冒泡排序快的。当N值较小时，如果交换时间比选择时间大的多，那么选择排序是相当快的。</p>
+<h2 id="3插入排序"><a href="#3插入排序" class="headerlink" title="3插入排序"></a>3插入排序</h2><p>直接插入排序基本思想是每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有 元素为止。  </p>
+<p>插入排序还分为直接插入排序、二分插入排序、链表插入排序、希尔排序等等，这里我们只是以直接插入排序 讲解，后面讲高级排序的时候会将其他的。  </p>
+<p>示例代码如下：</p>
+<pre><code class="java">public class InsertSort &#123;
+    public static int[] sort(int[] array)&#123;
+        int j;
+        //从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的
+        for(int i = 1 ; i &lt; array.length ; i++)&#123;
+            int tmp = array[i];//记录要插入的数据
+            j = i;
+            while(j &gt; 0 &amp;&amp; tmp &lt; array[j-1])&#123;
+                //从已经排序的序列最右边的开始比较，找到比其小的数
+                array[j] = array[j-1];
+                //向后挪动
+                j--;
+            &#125;
+            array[j] = tmp;//存在比其小的数，插入
+        &#125;
+        return array;
+    &#125;
+
+    //遍历显示数组
+    public static void display(int[] array)&#123;
+        for(int i = 0 ; i &lt; array.length ; i++)&#123;
+            System.out.print(array[i]+&quot; &quot;);
+        &#125;
+        System.out.println();
+    &#125;
+
+    public static void main(String[] args)&#123;
+        int[] array = &#123;4,2,8,9,5,7,6,1,3&#125;;
+        //未排序数组顺序为
+        System.out.println(&quot;未排序数组顺序为：&quot;);
+        display(array);
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        array = sort(array);
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        System.out.println(&quot;经过插入排序后的数组顺序为：&quot;);
+        display(array);
+    &#125;
+&#125;
+</code></pre>
+<p>运行结果：</p>
+<pre><code>未排序数组顺序为：
+4 2 8 9 5 7 6 1 3 
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+经过插入排序后的数组顺序为：
+1 2 3 4 5 6 7 8 9 
+</code></pre>
+<p><strong>插入排序性能分析</strong><br>在第一轮排序中，它最多比较一次，第二轮最多比较两次，一次类推，第N轮，最多比较N-1次。<br>因此有 1+2+3+…+N-1&#x3D;N*（N-1）&#x2F;2。  </p>
+<p>假设在每一轮排序发现插入点时，平均只有全体数据项的一半真的进行了比较，我们除以2得到：N*（N- 1）&#x2F;4。<br>用大O表示法大致需要需要 O(N2) 时间级别。</p>
+<p>复制的次数大致等于比较的次数，但是一次复制与一次交换的时间耗时不同，所以相对于随机数据，插入排序比冒泡快一倍，比选择排序略快。</p>
+<p>这里需要注意的是，如果要进行逆序排列，那么每次比较和移动都会进行，这时候并不会比冒泡排序快。</p>
+<h2 id="4总结"><a href="#4总结" class="headerlink" title="4总结"></a>4总结</h2><p>上面讲的三种排序，冒泡、选择、插入用大 O 表示法都需要 O(N2) 时间级别。一般不会选择冒泡排序，虽然冒泡排序书写是最简单的，但是平均性能是没有选择排序和插入排序好的。   </p>
+<p>选择排序把交换次数降低到最低，但是比较次数还是挺大的。当数据量小，并且交换数据相对于比较数据更加 耗时的情况下，可以应用选择排序。   </p>
+<p>在大多数情况下，假设数据量比较小或基本有序时，插入排序是三种算法中最好的选择。   </p>
+<p>后面我们会讲解高级排序，大O表示法的时间级别将比O(N2)小。</p>
+<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'bfcd27a804f71cfad5a0',
+            clientSecret: '77a760ab4dd835aa828e1bbc86680fb6246d4d63',
+            repo: 'xmlrambo.github.io',
+            owner: 'xmlrambo',
+            admin: ['xmlrambo'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2022-至今 xmlrambo
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+    
+    
+</div>
+
+
+</html>
