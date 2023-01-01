@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构算法之队列 | 青春纪念册</title>
+  <title>数据结构算法之哈希表 | 青春纪念册</title>
   <meta name="keywords" content=" 数据结构算法 ">
-  <meta name="description" content="数据结构算法之队列 | 青春纪念册">
+  <meta name="description" content="数据结构算法之哈希表 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -792,9 +792,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构算法之队列" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构算法之哈希表" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构算法之队列</h1>
+        <h1 class="article-title">数据结构算法之哈希表</h1>
     
     <div class="article-meta">
         
@@ -821,7 +821,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-29 08:57:53'>2022-12-21 09:14</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-01 09:00:13'>2023-01-01 08:45</time>
         
     </div>
     <div class="article-meta">
@@ -854,7 +854,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%9F%E5%88%97"><span class="toc-text">队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%98%9F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">1.队列的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-java%E6%A8%A1%E6%8B%9F%E5%8D%95%E5%90%91%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0"><span class="toc-text">2.java模拟单向队列实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="toc-text">3.双端队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97"><span class="toc-text">4.优先级队列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-text">哈希表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%95%E5%85%A5"><span class="toc-text">1.哈希函数的引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%86%B2%E7%AA%81"><span class="toc-text">2.冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BC%80%E6%94%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="toc-text">3.开放地址法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B"><span class="toc-text">3.1 线性探测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E8%A3%85%E5%A1%AB%E5%9B%A0%E5%AD%90"><span class="toc-text">3.2 装填因子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%BA%8C%E6%AC%A1%E6%8E%A2%E6%B5%8B"><span class="toc-text">3.3 二次探测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%86%8D%E5%93%88%E5%B8%8C%E6%B3%95"><span class="toc-text">3.4 再哈希法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%93%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="toc-text">4.链地址法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%A1%B6"><span class="toc-text">5.桶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%80%BB%E7%BB%93"><span class="toc-text">6.总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -870,184 +870,401 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>前面一篇博客我们讲解了并不像数组一样完全作为存储数据功能，而是作为构思算法的辅助工具的数据结构——<br>栈，本篇博客我们介绍另外一个这样的工具——队列。栈是后进先出，而队列刚好相反，是先进先出。</p>
-<h2 id="1-队列的基本概念"><a href="#1-队列的基本概念" class="headerlink" title="1.队列的基本概念"></a>1.队列的基本概念</h2><p>队列（queue）是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端<br>（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表。进行插入操作的端称为队尾，进行删除操作<br>的端称为队头。队列中没有元素时，称为空队列。  </p>
-<p>队列的数据元素又称为队列元素。在队列中插入一个队列元素称为入队，从队列中删除一个队列元素称为出<br>队。因为队列只允许在一端插入，在另一端删除，所以只有最早进入队列的元素才能最先从队列中删除，故队列又<br>称为先进先出（FIFO—first in first out）线性表。  </p>
-<p>比如我们去电影院排队买票，第一个进入排队序列的都是第一个买到票离开队列的人，而最后进入排队序列排<br>队的都是最后买到票的。  </p>
-<p>再比如在计算机操作系统中，有各种队列在安静的工作着，比如打印机在打印列队中等待打印。  </p>
-<p><strong>队列分为：</strong></p>
+        <h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><p>Hash表也称散列表，也有直接译作哈希表，Hash表是一种根据关键字值（key - value）而直接进行访问的数据<br>结构。它基于数组，通过把关键字映射到数组的某个下标来加快查找速度，但是又和数组、链表、树等数据结构不<br>同，在这些数据结构中查找某个关键字，通常要遍历整个数据结构，也就是O(N)的时间级，但是对于哈希表来说，<br>只是O(1)的时间级。<br>注意，这里有个重要的问题就是如何把关键字转换为数组的下标，这个转换的函数称为哈希函数（也称散列函<br>数），转换的过程称为哈希化。  </p>
+<h2 id="1-哈希函数的引入"><a href="#1-哈希函数的引入" class="headerlink" title="1.哈希函数的引入"></a>1.哈希函数的引入</h2><p>大家都用过字典，字典的优点是我们可以通过前面的目录快速定位到所要查找的单词。如果我们想把一本英文<br>字典的每个单词，从 a 到 zyzzyva(这是牛津字典的最后一个单词)，都写入计算机内存，以便快速读写，那么哈希<br>表是个不错的选择。  </p>
+<p>这里我们将范围缩小点，比如想在内存中存储5000个英文单词。我们可能想到每个单词会占用一个数组单<br>元，那么数组的大小是5000，同时可以用数组下标存取单词，这样设想很完美，但是数组下标和单词怎么建立联<br>系呢？  </p>
+<p>首先我们要建立单词和数字（数组下标）的关系：  </p>
+<p>我们知道 ASCII 是一种编码，其中 a 表示97，b表示98，以此类推，一直到122表示z，而每个单词都是由这26<br>个字母组成，我们可以不用 ASCII 编码那么大的数字，自己设计一套类似 ASCII的编码，比如a表示1，b表示2，依<br>次类推，z表示26，那么表示方法我们就知道了。  </p>
+<p>接下来如何把单个字母的数字组合成代表整个单词的数字呢？  </p>
 <ul>
-<li>单向队列（Queue）：只能在一端插入数据，另一端删除数据。</li>
-<li>双向队列（Deque）：每一端都可以进行插入数据和删除数据操作。</li>
+<li><strong>1.把数字相加</strong><br>首先第一种简单的方法就是把单词的每个字母表示的数字相加，得到的和便是数组的下标。</li>
 </ul>
-<p>这里我们还会介绍一种队列——优先级队列，优先级队列是比栈和队列更专用的数据结构，在优先级队列中，<br>数据项按照关键字进行排序，关键字最小（或者最大）的数据项往往在队列的最前面，而数据项在插入的时候都会<br>插入到合适的位置以确保队列的有序。  </p>
-<h2 id="2-java模拟单向队列实现"><a href="#2-java模拟单向队列实现" class="headerlink" title="2.java模拟单向队列实现"></a>2.java模拟单向队列实现</h2><p>在实现之前，我们先看下面几个问题：  </p>
+<p>比如单词 cats 转换成数字：cats&#x3D;3+1+20+19&#x3D;43  </p>
+<p>那么单词 cats 存储在数组中的下标为43，所有的英文单词都可以用这个办法转换成数组下标。但是这个办法<br>真的可行吗？  </p>
+<p>假设我们约定一个单词最多有 10 个字母，那么字典的最后一个单词为 zzzzzzzzzz ，其转换为数字：  </p>
+<p>zzzzzzzzzz &#x3D; 26*10 &#x3D; 260  </p>
+<p>那么我们可以得到单词编码的范围是从1-260。很显然，这个范围是不够存储5000个单词的，那么肯定有一个<br>位置存储了多个单词，每个数组的数据项平均要存储192个单词（5000除以260）。  </p>
+<p>对于上面的问题，我们如何解决呢？  </p>
+<p><strong>第一种方法</strong>：考虑每个数组项包含一个子数组或者一个子链表，这个办法存数据项确实很快，但是如果我们想<br>要从192个单词中查找到其中一个，那么还是很慢。<br><strong>第二种方法</strong>：为啥要让那么多单词占据同一个数据项呢？也就是说我们没有把单词分的足够开，数组能表示的<br>元素太少，我们需要扩展数组的下标，使其每个位置都只存放一个单词。  </p>
+<p>对于上面的第二种方法，问题产生了，我们如何扩展数组的下标呢？  </p>
 <ul>
-<li>与栈不同的是，队列中的数据不总是从数组的0下标开始的，移除一些队头front的数据后，队头指针会指<br>向一个较高的下标位置</li>
-<li>我们再设计时，队列中新增一个数据时，队尾的指针rear 会向上移动，也就是向下标大的方向。移除数据项<br>时，队头指针 front 向上移动。那么这样设计好像和现实情况相反，比如排队买电影票，队头的买完票就离开了，<br>然后队伍整体向前移动。在计算机中也可以在队列中删除一个数之后，队列整体向前移动，但是这样做效率很差。<br>我们选择的做法是移动队头和队尾的指针。</li>
-<li>如果向第2步这样移动指针，相信队尾指针很快就移动到数据的最末端了，这时候可能移除过数据，那么<br>队头会有空着的位置，然后新来了一个数据项，由于队尾不能再向上移动了，那该怎么办呢？<br>为了避免队列不满却不能插入新的数据，我们可以让队尾指针绕回到数组开始的位置，这也称为“循环队列”。</li>
+<li><strong>2.幂的连乘</strong></li>
 </ul>
-<p>java实现代码如下：</p>
-<pre><code class="java">public class MyQueue &#123;
-    private Object[] queArray;
-    //队列总大小
-    private int maxSize;
-    //前端
-    private int front;
-    //后端
-    private int rear;
-    //队列中元素的实际数目
-    private int nItems;
-    public MyQueue(int s)&#123;
-        maxSize = s;
-        queArray = new Object[maxSize];
-        front = 0;
-        rear = -1;
-        nItems = 0;
+<p>我们将单词表示的数拆成数列，用适当的 27 的幂乘以这些位数（因为有26个可能的字符，以及空格，一共27<br>个），然后把乘积相加，这样就得出了每个单词独一无二的数字。  </p>
+<p>比如把单词cats 转换为数字：  </p>
+<p>cats&#x3D;3273+1272+20271+19270&#x3D;59049+729+540+19&#x3D;60337  </p>
+<p>这个过程会为每个单词创建一个独一无二的数，但是注意的是我们这里只是计算了 4 个字母组成的单词，如果<br>单词很长，比如最长的10个字母的单词 zzzzzzzzzz，仅仅是279 结果就超出了7000000000000，这个结果是很巨<br>大的，在实际内存中，根本不可能为一个数组分配这么大的空间。  </p>
+<p>所以这个方案的问题就是虽然为每个单词都分配了独一无二的下标，但是只有一小部分存放了单词，很大一部<br>分都是空着的。那么现在就需要一种方法，把数位幂的连乘系统中得到的巨大的整数范围压缩到可接受的数组范围<br>中。   </p>
+<p>对于英语字典，假设只有5000个单词，这里我们选定容量为10000 的数组空间来存放（后面会介绍为啥需要<br>多出一倍的空间）。那么我们就需要将从 0 到超过 7000000000000 的范围，压缩到从0到10000的范围。  </p>
+<p>第一种方法：取余，得到一个数被另一个整数除后的余数。首先我们假设要把从0-199的数字（用<br>largeNumber表示），压缩为从0-9的数字（用smallNumber表示），后者有10个数，所以变量smallRange 的值<br>为10，这个转换的表达式为：<br>smallNumber &#x3D; largeNumber % smallRange<br>当一个数被 10 整除时，余数一定在0-9之间，这样，我们就把从0-199的数压缩为从0-9的数，压缩率为 20:1。  </p>
+<p>我们也可以用类似的方法把表示单词唯一的数压缩成数组的下标：<br>arrayIndex &#x3D; largerNumber % smallRange  </p>
+<p><strong>这也就是哈希函数。它把一个大范围的数字哈希（转化）成一个小范围的数字，这个小范围的数对应着数组的下标。使用哈希函数向数组插入数据后，这个数组就是哈希表</strong></p>
+<h2 id="2-冲突"><a href="#2-冲突" class="headerlink" title="2.冲突"></a>2.冲突</h2><p>把巨大的数字范围压缩到较小的数字范围，那么肯定会有几个不同的单词哈希化到同一个数组下标，即产生了<strong>冲突</strong>。  </p>
+<p>冲突可能会导致哈希化方案无法实施，前面我们说指定的数组范围大小是实际存储数据的两倍，因此可能有一<br>半的空间是空着的，所以，当冲突产生时，一个方法是通过系统的方法找到数组的一个空位，并把这个单词填入，<br>而不再用哈希函数得到数组的下标，这种方法称为开放地址法。比如加入单词 cats 哈希化的结果为5421，但是它<br>的位置已经被单词parsnip占用了，那么我们会考虑将单词 cats 存放在parsnip后面的一个位置 5422 上。  </p>
+<p>另一种方法，前面我们也提到过，就是数组的每个数据项都创建一个子链表或子数组，那么数组内不直接存放<br>单词，当产生冲突时，新的数据项直接存放到这个数组下标表示的链表中，这种方法称为链地址法。  </p>
+<h2 id="3-开放地址法"><a href="#3-开放地址法" class="headerlink" title="3.开放地址法"></a>3.开放地址法</h2><p>开发地址法中，若数据项不能直接存放在由哈希函数所计算出来的数组下标时，就要寻找其他的位置。分别有<br>三种方法：线性探测、二次探测以及再哈希法。  </p>
+<h3 id="3-1-线性探测"><a href="#3-1-线性探测" class="headerlink" title="3.1 线性探测"></a>3.1 线性探测</h3><p>在线性探测中，它会线性的查找空白单元。比如如果 5421 是要插入数据的位置，但是它已经被占用了，那么<br>就使用5422，如果5422也被占用了，那么使用5423，以此类推，数组下标依次递增，直到找到空白的位置。这就<br>叫做线性探测，因为它沿着数组下标一步一步顺序的查找空白单元。  </p>
+<p>代码如下：</p>
+<pre><code class="java">public class MyHashTable &#123;
+    private DataItem[] hashArray; //DataItem类，表示每个数据项信息
+    private int arraySize;//数组的初始大小
+    private int itemNum;//数组实际存储了多少项数据
+    private DataItem nonItem;//用于删除数据项
+    public MyHashTable(int arraySize)&#123;
+        this.arraySize = arraySize;
+        hashArray = new DataItem[arraySize];
+        nonItem = new DataItem(-1);//删除的数据项下标为‐1
     &#125;
-    //队列中新增数据
-    public void insert(int value)&#123;
+    //判断数组是否存储满了
+    public boolean isFull()&#123;
+        return (itemNum == arraySize);
+    &#125;
+    //判断数组是否为空
+    public boolean isEmpty()&#123;
+        return (itemNum == 0);
+    &#125;
+    //打印数组内容
+    public void display()&#123;
+        System.out.println(&quot;Table:&quot;);
+        for(int j = 0 ; j &lt; arraySize ; j++)&#123;
+            if(hashArray[j] != null)&#123;
+                System.out.print(hashArray[j].getKey() + &quot; &quot;);
+            &#125;else&#123;
+                System.out.print(&quot;** &quot;);
+            &#125;
+        &#125;
+    &#125;
+    //通过哈希函数转换得到数组下标
+    public int hashFunction(int key)&#123;
+        return key%arraySize;
+    &#125;
+    //插入数据项
+    public void insert(DataItem item)&#123;
         if(isFull())&#123;
-            System.out.println(&quot;队列已满！！！&quot;);
-        &#125;else&#123;
-            //如果队列尾部指向顶了，那么循环回来，执行队列的第一个元素
-            if(rear == maxSize -1)&#123;
-                rear = -1;
-            &#125;
-            //队尾指针加1，然后在队尾指针处插入新的数据
-            queArray[++rear] = value;
-            nItems++;
+            //扩展哈希表
+            System.out.println(&quot;哈希表已满，重新哈希化...&quot;);
+            extendHashTable();
         &#125;
-    &#125;
-    //移除数据
-    public Object remove()&#123;
-        Object removeValue = null ;
-        if(!isEmpty())&#123;
-            removeValue = queArray[front];
-            queArray[front] = null;
-            front++;
-            if(front == maxSize)&#123;
-                front = 0;
-            &#125;
-            nItems--;
-            return removeValue;
+        int key = item.getKey();
+        int hashVal = hashFunction(key);
+        while(hashArray[hashVal] != null &amp;&amp; hashArray[hashVal].getKey() != -1)&#123;
+            ++hashVal;
+            hashVal %= arraySize;
         &#125;
-        return removeValue;
+        hashArray[hashVal] = item;
+        itemNum++;
     &#125;
 
-    //查看对头数据
-    public Object peekFront()&#123;
-        return queArray[front];
+    /**
+     * 数组有固定的大小，而且不能扩展，所以扩展哈希表只能另外创建一个更大的数组，然后把旧数组中的数据插到新的数组中。
+     * 但是哈希表是根据数组大小计算给定数据的位置的，所以这些数据项不能再放在新数组中和老数组相同的位置上。
+     * 因此不能直接拷贝，需要按顺序遍历老数组，并使用insert方法向新数组中插入每个数据项。
+     * 这个过程叫做重新哈希化。这是一个耗时的过程，但如果数组要进行扩展，这个过程是必须的。
+     */
+    public void extendHashTable()&#123;
+        int num = arraySize;
+        itemNum = 0;//重新计数，因为下面要把原来的数据转移到新的扩张的数组中
+        arraySize *= 2;//数组大小翻倍
+        DataItem[] oldHashArray = hashArray;
+        hashArray = new DataItem[arraySize];
+        for(int i = 0 ; i &lt; num ; i++)&#123;
+            insert(oldHashArray[i]);
+        &#125;
     &#125;
-    //判断队列是否满了
+    //删除数据项
+    public DataItem delete(int key)&#123;
+        if(isEmpty())&#123;
+            System.out.println(&quot;Hash Table is Empty!&quot;);
+            return null;
+        &#125;
+        int hashVal = hashFunction(key);
+        while(hashArray[hashVal] != null)&#123;
+            if(hashArray[hashVal].getKey() == key)&#123;
+                DataItem temp = hashArray[hashVal];
+                hashArray[hashVal] = nonItem;//nonItem表示空Item,其key为‐1
+                itemNum--;
+                return temp;
+            &#125;
+            ++hashVal;
+            hashVal %= arraySize;
+        &#125;
+        return null;
+    &#125;
+    //查找数据项
+    public DataItem find(int key)&#123;
+        int hashVal = hashFunction(key);
+        while(hashArray[hashVal] != null)&#123;
+            if(hashArray[hashVal].getKey() == key)&#123;
+                return hashArray[hashVal];
+            &#125;
+            ++hashVal;
+            hashVal %= arraySize;
+        &#125;
+        return null;
+    &#125;
+    public static class DataItem&#123;
+        private int iData;
+        public DataItem(int iData)&#123;
+            this.iData = iData;
+        &#125;
+        public int getKey()&#123;
+            return iData;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>需要注意的是，当哈希表变得太满时，我们需要扩展数组，但是需要注意的是，数据项不能放到新数组中和老<br>数组相同的位置，而是要根据数组大小重新计算插入位置。这是一个比较耗时的过程，所以一般我们要确定数据的<br>范围，给定好数组的大小，而不再扩容。  </p>
+<p>另外，当哈希表变得比较满时，我们每插入一个新的数据，都要频繁的探测插入位置，因为可能很多位置都被<br>前面插入的数据所占用了，这称为聚集。数组填的越满，聚集越可能发生。  </p>
+<p>这就像人群，当某个人在商场晕倒时，人群就会慢慢聚集。最初的人群聚过来是因为看到了那个倒下的人，而<br>后面聚过来的人是因为它们想知道这些人聚在一起看什么。人群聚集的越大，吸引的人就会越多。  </p>
+<h3 id="3-2-装填因子"><a href="#3-2-装填因子" class="headerlink" title="3.2 装填因子"></a>3.2 装填因子</h3><p>已填入哈希表的数据项和表长的比率叫做装填因子，比如有10000个单元的哈希表填入了6667 个数据后，其<br>装填因子为 2&#x2F;3。当装填因子不太大时，聚集分布的比较连贯，而装填因子比较大时，则聚集发生的很大了。  </p>
+<p>我们知道线性探测是一步一步的往后面探测，当装填因子比较大时，会频繁的产生聚集，那么如果我们探测比<br>较大的单元，而不是一步一步的探测呢，这就是下面要讲的二次探测。  </p>
+<h3 id="3-3-二次探测"><a href="#3-3-二次探测" class="headerlink" title="3.3 二次探测"></a>3.3 二次探测</h3><p>二测探测是防止聚集产生的一种方式，思想是探测相距较远的单元，而不是和原始位置相邻的单元。  </p>
+<p>线性探测中，如果哈希函数计算的原始下标是x, 线性探测就是x+1, x+2, x+3, 以此类推；而在二次探测中，探<br>测的过程是x+1, x+4, x+9, x+16，以此类推，到原始位置的距离是步数的平方。二次探测虽然消除了原始的聚集问<br>题，但是产生了另一种更细的聚集问题，叫二次聚集：比如讲184，302，420和544依次插入表中，它们的映射都<br>是7，那么302需要以1为步长探测，420需要以4为步长探测， 544需要以9为步长探测。只要有一项其关键字映射<br>到7，就需要更长步长的探测，这个现象叫做二次聚集。二次聚集不是一个严重的问题，但是二次探测不会经常使<br>用，因为还有好的解决方法，比如再哈希法。  </p>
+<h3 id="3-4-再哈希法"><a href="#3-4-再哈希法" class="headerlink" title="3.4 再哈希法"></a>3.4 再哈希法</h3><p>为了消除原始聚集和二次聚集，我们使用另外一种方法：再哈希法。  </p>
+<p>我们知道二次聚集的原因是，二测探测的算法产生的探测序列步长总是固定的：1,4，9,16以此类推。那么我<br>们想到的是需要产生一种依赖关键字的探测序列，而不是每个关键字都一样，那么，不同的关键字即使映射到相同<br>的数组下标，也可以使用不同的探测序列。  </p>
+<p>方法是把关键字用不同的哈希函数再做一遍哈希化，用这个结果作为步长。对于指定的关键字，步长在整个探<br>测中是不变的，不过不同的关键字使用不同的步长。  </p>
+<p>第二个哈希函数必须具备如下特点：  </p>
+<ol>
+<li>和第一个哈希函数不同</li>
+<li>不能输出0（否则，将没有步长，每次探测都是原地踏步，算法将陷入死循环）。</li>
+</ol>
+<p>专家们已经发现下面形式的哈希函数工作的非常好：stepSize &#x3D; constant - key % constant; 其中constant是<br>质数，且小于数组容量。 再哈希法要求表的容量是一个质数，假如表长度为15(0-14)，非质数，有一个特定关<br>键字映射到0，步长为5，则探测序列是0,5,10,0,5,10,以此类推一直循环下去。算法只尝试这三个单元，所以不可能<br>找到某些空白单元，最终算法导致崩溃。如果数组容量为13, 质数，探测序列最终会访问所有单元。即<br>0,5,10,2,7,12,4,9,1,6,11,3,一直下去，只要表中有一个空位，就可以探测到它。  </p>
+<p>完整再哈希法代码如下：</p>
+<pre><code class="java">public class HashDouble &#123;
+    private DataItem[] hashArray; //DataItem类，表示每个数据项信息
+    private int arraySize;//数组的初始大小
+    private int itemNum;//数组实际存储了多少项数据
+    private DataItem nonItem;//用于删除数据项
+    public HashDouble()&#123;
+        this.arraySize = 13;
+        hashArray = new DataItem[arraySize];
+        nonItem = new DataItem(-1);//删除的数据项下标为‐1
+    &#125;
+    //判断数组是否存储满了
     public boolean isFull()&#123;
-        return (nItems == maxSize);
+        return (itemNum == arraySize);
     &#125;
-    //判断队列是否为空
+    //判断数组是否为空
     public boolean isEmpty()&#123;
-        return (nItems ==0);
+        return (itemNum == 0);
     &#125;
-    //返回队列的大小
-    public int getSize()&#123;
-        return nItems;
-    &#125;
-&#125;
-</code></pre>
-<p>测试代码如下：</p>
-<pre><code class="java">public class MyQueueTest &#123;
-    public static void main(String[] args) &#123;
-        MyQueue queue = new MyQueue(3);
-        queue.insert(1);
-        queue.insert(2);
-        queue.insert(3);//queArray数组数据为[1,2,3]
-        System.out.println(queue.peekFront()); //1
-        queue.remove();//queArray数组数据为[null,2,3]
-        System.out.println(queue.peekFront()); //2
-        queue.insert(4);//queArray数组数据为[4,2,3]
-        queue.insert(5);//队列已满,queArray数组数据为[4,2,3]
-    &#125;
-&#125;
-</code></pre>
-<p>运行结果：</p>
-<pre><code>1
-2
-队列已满！！！
-</code></pre>
-<h2 id="3-双端队列"><a href="#3-双端队列" class="headerlink" title="3.双端队列"></a>3.双端队列</h2><p>双端队列就是一个两端都是结尾或者开头的队列， 队列的每一端都可以进行插入数据项和移除数据项，这些方<br>法可以叫做：<br>insertRight()、insertLeft()、removeLeft()、removeRight()<br>如果严格禁止调用insertLeft()和removeLeft()（或禁用右端操作），那么双端队列的功能就和前面讲的栈功能<br>一样。  </p>
-<p>如果严格禁止调用insertLeft()和removeRight(或相反的另一对方法)，那么双端队列的功能就和单向队列一样<br>了。  </p>
-<h2 id="4-优先级队列"><a href="#4-优先级队列" class="headerlink" title="4.优先级队列"></a>4.优先级队列</h2><p>优先级队列（priority queue）是比栈和队列更专用的数据结构，在优先级队列中，数据项按照关键字进行排序，<br>关键字最小（或者最大）的数据项往往在队列的最前面，而数据项在插入的时候都会插入到合适的位置以确保队列<br>的有序。<br>优先级队列 是0个或多个元素的集合，每个元素都有一个优先权，对优先级队列执行的操作有：  </p>
-<ul>
-<li>查找</li>
-<li>插入一个新元素</li>
-<li>删除</li>
-</ul>
-<p>一般情况下，查找操作用来搜索优先权最大的元素，删除操作用来删除该元素 。对于优先权相同的元素，可按<br>先进先出次序处理或按任意优先权进行。  </p>
-<p>这里我们用数组实现优先级队列，这种方法插入比较慢，但是它比较简单，适用于数据量比较小并且不是特别<br>注重插入速度的情况。  </p>
-<p>后面我们会讲解堆，用堆的数据结构来实现优先级队列，可以相当快的插入数据。  </p>
-<p>数组实现优先级队列，声明为int类型的数组，关键字是数组里面的元素，在插入的时候按照从大到小的顺序排<br>列，也就是越小的元素优先级越高。  </p>
-<pre><code class="java">public class PriorityQueue &#123;
-    private int maxSize;
-    private int[] priQueArray;
-    private int nItems;
-    public PriorityQueue(int s)&#123;
-        maxSize = s;
-        priQueArray = new int[maxSize];
-        nItems = 0;
-    &#125;
-    //插入数据
-    public void insert(int value)&#123;
-        int j;
-        if(nItems == 0)&#123;
-            priQueArray[nItems++] = value;
-        &#125;else&#123;
-            j = nItems -1;
-            //选择的排序方法是插入排序，按照从大到小的顺序排列，越小的越在队列的顶端
-            while(j &gt;=0 &amp;&amp; value &gt; priQueArray[j])&#123;
-                priQueArray[j+1] = priQueArray[j];
-                j--;
+    //打印数组内容
+    public void display()&#123;
+        System.out.println(&quot;Table:&quot;);
+        for(int j = 0 ; j &lt; arraySize ; j++)&#123;
+            if(hashArray[j] != null)&#123;
+                System.out.print(hashArray[j].getKey() + &quot; &quot;);
+            &#125;else&#123;
+                System.out.print(&quot;** &quot;);
             &#125;
-            priQueArray[j+1] = value;
-            nItems++;
         &#125;
     &#125;
+    //通过哈希函数转换得到数组下标
+    public int hashFunction1(int key)&#123;
+        return key%arraySize;
+    &#125;
+    public int hashFunction2(int key)&#123;
+        return 5 - key%5;
+    &#125;
+    //插入数据项
+    public void insert(DataItem item)&#123;
+        if(isFull())&#123;
+            //扩展哈希表
+            System.out.println(&quot;哈希表已满，重新哈希化...&quot;);
+            extendHashTable();
+        &#125;
+        int key = item.getKey();
+        int hashVal = hashFunction1(key);
+        int stepSize = hashFunction2(key);//用第二个哈希函数计算探测步数
+        while(hashArray[hashVal] != null &amp;&amp; hashArray[hashVal].getKey() != -1)&#123;
+            hashVal += stepSize;
+            hashVal %= arraySize;//以指定的步数向后探测
+        &#125;
+        hashArray[hashVal] = item;
+        itemNum++;
+    &#125;
 
-    //移除数据,由于是按照大小排序的，所以移除数据我们指针向下移动
-    //被移除的地方由于是int类型的，不能设置为null，这里的做法是设置为 ‐1
-    public int remove()&#123;
-        int k = nItems -1;
-        int value = priQueArray[k];
-        priQueArray[k] = -1;//‐1表示这个位置的数据被移除了
-        nItems--;
-        return value;
+    /**
+     * 数组有固定的大小，而且不能扩展，所以扩展哈希表只能另外创建一个更大的数组，然后把旧数组中的数据插到新的数组中。
+     * 但是哈希表是根据数组大小计算给定数据的位置的，所以这些数据项不能再放在新数组中和老数组相同的位置上。
+     * 因此不能直接拷贝，需要按顺序遍历老数组，并使用insert方法向新数组中插入每个数据项。
+     * 这个过程叫做重新哈希化。这是一个耗时的过程，但如果数组要进行扩展，这个过程是必须的。
+     */
+    public void extendHashTable()&#123;
+        int num = arraySize;
+        itemNum = 0;//重新计数，因为下面要把原来的数据转移到新的扩张的数组中
+        arraySize *= 2;//数组大小翻倍
+        DataItem[] oldHashArray = hashArray;
+        hashArray = new DataItem[arraySize];
+        for(int i = 0 ; i &lt; num ; i++)&#123;
+            insert(oldHashArray[i]);
+        &#125;
     &#125;
-    //查看优先级最高的元素
-    public int peekMin()&#123;
-        return priQueArray[nItems-1];
+    //删除数据项
+    public DataItem delete(int key)&#123;
+        if(isEmpty())&#123;
+            System.out.println(&quot;Hash Table is Empty!&quot;);
+            return null;
+        &#125;
+        int hashVal = hashFunction1(key);
+        int stepSize = hashFunction2(key);
+        while(hashArray[hashVal] != null)&#123;
+            if(hashArray[hashVal].getKey() == key)&#123;
+                DataItem temp = hashArray[hashVal];
+                hashArray[hashVal] = nonItem;//nonItem表示空Item,其key为‐1
+                itemNum--;
+                return temp;
+            &#125;
+            hashVal += stepSize;
+            hashVal %= arraySize;
+        &#125;
+        return null;
     &#125;
-    //判断是否为空
-    public boolean isEmpty()&#123;
-        return (nItems == 0);
+    //查找数据项
+    public DataItem find(int key)&#123;
+        int hashVal = hashFunction1(key);
+        int stepSize = hashFunction2(key);
+        while(hashArray[hashVal] != null)&#123;
+            if(hashArray[hashVal].getKey() == key)&#123;
+                return hashArray[hashVal];
+            &#125;
+            hashVal += stepSize;
+            hashVal %= arraySize;
+        &#125;
+        return null;
     &#125;
-
-    //判断是否满了
-    public boolean isFull()&#123;
-        return (nItems == maxSize);
+    public static class DataItem&#123;
+        private int iData;
+        public DataItem(int iData)&#123;
+            this.iData = iData;
+        &#125;
+        public int getKey()&#123;
+            return iData;
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<p>insert() 方法，先检查队列中是否有数据项，如果没有，则直接插入到下标为0的单元里，否则，从数组顶部开始比<br>较，找到比插入值小的位置进行插入，并把 nItems 加1.  </p>
-<p>remove 方法直接获取顶部元素。  </p>
-<p>优先级队列的插入操作需要 O(N)的时间，而删除操作则需要O(1) 的时间，后面会讲解如何通过 堆 来改进插入<br>时间。  </p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本篇博客我们介绍了队列的三种形式，分别是单向队列、双向队列以及优先级队列。其实大家听名字也可以听得出<br>来他们之间的区别，单向队列遵循先进先出的原则，而且一端只能插入，另一端只能删除。双向队列则两端都可插<br>入和删除，如果限制双向队列的某一段的方法，则可以达到和单向队列同样的功能。最后优先级队列，则是在插入<br>元素的时候进行了优先级别排序，在实际应用中单项队列和优先级队列使用的比较多。后面讲解了堆这种数据结<br>构，我们会用堆来实现优先级队列，改善优先级队列插入元素的时间。  </p>
-<p>通过前面讲的栈以及本篇讲的队列这两种数据结构，我们稍微总结一下：  </p>
-<ul>
-<li>栈、队列（单向队列）、优先级队列通常是用来简化某些程序操作的数据结构，而不是主要作为存储数据<br>的。</li>
-<li>在这些数据结构中，只有一个数据项可以被访问。</li>
-<li>栈允许在栈顶压入（插入）数据，在栈顶弹出（移除）数据，但是只能访问最后一个插入的数据项，也就<br>是栈顶元素。</li>
-<li>队列（单向队列）只能在队尾插入数据，对头删除数据，并且只能访问对头的数据。而且队列还可以实现<br>循环队列，它基于数组，数组下标可以从数组末端绕回到数组的开始位置。</li>
-<li>优先级队列是有序的插入数据，并且只能访问当前元素中优先级别最大（或最小）的元素。</li>
-<li>这些数据结构都能由数组实现，但是可以用别的机制（后面讲的链表、堆等数据结构）实现。</li>
-</ul>
+<h2 id="4-链地址法"><a href="#4-链地址法" class="headerlink" title="4.链地址法"></a>4.链地址法</h2><p>在开放地址法中，通过再哈希法寻找一个空位解决冲突问题，另一个方法是在哈希表每个单元中设置链表（即<br>链地址法），某个数据项的关键字值还是像通常一样映射到哈希表的单元，而数据项本身插入到这个单元的链表<br>中。其他同样映射到这个位置的数据项只需要加到链表中，不需要在原始的数组中寻找空位。  </p>
+<p>有序链表：</p>
+<pre><code class="java">public class SortLink &#123;
+    private LinkNode first;
+    public SortLink()&#123;
+        first = null;
+    &#125;
+    public boolean isEmpty()&#123;
+        return (first == null);
+    &#125;
+    public void insert(LinkNode node)&#123;
+        int key = node.getKey();
+        LinkNode previous = null;
+        LinkNode current = first;
+        while(current != null &amp;&amp; current.getKey() &lt; key)&#123;
+            previous = current;
+            current = current.next;
+        &#125;
+        if(previous == null)&#123;
+            first = node;
+        &#125;else&#123;
+            previous.next = node;
+        &#125;
+        node.next = current;
+    &#125;
+    public void delete(int key)&#123;
+        LinkNode previous = null;
+        LinkNode current = first;
+        if(isEmpty())&#123;
+            System.out.println(&quot;Linked is Empty!!!&quot;);
+            return;
+        &#125;
+        while(current != null &amp;&amp; current.getKey() != key)&#123;
+            previous = current;
+            current = current.next;
+        &#125;
+        if(previous == null)&#123;
+            first = first.next;
+        &#125;else&#123;
+            previous.next = current.next;
+        &#125;
+    &#125;
+    public LinkNode find(int key)&#123;
+        LinkNode current = first;
+        while(current != null &amp;&amp; current.getKey() &lt;= key)&#123;
+            if(current.getKey() == key)&#123;
+                return current;
+            &#125;
+            current = current.next;
+        &#125;
+        return null;
+    &#125;
+    public void displayLink()&#123;
+        System.out.println(&quot;Link(First‐&gt;Last)&quot;);
+        LinkNode current = first;
+        while(current != null)&#123;
+            current.displayLink();
+            current = current.next;
+        &#125;
+        System.out.println(&quot;&quot;);
+    &#125;
+    class LinkNode&#123;
+        private int iData;
+        public LinkNode next;
+        public LinkNode(int iData)&#123;
+            this.iData = iData;
+        &#125;
+        public int getKey()&#123;
+            return iData;
+        &#125;
+        public void displayLink()&#123;
+            System.out.println(iData + &quot; &quot;);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>链地址法：</p>
+<pre><code class="java">import algorithm.hash.SortLink.LinkNode;
+public class HashChain &#123;
+    private SortLink[] hashArray;//数组中存放链表
+    private int arraySize;
+    public HashChain(int size)&#123;
+        arraySize = size;
+        hashArray = new SortLink[arraySize];
+        //new 出每个空链表初始化数组
+        for(int i = 0 ; i &lt; arraySize ; i++)&#123;
+            hashArray[i] = new SortLink();
+        &#125;
+    &#125;
+    public void displayTable()&#123;
+        for(int i = 0 ; i &lt; arraySize ; i++)&#123;
+            System.out.print(i + &quot;：&quot;);
+            hashArray[i].displayLink();
+        &#125;
+    &#125;
+    public int hashFunction(int key)&#123;
+        return key%arraySize;
+    &#125;
+    public void insert(LinkNode node)&#123;
+        int key = node.getKey();
+        int hashVal = hashFunction(key);
+        hashArray[hashVal].insert(node);//直接往链表中添加即可
+    &#125;
+    public LinkNode delete(int key)&#123;
+        int hashVal = hashFunction(key);
+        LinkNode temp = find(key);
+        hashArray[hashVal].delete(key);//从链表中找到要删除的数据项，直接删除
+        return temp;
+    &#125;
+    public LinkNode find(int key)&#123;
+        int hashVal = hashFunction(key);
+        LinkNode node = hashArray[hashVal].find(key);
+        return node;
+    &#125;
+&#125;
+</code></pre>
+<p>链地址法中，装填因子（数据项数和哈希表容量的比值）与开放地址法不同，在链地址法中，需要有N个单元<br>的数组中转入N个或更多的数据项，因此装填因子一般为1，或比1大（有可能某些位置包含的链表中包含两个或两<br>个以上的数据项）。  </p>
+<p>找到初始单元需要O(1)的时间级别，而搜索链表的时间与M成正比，M为链表包含的平均项数，即O(M)的时间<br>级别。</p>
+<h2 id="5-桶"><a href="#5-桶" class="headerlink" title="5.桶"></a>5.桶</h2><p>另外一种方法类似于链地址法，它是在每个数据项中使用子数组，而不是链表。这样的数组称为桶。  </p>
+<p>这个方法显然不如链表有效，因为桶的容量不好选择，如果容量太小，可能会溢出，如果太大，又造成性能浪<br>费，而链表是动态分配的，不存在此问题。所以一般不使用桶。  </p>
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2><p>哈希表基于数组，类似于key-value的存储形式，关键字值通过哈希函数映射为数组的下标，如果一个关键字<br>哈希化到已占用的数组单元，这种情况称为冲突。用来解决冲突的有两种方法：开放地址法和链地址法。在开发地<br>址法中，把冲突的数据项放在数组的其它位置；在链地址法中，每个单元都包含一个链表，把所有映射到同一数组<br>下标的数据项都插入到这个链表中。</p>
 <h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
 
