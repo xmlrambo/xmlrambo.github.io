@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>数据结构算法之234树 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之234树 | 青春纪念册">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="青春纪念册">
+<meta property="og:description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-09T13:19:10.000Z">
+<meta property="article:modified_time" content="2022-12-05T00:55:49.023Z">
+<meta property="article:author" content="BossLiu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/IMG_1706.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/IMG_1706.jpg"/>
+</a>
+<div class="author">
+    <span>BossLiu</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/xmlrambo"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="weibo"
+               href="https://weibo.com/u/2234281571"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/acd0a68dff7e"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/wananyanyucheng"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/ForeverLucky_"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/u/263448"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:384276224@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=384276224&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=369320275"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+    <a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(45)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="java">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        java
+                        <small>(42)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="java<--->日常问题">
+                                        
+                                        日常问题
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="java<--->设计模式">
+                                        
+                                        设计模式
+                                        
+                                            <small>(25
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="java<--->数据结构算法">
+                                        
+                                        数据结构算法
+                                        
+                                            <small>(15
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="python">
+                        
+                        python
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="sql">
+                        
+                        sql
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+        
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+        
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="45">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://xmlrambo.github.io/">青春纪念册</a></li>
+            
+            <li><a target="_blank" href="http://xmlrambo.gitee.io/">青春纪念册（备用地址）</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>设计模式</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构算法</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>python</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 sql "
+           href="/2023/03/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81%E8%A1%A8%E8%A7%A3%E9%94%81/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库锁表解锁">数据库锁表解锁</span>
+            <span class="post-date" title="2023-03-22 07:56:11">2023/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 python "
+           href="/2023/03/21/python%E4%B8%8B%E8%BD%BD%E5%B0%8F%E8%AF%B4/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="python下载小说">python下载小说</span>
+            <span class="post-date" title="2023-03-21 10:31:52">2023/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2023/01/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%9B%BE/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之图">数据结构算法之图</span>
+            <span class="post-date" title="2023-01-01 11:13:31">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2023/01/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%A0%86/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之堆">数据结构算法之堆</span>
+            <span class="post-date" title="2023-01-01 09:12:08">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2023/01/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%93%88%E5%B8%8C%E8%A1%A8/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之哈希表">数据结构算法之哈希表</span>
+            <span class="post-date" title="2023-01-01 08:45:35">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B234%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之234树">数据结构算法之234树</span>
+            <span class="post-date" title="2022-12-29 18:09:43">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E7%BA%A2%E9%BB%91%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之红黑树">数据结构算法之红黑树</span>
+            <span class="post-date" title="2022-12-29 14:36:29">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之二叉树">数据结构算法之二叉树</span>
+            <span class="post-date" title="2022-12-29 08:59:02">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之高级排序">数据结构算法之高级排序</span>
+            <span class="post-date" title="2022-12-23 11:12:52">2022/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%80%92%E5%BD%92/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之递归">数据结构算法之递归</span>
+            <span class="post-date" title="2022-12-22 11:55:46">2022/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之链表">数据结构算法之链表</span>
+            <span class="post-date" title="2022-12-22 09:10:41">2022/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%89%8D%E4%B8%AD%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之前中后缀表达式">数据结构算法之前中后缀表达式</span>
+            <span class="post-date" title="2022-12-21 09:36:11">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%98%9F%E5%88%97/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之队列">数据结构算法之队列</span>
+            <span class="post-date" title="2022-12-21 09:14:07">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A0%88/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之栈">数据结构算法之栈</span>
+            <span class="post-date" title="2022-12-21 08:35:00">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之简单排序">数据结构算法之简单排序</span>
+            <span class="post-date" title="2022-12-20 18:55:41">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之数组">数据结构算法之数组</span>
+            <span class="post-date" title="2022-12-20 11:03:58">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A6%82%E8%BF%B0/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之概述">数据结构算法之概述</span>
+            <span class="post-date" title="2022-12-20 09:10:15">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 日常问题 "
+           href="/2022/12/19/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java面向对象基础概念">java面向对象基础概念</span>
+            <span class="post-date" title="2022-12-19 19:06:58">2022/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/16/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%80%BB%E7%BB%93/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之总结">设计模式之总结</span>
+            <span class="post-date" title="2022-12-16 11:20:33">2022/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之解释器模式">设计模式之解释器模式</span>
+            <span class="post-date" title="2022-12-14 08:37:17">2022/12/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之访问者模式">设计模式之访问者模式</span>
+            <span class="post-date" title="2022-12-13 15:57:06">2022/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之享元模式">设计模式之享元模式</span>
+            <span class="post-date" title="2022-12-13 09:53:29">2022/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之中介者模式">设计模式之中介者模式</span>
+            <span class="post-date" title="2022-12-12 15:35:49">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之职责链模式">设计模式之职责链模式</span>
+            <span class="post-date" title="2022-12-12 11:41:49">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之命令模式">设计模式之命令模式</span>
+            <span class="post-date" title="2022-12-12 09:22:46">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之桥接模式">设计模式之桥接模式</span>
+            <span class="post-date" title="2022-12-11 17:45:08">2022/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之单例模式">设计模式之单例模式</span>
+            <span class="post-date" title="2022-12-10 16:07:17">2022/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之迭代器模式">设计模式之迭代器模式</span>
+            <span class="post-date" title="2022-12-08 07:50:03">2022/12/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之组合模式">设计模式之组合模式</span>
+            <span class="post-date" title="2022-12-07 19:29:54">2022/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之备忘录模式">设计模式之备忘录模式</span>
+            <span class="post-date" title="2022-12-07 07:56:31">2022/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之适配器模式">设计模式之适配器模式</span>
+            <span class="post-date" title="2022-12-06 08:53:46">2022/12/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之状态模式">设计模式之状态模式</span>
+            <span class="post-date" title="2022-12-05 14:01:16">2022/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之抽象工厂模式">设计模式之抽象工厂模式</span>
+            <span class="post-date" title="2022-12-04 17:02:36">2022/12/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之观察者模式">设计模式之观察者模式</span>
+            <span class="post-date" title="2022-12-03 10:14:52">2022/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之建造者模式">设计模式之建造者模式</span>
+            <span class="post-date" title="2022-12-02 14:38:06">2022/12/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之外观模式">设计模式之外观模式</span>
+            <span class="post-date" title="2022-12-01 14:39:56">2022/12/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之模板方法模式">设计模式之模板方法模式</span>
+            <span class="post-date" title="2022-11-30 10:04:08">2022/11/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之原型模式">设计模式之原型模式</span>
+            <span class="post-date" title="2022-11-28 22:05:57">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之工厂方法模式">设计模式之工厂方法模式</span>
+            <span class="post-date" title="2022-11-28 09:28:33">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之代理模式">设计模式之代理模式</span>
+            <span class="post-date" title="2022-11-25 11:25:11">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之装饰模式">设计模式之装饰模式</span>
+            <span class="post-date" title="2022-11-25 11:24:58">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之策略模式">设计模式之策略模式</span>
+            <span class="post-date" title="2022-11-24 17:40:34">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之简单工厂模式">设计模式之简单工厂模式</span>
+            <span class="post-date" title="2022-11-24 13:56:56">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 日常问题 "
+           href="/2022/11/23/java%E8%A7%A3%E6%9E%90%E8%AF%BB%E5%8F%96xml%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java解析读取xml文件的几种方式.md">java解析读取xml文件的几种方式.md</span>
+            <span class="post-date" title="2022-11-23 13:45:51">2022/11/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 sql "
+           href="/2022/11/21/%E8%A7%A3%E5%86%B3plsql%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E5%8F%B7%E9%97%AE%E9%A2%98/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="解决plsql中文显示问号问题">解决plsql中文显示问号问题</span>
+            <span class="post-date" title="2022-11-21 18:05:55">2022/11/21</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-数据结构算法之234树" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">数据结构算法之234树</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="java">java</a> > 
+            
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">数据结构算法</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-03-21 10:39:53'>2022-12-29 18:09</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2-3-4%E6%A0%91"><span class="toc-text">2-3-4树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-3-4%E6%A0%91%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 2-3-4树介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%90%9C%E7%B4%A22-3-4%E6%A0%91"><span class="toc-text">2.搜索2-3-4树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%8F%92%E5%85%A5"><span class="toc-text">3.插入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%8A%82%E7%82%B9%E5%88%86%E8%A3%82"><span class="toc-text">3.1 节点分裂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%A0%B9%E7%9A%84%E5%88%86%E8%A3%82"><span class="toc-text">3.2 根的分裂</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%8C%E6%95%B4%E6%BA%90%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">4.完整源码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-3-4%E6%A0%91%E4%B8%8E%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-text">5. 2-3-4树与红黑树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%AF%B9%E5%BA%94%E8%A7%84%E5%88%99"><span class="toc-text">5.1 对应规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%93%8D%E4%BD%9C%E7%AD%89%E4%BB%B7"><span class="toc-text">5.2 操作等价</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-3-4%E6%A0%91%E7%9A%84%E6%95%88%E7%8E%87"><span class="toc-text">6. 2-3-4树的效率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2-3-4树"><a href="#2-3-4树" class="headerlink" title="2-3-4树"></a>2-3-4树</h1><p>通过前面的介绍，我们知道在二叉树中，每个节点只有一个数据项，最多有两个子节点。如果允许每个节点可以<br>有更多的数据项和更多的子节点，就是多叉树。本篇我们将介绍的——2-3-4树，它是一种多叉树，它的每个<br>节点最多有四个子节点和三个数据项。</p>
+<h2 id="1-2-3-4树介绍"><a href="#1-2-3-4树介绍" class="headerlink" title="1. 2-3-4树介绍"></a>1. 2-3-4树介绍</h2><p>2-3-4树每个节点最多有四个字节点和三个数据项，名字中 2,3,4 的数字含义是指一个节点可能含有的子节点的个数。<br>对于非叶节点有三种可能的情况：  </p>
+<ol>
+<li>有一个数据项的节点总是有两个子节点；</li>
+<li>有二个数据项的节点总是有三个子节点；</li>
+<li>有三个数据项的节点总是有四个子节点；</li>
+</ol>
+<p>简而言之，非叶节点的子节点数总是比它含有的数据项多1。如果子节点个数为L，数据项个数为D，那么：L&#x3D;D+1</p>
+<p>如图一所示：</p>
+<pre><code class="java">/**
+* 图一
+*             (50   |     |    )
+*             /                 \
+*            /                   \
+*           /                     \
+*          /                       \
+*        (30| | )               (60   |  70   |  80)
+*         /  \                   /  \        \         \
+*        /    \                 /    \        \         \
+*       /      \               /      \        \         \
+*   (10|20| ) (40| |)     (55||)   (62|64|68)  (75||)   (83|86|)
+*
+*/
+</code></pre>
+<p>叶节点（上图最下面的一排）是没有子节点的，然而它可能含有一个、两个或三个数据项。空节点是不会存在的。  </p>
+<p>树结构中很重要的一点就是节点之间关键字值大小的关系。在二叉树中，所有关键字值比某个节点值小的节点<br>都在这个节点左子节点为根的子树上；所有关键字值比某个节点值大的节点都在这个节点右子节点为根的子树上。<br>2-3-4 树规则也是一样，并且还加上如下规则：</p>
+<pre><code class="java">/**
+*
+*                (A  |  B  |  C)
+*               /     /    \    \
+*              /     /      \    \
+*             /     /        \    \
+*         (值&lt;A)  (A&lt;值&lt;B) (B&lt;值&lt;C) (c&lt;值)
+*
+*/
+</code></pre>
+<h2 id="2-搜索2-3-4树"><a href="#2-搜索2-3-4树" class="headerlink" title="2.搜索2-3-4树"></a>2.搜索2-3-4树</h2><p>查找特定关键字值的数据项和在二叉树中的搜索类似。从根节点开始搜索，除非查找的关键字值就是根，否则选择<br>关键字值所在的合适范围，转向那个方向，直到找到为止。</p>
+<p>比如对于上面图一中，我们需要查找关键字值为 64 的数据项。  </p>
+<p>首先从根节点开始，根节点只有一个数据项50，没有找到，而且因为64比50大，那么转到根节点的子节点child1。<br>60|70|80 也没有找到，而且60&lt;64&lt;70，所以我们还是找该节点的child1,62|64|66，我们发现其第二个数据项正<br>好是64，于是找到了。  </p>
+<h2 id="3-插入"><a href="#3-插入" class="headerlink" title="3.插入"></a>3.插入</h2><p>新的数据项一般要插在叶节点里，在树的最底层。如果你插入到有子节点的节点里，那么子节点的编号就要发生<br>变化来维持树的结构，因为在2-3-4树中节点的子节点要比数据项多1。  </p>
+<p>插入操作有时比较简单，有时却很复杂。  </p>
+<ul>
+<li>当插入没有满数据项的节点时是很简单的，找到合适的位置，只需要把新数据项插入就可以了，插入可能会涉及到在一个节点中移动一个或其他两个数据项，这样在新的数据项插入后关键字值仍保持正确的顺序。<br>如下图（插入42）：</li>
+</ul>
+<pre><code class="java">/**
+* 插入 42
+*             (50   |     |    )
+*             /                 \
+*            /                   \
+*           /                     \
+*          /                       \
+*        (30| | )               (60   |  70   |  80)
+*         /  \                   /  \        \         \
+*        /    \                 /    \        \         \
+*       /      \               /      \        \         \
+*   (10|20| ) (40|42|)     (55||)   (62|64|68)  (75||)   (83|86|)
+*
+*/
+</code></pre>
+<ul>
+<li>如果往下寻找插入位置的途中，节点已经满了，那么插入就变得复杂了。发生这种情况时，节点必须分裂，分裂能保证2-3-4树的平衡。</li>
+</ul>
+<p>ps：这里讨论的是自顶向下的2-3-4树，因为是在向下找到插入点的路途中节点发生了分裂。把要分裂的数据项设为A,B,C，下面是节点分裂的情况（假设分裂的节点不是根节点）：</p>
+<h3 id="3-1-节点分裂"><a href="#3-1-节点分裂" class="headerlink" title="3.1 节点分裂"></a>3.1 节点分裂</h3><ul>
+<li>一、创建一个新的空节点，它是要分裂节点的兄弟，在要分裂节点的右边；</li>
+<li>二、数据项C移到新节点中；</li>
+<li>三、数据项B移到要分裂节点的父节点中；</li>
+<li>四、数据项A保留在原来的位置；</li>
+<li>五、最右边的两个子节点从要分裂处断开，连到新节点上。</li>
+</ul>
+<p>比如插入一个节点99</p>
+<pre><code class="java">/**
+* 99插入前
+*             (62   |     |    )
+*             /                 \
+*            /                   \
+*           /                     \
+*          /                       \
+*        (29| | )               (83   |  92   |  104)
+*         /  \                   /  \        \         \
+*        /    \                 /    \        \         \
+*       /      \               /      \        \         \
+*   (15|21| ) (47| |)     (74||)   (87|89|)  (97||)   (112||)
+*
+*/
+</code></pre>
+<ul>
+<li>92节点上移</li>
+<li>104节点右移进新节点</li>
+<li>83节点保留</li>
+</ul>
+<pre><code class="java">/**
+* 99插入后
+*             (62    |   92   |     )
+*             /      \              \
+*            /        \              \
+*           /          \              \
+*          /            \              \
+*        (29| | )      (83| |  )      (104| | )
+*         /  \            /  \            / \
+*        /    \          /    \          /   \
+*       /      \        /      \        /     \
+*   (15|21|)(47||)  (74||)  (87|89|)  (97|99|) (112||)
+*
+*/
+</code></pre>
+<p>上图描述了节点分裂的例子，另一种描述节点分裂的说法是4-节点变成了两个 2- 节点。节点分裂是把数据向<br>上和向右移动，从而保持了数的平衡。一般插入只需要分裂一个节点，除非插入路径上存在不止一个满节点时，这<br>种情况就需要多重分裂。</p>
+<h3 id="3-2-根的分裂"><a href="#3-2-根的分裂" class="headerlink" title="3.2 根的分裂"></a>3.2 根的分裂</h3><p>如果一开始查找插入节点时就碰到满的根节点，那么插入过程更复杂：  </p>
+<ol>
+<li>创建新的根节点，它是要分裂节点的父节点。</li>
+<li>创建第二个新的节点，它是要分裂节点的兄弟节点；</li>
+<li>数据项C移到新的兄弟节点中；</li>
+<li>数据项B移到新的根节点中；</li>
+<li>数据项A保留在原来的位置；</li>
+<li>要分裂节点最右边的两个子节点断开连接，连到新的兄弟节点中。</li>
+</ol>
+<pre><code class="java">/**
+*41插入前
+*                (28  |  49  |  72)
+*               /     /    \      \
+*              /     /      \      \
+*             /     /        \      \
+*         (9|13|) (31|35|) (52|61|) (82||)
+*
+*/
+</code></pre>
+<p>插入节点41，经历如下几步：</p>
+<ul>
+<li>49上移开辟新的根节点</li>
+<li>26保留</li>
+<li>72右移开辟新的节点</li>
+</ul>
+<pre><code class="java">/**
+* 41插入后
+*             (49    |        |     )
+*             /                    \
+*            /                      \
+*           /                        \
+*          /                          \
+*        (26| | )                   (72| | )
+*         /   \                     /      \
+*        /     \                   /        \
+*       /       \                 /          \
+*   (9|13|)  (31|35|41)       (52|61|)     (82||)
+*
+*/
+</code></pre>
+<p>上图便是根分裂的情况，分裂完成之后，整个树的高度加1。另外一种描述根分裂的方法是说4-节点变成三个2-节点。  </p>
+<p><strong>注意：插入时，碰到没有满的节点时，要继续向下寻找其子节点进行插入。如果直接插入该节点，那么还要进行子节点的增加，因为在2-3-4树中节点的子节点个数要比数据项多1；如果插入的节点满了，那么就要进行节点分裂。</strong></p>
+<h2 id="4-完整源码实现"><a href="#4-完整源码实现" class="headerlink" title="4.完整源码实现"></a>4.完整源码实现</h2><p>分为节点类Node,表示每个节点的数据项类DataItem,以及最后的2-3-4树类Tree234.class</p>
+<pre><code class="java">public class Tree234 &#123;
+    private Node root = new Node() ;
+    /*public Tree234()&#123;
+        root = new Node();
+    &#125;*/
+    //查找关键字值
+    public int find(long key) &#123;
+        Node curNode = root;
+        int childNumber;
+        while (true) &#123;
+            if ((childNumber = curNode.findItem(key)) !=-1)&#123;
+                return childNumber;
+            &#125;else if (curNode.isLeaf()) &#123;//节点是叶节点
+                return -1;
+            &#125; else &#123;
+                curNode = getNextChild(curNode, key);
+            &#125;
+        &#125;
+    &#125;
+
+    public Node getNextChild(Node theNode,long theValue)&#123;
+        int j;
+        int numItems = theNode.getNumItems();
+        for(j = 0 ; j &lt; numItems ; j++)&#123;
+            if(theValue &lt; theNode.getItem(j).dData)&#123;
+                return theNode.getChild(j);
+            &#125;
+        &#125;
+        return theNode.getChild(j);
+    &#125;
+
+    //插入数据项
+    public void insert(long dValue)&#123;
+        Node curNode = root;
+        DataItem tempItem = new DataItem(dValue);
+        while(true)&#123;
+            if(curNode.isFull())&#123;//如果节点满数据项了，则分裂节点
+                split(curNode);
+                curNode = curNode.getParent();
+                curNode = getNextChild(curNode, dValue);
+            &#125;else if(curNode.isLeaf())&#123;//当前节点是叶节点
+                break;
+            &#125;else&#123;
+                curNode = getNextChild(curNode, dValue);
+            &#125;
+        &#125;//end while
+        curNode.insertItem(tempItem);
+    &#125;
+
+    public void split(Node thisNode)&#123;
+        DataItem itemB,itemC;
+        Node parent,child2,child3;
+        int itemIndex;
+        itemC = thisNode.removeItem();
+        itemB = thisNode.removeItem();
+        child2 = thisNode.disconnectChild(2);
+        child3 = thisNode.disconnectChild(3);
+        Node newRight = new Node();
+        if(thisNode == root)&#123;//如果当前节点是根节点，执行根分裂
+            root = new Node();
+            parent = root;
+            root.connectChild(0, thisNode);
+        &#125;else&#123;
+            parent = thisNode.getParent();
+        &#125;
+        //处理父节点
+        itemIndex = parent.insertItem(itemB);
+        int n = parent.getNumItems();
+        for(int j = n-1; j &gt; itemIndex ; j--)&#123;
+            Node temp = parent.disconnectChild(j);
+            parent.connectChild(j+1, temp);
+        &#125;
+        parent.connectChild(itemIndex+1, newRight);
+        //处理新建的右节点
+        newRight.insertItem(itemC);
+        newRight.connectChild(0, child2);
+        newRight.connectChild(1, child3);
+    &#125;
+
+
+    //打印树节点
+    public void displayTree()&#123;
+        recDisplayTree(root,0,0);
+    &#125;
+    private void recDisplayTree(Node thisNode,int level,int childNumber)&#123;
+        System.out.println(&quot;levle=&quot;+level+&quot; child=&quot;+childNumber+&quot; &quot;);
+        thisNode.displayNode();
+        int numItems = thisNode.getNumItems();
+        for(int j = 0; j &lt; numItems+1 ; j++)&#123;
+            Node nextNode = thisNode.getChild(j);
+            if(nextNode != null)&#123;
+                recDisplayTree(nextNode, level+1, j);
+            &#125;else&#123;
+                return;
+            &#125;
+        &#125;
+    &#125;
+
+
+    //数据项
+    class DataItem&#123;
+        public long dData;
+        public DataItem(long dData)&#123;
+            this.dData = dData;
+        &#125;
+        public void displayItem()&#123;
+            System.out.println(&quot;/&quot;+dData);
+        &#125;
+    &#125;
+
+    //节点
+    class Node&#123;
+        private static final int ORDER = 4;
+        private int numItems;//表示该节点有多少个数据项
+        private Node parent;//父节点
+        private Node childArray[] = new Node[ORDER];//存储子节点的数组，最多有4个子节点
+        private DataItem itemArray[] = new DataItem[ORDER-1];//存放数据项的数组，一个节点最多有三个数据项
+        //连接子节点
+        public void connectChild(int childNum,Node child)&#123;
+            childArray[childNum] = child;
+            if(child != null)&#123;
+                child.parent = this;
+            &#125;
+        &#125;
+        //断开与子节点的连接，并返回该子节点
+        public Node disconnectChild(int childNum)&#123;
+            Node tempNode = childArray[childNum];
+            childArray[childNum] = null;
+            return tempNode;
+        &#125;
+        //得到节点的某个子节点
+        public Node getChild(int childNum)&#123;
+            return childArray[childNum];
+        &#125;
+        //得到父节点
+        public Node getParent()&#123;
+            return parent;
+        &#125;
+        //判断是否是叶节点
+        public boolean isLeaf()&#123;
+            return (childArray[0] == null)?true:false;
+        &#125;
+        //得到节点数据项的个数
+        public int getNumItems()&#123;
+            return numItems;
+        &#125;
+        //得到节点的某个数据项
+        public DataItem getItem(int index)&#123;
+            return itemArray[index];
+        &#125;
+        //判断节点的数据项是否满了（最多3个）
+        public boolean isFull()&#123;
+            return (numItems == ORDER-1) ? true:false;
+        &#125;
+        //找到数据项在节点中的位置
+        public int findItem(long key)&#123;
+            for(int j = 0 ; j &lt; ORDER-1 ; j++)&#123;
+                if(itemArray[j]==null)&#123;
+                    break;
+                &#125;else if(itemArray[j].dData == key)&#123;
+                    return j;
+                &#125;
+            &#125;
+            return -1;
+        &#125;
+        //将数据项插入到节点
+        public int insertItem(DataItem newItem)&#123;
+            numItems++;
+            long newKey = newItem.dData;
+            for(int j = ORDER-2 ; j &gt;= 0 ; j--)&#123;
+                if(itemArray[j] == null)&#123;//如果为空，继续向前循环
+                    continue;
+                &#125;else&#123;
+                    long itsKey = itemArray[j].dData;//保存节点某个位置的数据项
+                    if(newKey &lt; itsKey)&#123;//如果比新插入的数据项大
+                        itemArray[j+1] = itemArray[j];//将大数据项向后移动一位
+                    &#125;else&#123;
+                        itemArray[j+1] = newItem;//如果比新插入的数据项小，则直接插入
+                        return j+1;
+                    &#125;
+                &#125;
+            &#125;
+            //如果都为空，或者都比待插入的数据项大，则将待插入的数据项放在节点第一个位置
+            itemArray[0] = newItem;
+            return 0;
+        &#125;
+        //移除节点的数据项
+        public DataItem removeItem()&#123;
+            DataItem temp = itemArray[numItems-1];
+            itemArray[numItems-1] = null;
+            numItems--;
+            return temp;
+        &#125;
+        //打印节点的所有数据项
+        public void displayNode()&#123;
+            for(int j = 0 ; j &lt; numItems ; j++)&#123;
+                itemArray[j].displayItem();
+            &#125;
+            System.out.println(&quot;/&quot;);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="5-2-3-4树与红黑树"><a href="#5-2-3-4树与红黑树" class="headerlink" title="5. 2-3-4树与红黑树"></a>5. 2-3-4树与红黑树</h2><p>2-3-4树是多叉树，而红黑树是二叉树，看上去可能完全不同，但是，在某种意义上它们又是完全相同的，一个可<br>以通过应用一些简单的规则变成另一个，而且使他们保持平衡的操作也是一样，数学上称他们为同构。 </p>
+<h3 id="5-1-对应规则"><a href="#5-1-对应规则" class="headerlink" title="5.1 对应规则"></a>5.1 对应规则</h3><p>应用如下三条规则可以将2-3-4树转化为红黑树：</p>
+<ul>
+<li>一、把2-3-4树中的每个2-节点转化为红-黑树的黑色节点。</li>
+<li>二、把每个3-节点转化为一个子节点和一个父节点，子节点有两个自己的子节点：W和X或X和Y。父节点有另一个子节点：Y或W。哪个节点变成子节点或父节点都无所谓。子节点涂成红色，父节点涂成黑色。</li>
+<li>三、把每个4-节点转化为一个父节点和两个子节点。第一个子节点有它自己的子节点W和X；第二个子节点拥有子节点Y和Z。和前面一样，子节点涂成红色，父节点涂成黑色。</li>
+</ul>
+<h3 id="5-2-操作等价"><a href="#5-2-操作等价" class="headerlink" title="5.2 操作等价"></a>5.2 操作等价</h3><p>不仅红-黑树的结构与2-3-4树对应，而且两种树操作也一样。2-3-4树用节点分裂保持平衡，红-黑树用颜色变换和旋转保持平衡。</p>
+<h2 id="6-2-3-4树的效率"><a href="#6-2-3-4树的效率" class="headerlink" title="6. 2-3-4树的效率"></a>6. 2-3-4树的效率</h2><p>分析2-3-4树我们可以和红黑树作比较分析。红-黑树的层数（平衡二叉树）大约是log2(N+1)，而2-3-4树每个节点<br>可以最多有4个数据项，如果节点都是满的，那么高度和log4N。因此在所有节点都满的情况下，2-3-4树的高度大<br>致是红-黑树的一半。不过他们不可能都是满的，所以2-3-4树的高度大致在log2(N+1)和log2(N+1)&#x2F;2。减少2-3-4树<br>的高度可以使它的查找时间比红-黑树的短一些。  </p>
+<p>但是另一方面，每个节点要查看的数据项就多了，这会增加查找时间。因为节点中用线性搜索来查看数据项，<br>使得查找时间的倍数和M成正比，即每个节点数据项的平均数量。总的查找时间和M*log4N成正比。</p>
+<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'bfcd27a804f71cfad5a0',
+            clientSecret: '77a760ab4dd835aa828e1bbc86680fb6246d4d63',
+            repo: 'xmlrambo.github.io',
+            owner: 'xmlrambo',
+            admin: ['xmlrambo'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2022-至今 xmlrambo
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+    
+    
+</div>
+
+
+</html>

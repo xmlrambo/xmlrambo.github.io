@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>数据结构算法之图 | 青春纪念册</title>
+  <meta name="keywords" content=" 数据结构算法 ">
+  <meta name="description" content="数据结构算法之图 | 青春纪念册">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="青春纪念册">
+<meta property="og:description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-09T13:19:10.000Z">
+<meta property="article:modified_time" content="2022-12-05T00:55:49.023Z">
+<meta property="article:author" content="BossLiu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/IMG_1706.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/IMG_1706.jpg"/>
+</a>
+<div class="author">
+    <span>BossLiu</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/xmlrambo"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="weibo"
+               href="https://weibo.com/u/2234281571"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/acd0a68dff7e"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/wananyanyucheng"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://blog.csdn.net/ForeverLucky_"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/u/263448"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:384276224@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=384276224&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=369320275"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+    <a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(45)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="java">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        java
+                        <small>(42)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="java<--->日常问题">
+                                        
+                                        日常问题
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="java<--->设计模式">
+                                        
+                                        设计模式
+                                        
+                                            <small>(25
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="java<--->数据结构算法">
+                                        
+                                        数据结构算法
+                                        
+                                            <small>(15
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="python">
+                        
+                        python
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="sql">
+                        
+                        sql
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+        
+            
+                <a class="dynamic-menu "
+                   target="_blank"
+                        
+                   href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+        
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="45">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://xmlrambo.github.io/">青春纪念册</a></li>
+            
+            <li><a target="_blank" href="http://xmlrambo.gitee.io/">青春纪念册（备用地址）</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>设计模式</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据结构算法</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>python</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 sql "
+           href="/2023/03/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81%E8%A1%A8%E8%A7%A3%E9%94%81/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据库锁表解锁">数据库锁表解锁</span>
+            <span class="post-date" title="2023-03-22 07:56:11">2023/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 python "
+           href="/2023/03/21/python%E4%B8%8B%E8%BD%BD%E5%B0%8F%E8%AF%B4/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="python下载小说">python下载小说</span>
+            <span class="post-date" title="2023-03-21 10:31:52">2023/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2023/01/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%9B%BE/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之图">数据结构算法之图</span>
+            <span class="post-date" title="2023-01-01 11:13:31">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2023/01/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%A0%86/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之堆">数据结构算法之堆</span>
+            <span class="post-date" title="2023-01-01 09:12:08">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2023/01/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%93%88%E5%B8%8C%E8%A1%A8/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之哈希表">数据结构算法之哈希表</span>
+            <span class="post-date" title="2023-01-01 08:45:35">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B234%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之234树">数据结构算法之234树</span>
+            <span class="post-date" title="2022-12-29 18:09:43">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E7%BA%A2%E9%BB%91%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之红黑树">数据结构算法之红黑树</span>
+            <span class="post-date" title="2022-12-29 14:36:29">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之二叉树">数据结构算法之二叉树</span>
+            <span class="post-date" title="2022-12-29 08:59:02">2022/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之高级排序">数据结构算法之高级排序</span>
+            <span class="post-date" title="2022-12-23 11:12:52">2022/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%80%92%E5%BD%92/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之递归">数据结构算法之递归</span>
+            <span class="post-date" title="2022-12-22 11:55:46">2022/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之链表">数据结构算法之链表</span>
+            <span class="post-date" title="2022-12-22 09:10:41">2022/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%89%8D%E4%B8%AD%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之前中后缀表达式">数据结构算法之前中后缀表达式</span>
+            <span class="post-date" title="2022-12-21 09:36:11">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%98%9F%E5%88%97/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之队列">数据结构算法之队列</span>
+            <span class="post-date" title="2022-12-21 09:14:07">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A0%88/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之栈">数据结构算法之栈</span>
+            <span class="post-date" title="2022-12-21 08:35:00">2022/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之简单排序">数据结构算法之简单排序</span>
+            <span class="post-date" title="2022-12-20 18:55:41">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之数组">数据结构算法之数组</span>
+            <span class="post-date" title="2022-12-20 11:03:58">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 数据结构算法 "
+           href="/2022/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A6%82%E8%BF%B0/"
+           data-tag="数据结构算法"
+           data-author="" >
+            <span class="post-title" title="数据结构算法之概述">数据结构算法之概述</span>
+            <span class="post-date" title="2022-12-20 09:10:15">2022/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 日常问题 "
+           href="/2022/12/19/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java面向对象基础概念">java面向对象基础概念</span>
+            <span class="post-date" title="2022-12-19 19:06:58">2022/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/16/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%80%BB%E7%BB%93/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之总结">设计模式之总结</span>
+            <span class="post-date" title="2022-12-16 11:20:33">2022/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之解释器模式">设计模式之解释器模式</span>
+            <span class="post-date" title="2022-12-14 08:37:17">2022/12/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之访问者模式">设计模式之访问者模式</span>
+            <span class="post-date" title="2022-12-13 15:57:06">2022/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之享元模式">设计模式之享元模式</span>
+            <span class="post-date" title="2022-12-13 09:53:29">2022/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之中介者模式">设计模式之中介者模式</span>
+            <span class="post-date" title="2022-12-12 15:35:49">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之职责链模式">设计模式之职责链模式</span>
+            <span class="post-date" title="2022-12-12 11:41:49">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之命令模式">设计模式之命令模式</span>
+            <span class="post-date" title="2022-12-12 09:22:46">2022/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之桥接模式">设计模式之桥接模式</span>
+            <span class="post-date" title="2022-12-11 17:45:08">2022/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之单例模式">设计模式之单例模式</span>
+            <span class="post-date" title="2022-12-10 16:07:17">2022/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之迭代器模式">设计模式之迭代器模式</span>
+            <span class="post-date" title="2022-12-08 07:50:03">2022/12/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之组合模式">设计模式之组合模式</span>
+            <span class="post-date" title="2022-12-07 19:29:54">2022/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之备忘录模式">设计模式之备忘录模式</span>
+            <span class="post-date" title="2022-12-07 07:56:31">2022/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之适配器模式">设计模式之适配器模式</span>
+            <span class="post-date" title="2022-12-06 08:53:46">2022/12/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之状态模式">设计模式之状态模式</span>
+            <span class="post-date" title="2022-12-05 14:01:16">2022/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之抽象工厂模式">设计模式之抽象工厂模式</span>
+            <span class="post-date" title="2022-12-04 17:02:36">2022/12/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之观察者模式">设计模式之观察者模式</span>
+            <span class="post-date" title="2022-12-03 10:14:52">2022/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之建造者模式">设计模式之建造者模式</span>
+            <span class="post-date" title="2022-12-02 14:38:06">2022/12/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/12/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之外观模式">设计模式之外观模式</span>
+            <span class="post-date" title="2022-12-01 14:39:56">2022/12/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之模板方法模式">设计模式之模板方法模式</span>
+            <span class="post-date" title="2022-11-30 10:04:08">2022/11/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之原型模式">设计模式之原型模式</span>
+            <span class="post-date" title="2022-11-28 22:05:57">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之工厂方法模式">设计模式之工厂方法模式</span>
+            <span class="post-date" title="2022-11-28 09:28:33">2022/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之代理模式">设计模式之代理模式</span>
+            <span class="post-date" title="2022-11-25 11:25:11">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之装饰模式">设计模式之装饰模式</span>
+            <span class="post-date" title="2022-11-25 11:24:58">2022/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之策略模式">设计模式之策略模式</span>
+            <span class="post-date" title="2022-11-24 17:40:34">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 设计模式 "
+           href="/2022/11/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式之简单工厂模式">设计模式之简单工厂模式</span>
+            <span class="post-date" title="2022-11-24 13:56:56">2022/11/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 java 日常问题 "
+           href="/2022/11/23/java%E8%A7%A3%E6%9E%90%E8%AF%BB%E5%8F%96xml%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java解析读取xml文件的几种方式.md">java解析读取xml文件的几种方式.md</span>
+            <span class="post-date" title="2022-11-23 13:45:51">2022/11/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 sql "
+           href="/2022/11/21/%E8%A7%A3%E5%86%B3plsql%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E5%8F%B7%E9%97%AE%E9%A2%98/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="解决plsql中文显示问号问题">解决plsql中文显示问号问题</span>
+            <span class="post-date" title="2022-11-21 18:05:55">2022/11/21</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-数据结构算法之图" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">数据结构算法之图</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="java">java</a> > 
+            
+            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">数据结构算法</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-03-21 10:39:53'>2023-01-01 11:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE"><span class="toc-text">图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">1.图的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%82%BB%E6%8E%A5"><span class="toc-text">1.1 邻接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%B7%AF%E5%BE%84"><span class="toc-text">1.2 路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%BF%9E%E9%80%9A%E5%9B%BE%E5%92%8C%E9%9D%9E%E8%BF%9E%E9%80%9A%E5%9B%BE"><span class="toc-text">1.3 连通图和非连通图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%9C%89%E5%90%91%E5%9B%BE%E5%92%8C%E6%97%A0%E5%90%91%E5%9B%BE"><span class="toc-text">1.4 有向图和无向图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E6%9C%89%E6%9D%83%E5%9B%BE%E5%92%8C%E6%97%A0%E6%9D%83%E5%9B%BE"><span class="toc-text">1.5 有权图和无权图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9C%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E8%A1%A8%E7%A4%BA%E5%9B%BE"><span class="toc-text">2. 在程序中表示图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E9%A1%B6%E7%82%B9"><span class="toc-text">2.1 顶点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%BE%B9"><span class="toc-text">2.2 边</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%90%9C%E7%B4%A2"><span class="toc-text">3.搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%EF%BC%88DFS%EF%BC%89"><span class="toc-text">3.1 深度优先搜索（DFS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%EF%BC%88BFS%EF%BC%89"><span class="toc-text">3.2 广度优先搜索（BFS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">3.3 程序实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-text">4.最小生成树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%BB%E7%BB%93"><span class="toc-text">5.总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><p>前面我们介绍了树这种数据结构，树是由n（n&gt;0）个有限节点通过连接它们的边组成一个具有层次关系的集<br>合，把它叫做“树”是因为它看起来像一棵倒挂的树，包括二叉树、红黑树、2-3-4树、堆等各种不同的树，有对这几<br>种树不了解的可以参考前面几篇文章。而本篇我们将介绍另外一种数据结构——图，图也是计算机程序设计<br>中最常用的数据结构之一，从数学意义上讲，树是图的一种，大家可以对比着学习。</p>
+<h2 id="1-图的定义"><a href="#1-图的定义" class="headerlink" title="1.图的定义"></a>1.图的定义</h2><p>我们知道，前面讨论的数据结构都有一个框架，而这个框架是由相应的算法实现的，比如二叉树搜索树，左子<br>树上所有结点的值均小于它的根结点的值，右子树所有结点的值均大于它的根节点的值，类似这种形状使得它容易<br>搜索数据和插入数据，树的边表示了从一个节点到另一个节点的快捷方式。  </p>
+<p>而图通常有个固定的形状，这是由物理或抽象的问题所决定的。比如一副地图中一些节点表示城市，而边可能表示城市间<br>的班机航线或铁路公路信息等。</p>
+<h3 id="1-1-邻接"><a href="#1-1-邻接" class="headerlink" title="1.1 邻接"></a>1.1 邻接</h3><p>如果两个顶点被同一条边连接，就称这两个顶点是邻接的。有时候也将和某个指定顶点邻接的顶点叫做它的邻居。</p>
+<h3 id="1-2-路径"><a href="#1-2-路径" class="headerlink" title="1.2 路径"></a>1.2 路径</h3><p>路径是边的序列，比如从顶点A到顶点J的路径为 ABCJ，当然还有别的路径 ABCDJ，ABDJ等等，只要这些点是邻接的。  </p>
+<h3 id="1-3-连通图和非连通图"><a href="#1-3-连通图和非连通图" class="headerlink" title="1.3 连通图和非连通图"></a>1.3 连通图和非连通图</h3><p>如果至少有一条路径可以连接起所有的顶点，那么这个图称作连通的；如果假如存在从某个顶点不能到达另外一个顶点，则称为非联通的。  </p>
+<h3 id="1-4-有向图和无向图"><a href="#1-4-有向图和无向图" class="headerlink" title="1.4 有向图和无向图"></a>1.4 有向图和无向图</h3><p>如果图中的边没有方向，可以从任意一边到达另一边，则称为无向图；比如双向高速公路，A城市到B城市可<br>以开车从A驶向B，也可以开车从B城市驶向A城市。但是如果只能从A城市驶向B城市的图，那么则称为有向图。  </p>
+<h3 id="1-5-有权图和无权图"><a href="#1-5-有权图和无权图" class="headerlink" title="1.5 有权图和无权图"></a>1.5 有权图和无权图</h3><p>图中的边被赋予一个权值，权值是一个数字，它能代表两个顶点间的物理距离，或者从一个顶点到另一个顶点<br>的时间，这种图被称为有权图；反之边没有赋值的则称为无权图。  </p>
+<p>本篇我们讨论的是无权无向图。  </p>
+<h2 id="2-在程序中表示图"><a href="#2-在程序中表示图" class="headerlink" title="2. 在程序中表示图"></a>2. 在程序中表示图</h2><p>我们知道图是由顶点和边组成，那么在计算机中，怎么来模拟顶点和边？  </p>
+<h3 id="2-1-顶点"><a href="#2-1-顶点" class="headerlink" title="2.1 顶点"></a>2.1 顶点</h3><p>在大多数情况下，顶点表示某个真实世界的对象，这个对象必须用数据项来描述。比如在一个飞机航线模拟程<br>序中，顶点表示城市，那么它需要存储城市的名字、海拔高度、地理位置和其它相关信息，因此通常用一个顶点类<br>的对象来表示一个顶点，这里我们仅仅在顶点中存储了一个字母来标识顶点，同时还有一个标志位，用来判断该顶<br>点有没有被访问过（用于后面的搜索）。</p>
+<pre><code class="java">/**
+ * 顶点类
+ * */
+public class Vertex &#123;
+    public char label;
+    public boolean wasVisited;
+    public Vertex(char label)&#123;
+        this.label = label;
+        wasVisited = false;
+    &#125;
+&#125;
+</code></pre>
+<p>顶点对象能放在数组中，然后用下标指示，也可以放在链表或其它数据结构中，不论使用什么结构，存储只是<br>为了使用方便，这与边如何连接点是没有关系的。</p>
+<h3 id="2-2-边"><a href="#2-2-边" class="headerlink" title="2.2 边"></a>2.2 边</h3><p>在前面讲解各种树的数据结构时，大多数树都是每个节点包含它的子节点的引用，比如红黑树、二叉树。也有<br>用数组表示树，树组中节点的位置决定了它和其它节点的关系，比如堆就是用数组表示。  </p>
+<p>然而图并不像树，图没有固定的结构，图的每个顶点可以与任意多个顶点相连，为了模拟这种自由形式的组织<br>结构，用如下两种方式表示图：邻接矩阵和邻接表（如果一条边连接两个顶点，那么这两个顶点就是邻接的）</p>
+<pre><code class="java">/**
+*        B
+*      /  \
+*     A----D
+*      \
+*       C
+*/
+</code></pre>
+<p><strong>邻接矩阵</strong><br>邻接矩阵是一个二维数组，数据项表示两点间是否存在边，如果图中有 N 个顶点，邻接矩阵就是 N*N 的数<br>组。上图用邻接矩阵表示如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>1表示有边，0表示没有边，也可以用布尔变量true和false来表示。顶点与自身相连用 0 表示，所以这个矩阵<br>从左上角到右上角的对角线全是 0 。  </p>
+<p>注意：这个矩阵的上三角是下三角的镜像，两个三角包含了相同的信息，这个冗余信息看似低效，但是在大多<br>数计算机中，创造一个三角形数组比较困难，所以只好接受这个冗余，这也要求在程序处理中，当我们增加一条边<br>时，比如更新邻接矩阵的两部分，而不是一部分。  </p>
+<p><strong>邻接表</strong><br>邻接表是一个链表数组（或者是链表的链表），每个单独的链表表示了有哪些顶点与当前顶点邻接  </p>
+<table>
+<thead>
+<tr>
+<th>顶点</th>
+<th>包含邻接顶点的链表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>B-&gt;C-&gt;D</td>
+</tr>
+<tr>
+<td>B</td>
+<td>A-&gt;D</td>
+</tr>
+<tr>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr>
+<td>D</td>
+<td>A-&gt;B</td>
+</tr>
+</tbody></table>
+<h2 id="3-搜索"><a href="#3-搜索" class="headerlink" title="3.搜索"></a>3.搜索</h2><p>在图中实现最基本的操作之一就是搜索从一个指定顶点可以到达哪些顶点，比如从武汉出发的高铁可以到达哪<br>些城市，一些城市可以直达，一些城市不能直达。现在有一份全国高铁模拟图，要从某个城市（顶点）开始，沿着<br>铁轨（边）移动到其他城市（顶点），有两种方法可以用来搜索图：深度优先搜索（DFS）和广度优先搜索<br>（BFS）。它们最终都会到达所有连通的顶点，深度优先搜索通过栈来实现，而广度优先搜索通过队列来实现，不<br>同的实现机制导致不同的搜索方式。  </p>
+<h3 id="3-1-深度优先搜索（DFS）"><a href="#3-1-深度优先搜索（DFS）" class="headerlink" title="3.1 深度优先搜索（DFS）"></a>3.1 深度优先搜索（DFS）</h3><p>深度优先搜索算法有如下规则：<br>规则1：如果可能，访问一个邻接的未访问顶点，标记它，并将它放入栈中。<br>规则2：当不能执行规则 1 时，如果栈不为空，就从栈中弹出一个顶点。<br>规则3：如果不能执行规则 1 和规则 2 时，就完成了整个搜索过程。  </p>
+<pre><code class="java">/**
+*   -----B---F---H
+*   |
+*   |----C
+*   |
+*   A----D---G---I
+*   |
+*   ----E
+*/
+</code></pre>
+<p>对于上图，应用深度优先搜索如下：假设选取 A 顶点为起始点，并且按照字母优先顺序进行访问，那么应用规<br>则 1 ，接下来访问顶点 B，然后标记它，并将它放入栈中；再次应用规则 1，接下来访问顶点 F，再次应用规则<br>1，访问顶点 H。我们这时候发现，没有 H 顶点的邻接点了，这时候应用规则 2，从栈中弹出 H，这时候回到了顶<br>点 F，但是我们发现 F 也除了 H 也没有与之邻接且未访问的顶点了，那么再弹出 F，这时候回到顶点 B，同理规则1 应用不了，<br>应用规则 2，弹出 B，这时候栈中只有顶点 A了，然后 A 还有未访问的邻接点，所有接下来访问顶点<br>C，但是 C又是这条线的终点，所以从栈中弹出它，再次回到 A，接着访问 D,G,I，最后也回到了 A，然后访问 E，<br>但是最后又回到了顶点 A，这时候我们发现 A没有未访问的邻接点了，所以也把它弹出栈。现在栈中已无顶点，于<br>是应用规则 3，完成了整个搜索过程。    </p>
+<p>深度优先搜索在于能够找到与某一顶点邻接且没有访问过的顶点。这里以邻接矩阵为例，找到顶点所在的行，<br>从第一列开始向后寻找值为1的列；列号是邻接顶点的号码，检查这个顶点是否未访问过，如果是这样，那么这就<br>是要访问的下一个顶点，如果该行没有顶点既等于1（邻接）且又是未访问的，那么与指定点相邻接的顶点就全部<br>访问过了（后面会用算法实现）。</p>
+<h3 id="3-2-广度优先搜索（BFS）"><a href="#3-2-广度优先搜索（BFS）" class="headerlink" title="3.2 广度优先搜索（BFS）"></a>3.2 广度优先搜索（BFS）</h3><p>深度优先搜索要尽可能的远离起始点，而广度优先搜索则要尽可能的靠近起始点，它首先访问起始顶点的所有<br>邻接点，然后再访问较远的区域，这种搜索不能用栈实现，而是用队列实现。  </p>
+<p>规则1：访问下一个未访问的邻接点（如果存在），这个顶点必须是当前顶点的邻接点，标记它，并把它插入到队列中。  </p>
+<p>规则2：如果已经没有未访问的邻接点而不能执行规则 1 时，那么从队列列头取出一个顶点（如果存在），并使其成为当前顶点。  </p>
+<p>规则3：如果因为队列为空而不能执行规则 2，则搜索结束。  </p>
+<p>对于上面的图，应用广度优先搜索：以A为起始点，首先访问所有与 A 相邻的顶点，并在访问的同时将其插入<br>队列中，现在已经访问了 A,B,C,D和E。这时队列（从头到尾）包含 BCDE，已经没有未访问的且与顶点 A 邻接的顶<br>点了，所以从队列中取出B，寻找与B邻接的顶点，这时找到F，所以把F插入到队列中。已经没有未访问且与B邻接<br>的顶点了，所以从队列列头取出C，它没有未访问的邻接点。因此取出 D 并访问 G，D也没有未访问的邻接点了，<br>所以取出E，现在队列中有 FG，在取出 F，访问 H，然后取出 G，访问 I，现在队列中有 HI，当取出他们时，发现<br>没有其它为访问的顶点了，这时队列为空，搜索结束。  </p>
+<h3 id="3-3-程序实现"><a href="#3-3-程序实现" class="headerlink" title="3.3 程序实现"></a>3.3 程序实现</h3><p>实现深度优先搜索的栈</p>
+<pre><code class="java">/**
+ * 用于实现深度优先搜索的栈
+ * */
+public class StackX &#123;
+    private final int SIZE = 20;
+    private int[] st;
+    private int top;
+    public StackX()&#123;
+        st = new int[SIZE];
+        top = -1;
+    &#125;
+    public void push(int j)&#123;
+        st[++top] = j;
+    &#125;
+    public int pop()&#123;
+        return st[top--];
+    &#125;
+    public int peek()&#123;
+        return st[top];
+    &#125;
+    public boolean isEmpty()&#123;
+        return (top == -1);
+    &#125;
+&#125;
+</code></pre>
+<p>实现广度优先搜索的队列</p>
+<pre><code class="java">/**
+ * 用于实现广度优先搜索的队列
+ * */
+public class Queue &#123;
+    private final int SIZE = 20;
+    private int[] queArray;
+    private int front;
+    private int rear;
+    public Queue()&#123;
+        queArray = new int[SIZE];
+        front = 0;
+        rear = -1;
+    &#125;
+    public void insert(int j) &#123;
+        if(rear == SIZE-1) &#123;
+            rear = -1;
+        &#125;
+        queArray[++rear] = j;
+    &#125;
+    public int remove() &#123;
+        int temp = queArray[front++];
+        if(front == SIZE) &#123;
+            front = 0;
+        &#125;
+        return temp;
+    &#125;
+    public boolean isEmpty() &#123;
+        return (rear+1 == front || front+SIZE-1 == rear);
+    &#125;
+&#125;
+</code></pre>
+<p>图类源码：</p>
+<pre><code class="java">public class Graph &#123;
+    private final int MAX_VERTS = 20;//表示顶点的个数
+    private Vertex vertexList[];//用来存储顶点的数组
+    private int adjMat[][];//用邻接矩阵来存储 边,数组元素0表示没有边界，1表示有边界
+    private int nVerts;//顶点个数
+    private StackX theStack;//用栈实现深度优先搜索
+    private Queue queue;//用队列实现广度优先搜索
+
+    public Graph() &#123;
+        vertexList = new Vertex[MAX_VERTS];
+        adjMat = new int[MAX_VERTS][MAX_VERTS];
+        nVerts = 0;//初始化顶点个数为0
+        //初始化邻接矩阵所有元素都为0，即所有顶点都没有边
+        for (int i = 0; i &lt; MAX_VERTS; i++) &#123;
+            for (int j = 0; j &lt; MAX_VERTS; j++) &#123;
+                adjMat[i][j] = 0;
+            &#125;
+        &#125;
+        theStack = new StackX();
+        queue = new Queue();
+    &#125;
+
+    //将顶点添加到数组中，是否访问标志置为wasVisited=false(未访问)
+    public void addVertex(char lab) &#123;
+        vertexList[nVerts++] = new Vertex(lab);
+    &#125;
+
+    //注意用邻接矩阵表示边，是对称的，两部分都要赋值
+    public void addEdge(int start, int end) &#123;
+        adjMat[start][end] = 1;
+        adjMat[end][start] = 1;
+    &#125;
+
+    //打印某个顶点表示的值
+    public void displayVertex(int v) &#123;
+        System.out.print(vertexList[v].label);
+    &#125;
+
+    /**
+     * 深度优先搜索算法:
+     * 1、用peek()方法检查栈顶的顶点
+     * 2、用getAdjUnvisitedVertex()方法找到当前栈顶点邻接且未被访问的顶点
+     * 3、第二步方法返回值不等于‐1则找到下一个未访问的邻接顶点，访问这个顶点，并入栈
+     * 如果第二步方法返回值等于 ‐1，则没有找到，出栈
+     */
+    public void depthFirstSearch() &#123;
+        //从第一个顶点开始访问
+        vertexList[0].wasVisited = true; //访问之后标记为true
+        displayVertex(0);//打印访问的第一个顶点
+        theStack.push(0);//将第一个顶点放入栈中
+        while (!theStack.isEmpty()) &#123;
+            //找到栈当前顶点邻接且未被访问的顶点
+            int v = getAdjUnvisitedVertex(theStack.peek());
+            if (v == -1) &#123; //如果当前顶点值为‐1，则表示没有邻接且未被访问顶点，那么出栈顶点
+                theStack.pop();
+            &#125; else &#123; //否则访问下一个邻接顶点
+                vertexList[v].wasVisited = true;
+                displayVertex(v);
+                theStack.push(v);
+            &#125;
+        &#125;
+        //栈访问完毕，重置所有标记位wasVisited=false
+        for (int i = 0; i &lt; nVerts; i++) &#123;
+            vertexList[i].wasVisited = false;
+        &#125;
+    &#125;
+
+    //找到与某一顶点邻接且未被访问的顶点
+    public int getAdjUnvisitedVertex(int v) &#123;
+        for (int i = 0; i &lt; nVerts; i++) &#123;
+            //v顶点与i顶点相邻（邻接矩阵值为1）且未被访问 wasVisited==false
+            if (adjMat[v][i] == 1 &amp;&amp; vertexList[i].wasVisited == false) &#123;
+                return i;
+            &#125;
+        &#125;
+        return -1;
+    &#125;
+
+    /**
+     * 广度优先搜索算法：
+     * 1、用remove()方法检查栈顶的顶点
+     * 2、试图找到这个顶点还未访问的邻节点
+     * 3、 如果没有找到，该顶点出列
+     * 4、 如果找到这样的顶点，访问这个顶点，并把它放入队列中
+     */
+    public void breadthFirstSearch() &#123;
+        vertexList[0].wasVisited = true;
+        displayVertex(0);
+        queue.insert(0);
+        int v2;
+        while (!queue.isEmpty()) &#123;
+            int v1 = queue.remove();
+            while ((v2 = getAdjUnvisitedVertex(v1)) != -1) &#123;
+                vertexList[v2].wasVisited = true;
+                displayVertex(v2);
+                queue.insert(v2);
+            &#125;
+        &#125;
+        //搜索完毕，初始化，以便于下次搜索
+        for (int i = 0; i &lt; nVerts; i++) &#123;
+            vertexList[i].wasVisited = false;
+        &#125;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        Graph graph = new Graph();
+        graph.addVertex(&#39;A&#39;);
+        graph.addVertex(&#39;B&#39;);
+        graph.addVertex(&#39;C&#39;);
+        graph.addVertex(&#39;D&#39;);
+        graph.addVertex(&#39;E&#39;);
+        graph.addEdge(0, 1);//AB
+        graph.addEdge(1, 2);//BC
+        graph.addEdge(0, 3);//AD
+        graph.addEdge(3, 4);//DE
+        System.out.println(&quot;深度优先搜索算法 :&quot;);
+        graph.depthFirstSearch();//ABCDE
+        System.out.println();
+        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
+        System.out.println(&quot;广度优先搜索算法 :&quot;);
+        graph.breadthFirstSearch();//ABDCE
+    &#125;
+&#125;
+</code></pre>
+<p>我们用下图来测试，看测试结果</p>
+<pre><code class="java">/**
+*  -----B-----C
+*  |
+*  A
+*  |
+*  -----D-----E
+*
+*  理论上，两种不同搜索结果应该如下：
+*   深度优先：ABCDE
+*   广度优先：ABDCE
+*/
+</code></pre>
+<p>我们看程序运行结果：</p>
+<pre><code>深度优先搜索算法 :
+ABCDE
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
+广度优先搜索算法 :
+ABDCE
+</code></pre>
+<h2 id="4-最小生成树"><a href="#4-最小生成树" class="headerlink" title="4.最小生成树"></a>4.最小生成树</h2><p>对于图的操作，还有一个最常用的就是找到最小生成树，最小生成树就是用最少的边连接所有顶点。对于给定<br>的一组顶点，可能有很多种最小生成树，但是最小生成树的边的数量 E 总是比顶点 V 的数量小1，即：  </p>
+<p>V &#x3D; E + 1  </p>
+<p>这里不用关心边的长度，不是找最短的路径（会在带权图中讲解），而是找最少数量的边，可以基于深度优先<br>搜索和广度优先搜索来实现。  </p>
+<p>比如基于深度优先搜索，我们记录走过的边，就可以创建一个最小生成树。因为DFS 访问所有顶点，但只访问<br>一次，它绝对不会两次访问同一个顶点，但她看到某条边将到达一个已访问的顶点，它就不会走这条边，它从来不<br>遍历那些不可能的边，因此，DFS 算法走过整个图的路径必定是最小生成树。  </p>
+<pre><code class="java">    //基于深度优先搜索找到最小生成树
+    public void mst() &#123;
+        vertexList[0].wasVisited = true;
+        theStack.push(0);
+        while (!theStack.isEmpty()) &#123;
+            int currentVertex = theStack.peek();
+            int v = getAdjUnvisitedVertex(currentVertex);
+            if (v == -1) &#123;
+                theStack.pop();
+            &#125; else &#123;
+                vertexList[v].wasVisited = true;
+                theStack.push(v);
+                displayVertex(currentVertex);
+                displayVertex(v);
+                System.out.print(&quot; &quot;);
+            &#125;
+        &#125;
+        //搜索完毕，初始化，以便于下次搜索
+        for (int i = 0; i &lt; nVerts; i++) &#123;
+            vertexList[i].wasVisited = false;
+        &#125;
+    &#125;
+</code></pre>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><p>图是由边连接的顶点组成，图可以表示许多真实的世界情况，包括飞机航线、电子线路等等。搜索算法以一种<br>系统的方式访问图中的每个顶点，主要通过深度优先搜索（DFS）和广度优先搜索（BFS），深度优先搜索通过栈<br>来实现，广度优先搜索通过队列来实现。最后需要知道最小生成树是包含连接图中所有顶点所需要的最少数量的<br>边。</p>
+<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'bfcd27a804f71cfad5a0',
+            clientSecret: '77a760ab4dd835aa828e1bbc86680fb6246d4d63',
+            repo: 'xmlrambo.github.io',
+            owner: 'xmlrambo',
+            admin: ['xmlrambo'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2022-至今 xmlrambo
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_diary/">日记本</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://xmlrambo.gitee.io/xml_novel/">网文世界</a>
+    
+    
+</div>
+
+
+</html>
