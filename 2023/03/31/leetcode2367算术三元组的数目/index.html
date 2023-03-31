@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构算法之简单排序 | 青春纪念册</title>
-  <meta name="keywords" content=" 数据结构算法 ">
-  <meta name="description" content="数据结构算法之简单排序 | 青春纪念册">
+  <title>leetcode2367算术三元组的数目 | 青春纪念册</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="leetcode2367算术三元组的数目 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -912,9 +912,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构算法之简单排序" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-leetcode2367算术三元组的数目" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构算法之简单排序</h1>
+        <h1 class="article-title">leetcode2367算术三元组的数目</h1>
     
     <div class="article-meta">
         
@@ -926,22 +926,15 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
+            <a  data-rel="java&lt;---&gt;leetcode">leetcode</a>
             
         </span>
         
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color2">数据结构算法</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-21 08:33:57'>2022-12-20 18:55</time>
+            发布时间 : <time class="date" title='最后更新: 2023-03-31 11:32:21'>2023-03-31 11:27</time>
         
     </div>
     <div class="article-meta">
@@ -974,7 +967,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E3%80%81%E9%80%89%E6%8B%A9%E3%80%81%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">冒泡、选择、插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-text">1冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-text">2选择排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">3插入排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E6%80%BB%E7%BB%93"><span class="toc-text">4总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91"><span class="toc-text">实现逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -990,206 +983,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="冒泡、选择、插入排序"><a href="#冒泡、选择、插入排序" class="headerlink" title="冒泡、选择、插入排序"></a>冒泡、选择、插入排序</h1><p>上一篇我们实现的数组结构是无序的，也就是纯粹按照插入顺序进行排列，<br>那么如何进行元素排序，本篇 我们介绍几种简单的排序算法。</p>
-<h2 id="1冒泡排序"><a href="#1冒泡排序" class="headerlink" title="1冒泡排序"></a>1冒泡排序</h2><p>这个名词的由来很好理解，一般河水中的冒泡，水底刚冒出来的时候是比较小的，随着慢慢向水面浮起会逐渐增大，这物理规律不作过多解释，大家只需要了解即可。</p>
-<p>冒泡算法的运作规律如下：</p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你一个下标从 0 开始、严格递增 的整数数组 nums 和一个正整数 diff 。如果满足下述全部条件，则三元组 (i, j, k) 就是一个 算术三元组 ：</p>
 <ul>
-<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
-<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的 数（也就是第一波冒泡完成）。</li>
-<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
-<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+<li>i &lt; j &lt; k ，</li>
+<li>nums[j] - nums[i] &#x3D;&#x3D; diff 且</li>
+<li>nums[k] - nums[j] &#x3D;&#x3D; diff<br>返回不同 算术三元组 的数目。</li>
 </ul>
-<p>示例代码如下：</p>
-<pre><code class="java">public class InsertSort &#123;
-    public static int[] sort(int[] array)&#123;
-        int j;
-        //从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的
-        for(int i = 1 ; i &lt; array.length ; i++)&#123;
-            int tmp = array[i];//记录要插入的数据
-            j = i;
-            while(j &gt; 0 &amp;&amp; tmp &lt; array[j-1])&#123;
-                //从已经排序的序列最右边的开始比较，找到比其小的数
-                array[j] = array[j-1];
-                //向后挪动
-                j--;
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>输入：nums &#x3D; [0,1,4,6,7,10], diff &#x3D; 3<br>输出：2<br>解释：<br>(1, 2, 4) 是算术三元组：7 - 4 &#x3D;&#x3D; 3 且 4 - 1 &#x3D;&#x3D; 3 。<br>(2, 4, 5) 是算术三元组：10 - 7 &#x3D;&#x3D; 3 且 7 - 4 &#x3D;&#x3D; 3 。  </p>
+<h2 id="实现逻辑"><a href="#实现逻辑" class="headerlink" title="实现逻辑"></a>实现逻辑</h2><p>用Set存下数组中的每个元素，然后依次遍历，看nums[i]+diff 及nums[i]+diff+diff是否在set中存在即可。  </p>
+<pre><code class="java">import java.util.HashSet;
+import java.util.Set;
+
+public class Solution2367 &#123;
+    public static int arithmeticTriplets(int[] nums, int diff) &#123;
+        Set set = new HashSet();
+        for(int i=0; i&lt;nums.length; i++)&#123;
+            set.add(nums[i]);
+        &#125;
+        int result = 0;
+        for(int i=0; i&lt;nums.length; i++)&#123;
+            if(set.contains(nums[i]+diff) &amp;&amp; set.contains(nums[i]+diff+diff))&#123;
+                result++;
             &#125;
-            array[j] = tmp;//存在比其小的数，插入
         &#125;
-        return array;
+        return result;
     &#125;
 
-    //遍历显示数组
-    public static void display(int[] array)&#123;
-        for(int i = 0 ; i &lt; array.length ; i++)&#123;
-            System.out.print(array[i]+&quot; &quot;);
-        &#125;
-        System.out.println();
-    &#125;
-
-    public static void main(String[] args)&#123;
-        int[] array = &#123;4,2,8,9,5,7,6,1,3&#125;;
-        //未排序数组顺序为
-        System.out.println(&quot;未排序数组顺序为：&quot;);
-        display(array);
-        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
-        array = sort(array);
-        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
-        System.out.println(&quot;经过插入排序后的数组顺序为：&quot;);
-        display(array);
+    public static void main(String[] args) &#123;
+        int nums[]= new int[]&#123;4,5,6,7,8,9&#125;;
+        int result = arithmeticTriplets(nums,2);
+        System.out.println(result);
     &#125;
 &#125;
 </code></pre>
-<p>执行结果如下：</p>
-<pre><code>未排序数组顺序为：
-4 2 8 9 5 7 6 1 3 
-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
-第1轮排序后的结果为:2 4 8 5 7 6 1 3 9 
-第2轮排序后的结果为:2 4 5 7 6 1 3 8 9 
-第3轮排序后的结果为:2 4 5 6 1 3 7 8 9 
-第4轮排序后的结果为:2 4 5 1 3 6 7 8 9 
-第5轮排序后的结果为:2 4 1 3 5 6 7 8 9 
-第6轮排序后的结果为:2 1 3 4 5 6 7 8 9 
-第7轮排序后的结果为:1 2 3 4 5 6 7 8 9 
-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
-经过冒泡排序后的数组顺序为：
-1 2 3 4 5 6 7 8 9 
-</code></pre>
-<p>本来应该是 8 轮排序的，这里我们只进行了 7 轮排序，因为第 7 轮排序之后已经是有序数组了。</p>
-<p><strong>冒泡排序解释</strong><br>冒泡排序是由两个for循环构成，第一个for循环的变量 i 表示总共需要多少轮比较，第二个for循环的变量 j 表示每轮参与比较的元素下标【0,1，……，length-i】，因为每轮比较都会出现一个最大值放在最右边，所以每轮比 较后的元素个数都会少一个，这也是为什么 j 的范围是逐渐减小的。相信大家理解之后快速写出一个冒泡排序并不难。</p>
-<p><strong>冒泡排序性能分析</strong><br>假设参与比较的数组元素个数为 N，则第一轮排序有 N-1 次比较，第二轮有 N-2 次，如此类推，这种序列的 求和公式为：<br>（N-1）+（N-2）+…+1 &#x3D; N*（N-1）&#x2F;2<br>当 N 的值很大时，算法比较次数约为 N2&#x2F;2次比较，忽略减1。  </p>
-<p>假设数据是随机的，那么每次比较可能要交换位置，可能不会交换，假设概率为50%，那么交换次数为 N2&#x2F;4。不过如果是最坏的情况，初始数据是逆序的，那么每次比较都要交换位置。  </p>
-<p>交换和比较次数都和N2 成正比。由于常数不算大 O 表示法中，忽略 2 和 4，那么冒泡排序运行都需要 O(N2) 时间级别。  </p>
-<p>其实无论何时，只要看见一个循环嵌套在另一个循环中，我们都可以怀疑这个算法的运行时间为 O(N2)级，外层循环执行 N 次，内层循环对每一次外层循环都执行N次（或者几分之N次）。这就意味着大约需要执行N2次某个基本操作。</p>
-<h2 id="2选择排序"><a href="#2选择排序" class="headerlink" title="2选择排序"></a>2选择排序</h2><p>选择排序是每一次从待排序的数据元素中选出最小的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。<br>分为三步： </p>
-<ul>
-<li>从待排序序列中，找到关键字最小的元素 </li>
-<li>如果最小元素不是待排序序列的第一个元素，将其和第一个元素互换 </li>
-<li>从余下的 N - 1 个元素中，找出关键字最小的元素，重复(1)、(2)步，直到排序结束</li>
-</ul>
-<p>示例代码如下：</p>
-<pre><code class="java">public class ChoiceSort &#123;
-    public static int[] sort(int[] array) &#123;
-        //总共要经过N‐1轮比较
-        for (int i = 0; i &lt; array.length-1; i++)&#123;
-            int min = i;
-            //每轮需要比较的次数
-            for (int j = i + 1; j &lt; array.length; j++) &#123;
-                if (array[j] &lt; array[min]) &#123;
-                    min = j;//记录目前能找到的最小值元素的下标
-                &#125;
-            &#125;
-            //将找到的最小值和i位置所在的值进行交换
-            if (i != min) &#123;
-                int temp = array[i];
-                array[i] = array[min];
-                array[min] = temp;
-            &#125;
-            //第 i轮排序的结果为
-            System.out.print(&quot;第&quot; + (i + 1) + &quot;轮排序后的结果为:&quot;);
-            display(array);
-        &#125;
-        return array;
-    &#125;
-
-    //遍历显示数组
-    public static void display(int[] array)&#123;
-        for(int i = 0 ; i &lt; array.length ; i++)&#123;
-            System.out.print(array[i]+&quot; &quot;);
-        &#125;
-        System.out.println();
-    &#125;
-
-    public static void main(String[] args)&#123;
-        int[] array = &#123;4,2,8,9,5,7,6,1,3&#125;;
-        //未排序数组顺序为
-        System.out.println(&quot;未排序数组顺序为：&quot;);
-        display(array);
-        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
-        array = sort(array);
-        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
-        System.out.println(&quot;经过选择排序后的数组顺序为：&quot;);
-        display(array);
-    &#125;
-&#125;
-</code></pre>
-<p>运行结果：</p>
-<pre><code>未排序数组顺序为：
-4 2 8 9 5 7 6 1 3 
-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
-第1轮排序后的结果为:1 2 8 9 5 7 6 4 3 
-第2轮排序后的结果为:1 2 8 9 5 7 6 4 3 
-第3轮排序后的结果为:1 2 3 9 5 7 6 4 8 
-第4轮排序后的结果为:1 2 3 4 5 7 6 9 8 
-第5轮排序后的结果为:1 2 3 4 5 7 6 9 8 
-第6轮排序后的结果为:1 2 3 4 5 6 7 9 8 
-第7轮排序后的结果为:1 2 3 4 5 6 7 9 8 
-第8轮排序后的结果为:1 2 3 4 5 6 7 8 9 
-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
-经过选择排序后的数组顺序为：
-1 2 3 4 5 6 7 8 9 
-</code></pre>
-<p><strong>选择排序性能分析</strong><br>选择排序和冒泡排序执行了相同次数的比较：N*（N-1）&#x2F;2，但是至多只进行了N次交换。  </p>
-<p>当 N 值很大时，比较次数是主要的，所以和冒泡排序一样，用大O表示是O(N2)时间级别。但是由于选择排序交换的次数少，所以选择排序无疑是比冒泡排序快的。当N值较小时，如果交换时间比选择时间大的多，那么选择排序是相当快的。</p>
-<h2 id="3插入排序"><a href="#3插入排序" class="headerlink" title="3插入排序"></a>3插入排序</h2><p>直接插入排序基本思想是每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有 元素为止。  </p>
-<p>插入排序还分为直接插入排序、二分插入排序、链表插入排序、希尔排序等等，这里我们只是以直接插入排序 讲解，后面讲高级排序的时候会将其他的。  </p>
-<p>示例代码如下：</p>
-<pre><code class="java">public class InsertSort &#123;
-    public static int[] sort(int[] array)&#123;
-        int j;
-        //从下标为1的元素开始选择合适的位置插入，因为下标为0的只有一个元素，默认是有序的
-        for(int i = 1 ; i &lt; array.length ; i++)&#123;
-            int tmp = array[i];//记录要插入的数据
-            j = i;
-            while(j &gt; 0 &amp;&amp; tmp &lt; array[j-1])&#123;
-                //从已经排序的序列最右边的开始比较，找到比其小的数
-                array[j] = array[j-1];
-                //向后挪动
-                j--;
-            &#125;
-            array[j] = tmp;//存在比其小的数，插入
-        &#125;
-        return array;
-    &#125;
-
-    //遍历显示数组
-    public static void display(int[] array)&#123;
-        for(int i = 0 ; i &lt; array.length ; i++)&#123;
-            System.out.print(array[i]+&quot; &quot;);
-        &#125;
-        System.out.println();
-    &#125;
-
-    public static void main(String[] args)&#123;
-        int[] array = &#123;4,2,8,9,5,7,6,1,3&#125;;
-        //未排序数组顺序为
-        System.out.println(&quot;未排序数组顺序为：&quot;);
-        display(array);
-        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
-        array = sort(array);
-        System.out.println(&quot;‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐&quot;);
-        System.out.println(&quot;经过插入排序后的数组顺序为：&quot;);
-        display(array);
-    &#125;
-&#125;
-</code></pre>
-<p>运行结果：</p>
-<pre><code>未排序数组顺序为：
-4 2 8 9 5 7 6 1 3 
-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
-‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
-经过插入排序后的数组顺序为：
-1 2 3 4 5 6 7 8 9 
-</code></pre>
-<p><strong>插入排序性能分析</strong><br>在第一轮排序中，它最多比较一次，第二轮最多比较两次，一次类推，第N轮，最多比较N-1次。<br>因此有 1+2+3+…+N-1&#x3D;N*（N-1）&#x2F;2。  </p>
-<p>假设在每一轮排序发现插入点时，平均只有全体数据项的一半真的进行了比较，我们除以2得到：N*（N- 1）&#x2F;4。<br>用大O表示法大致需要需要 O(N2) 时间级别。</p>
-<p>复制的次数大致等于比较的次数，但是一次复制与一次交换的时间耗时不同，所以相对于随机数据，插入排序比冒泡快一倍，比选择排序略快。</p>
-<p>这里需要注意的是，如果要进行逆序排列，那么每次比较和移动都会进行，这时候并不会比冒泡排序快。</p>
-<h2 id="4总结"><a href="#4总结" class="headerlink" title="4总结"></a>4总结</h2><p>上面讲的三种排序，冒泡、选择、插入用大 O 表示法都需要 O(N2) 时间级别。一般不会选择冒泡排序，虽然冒泡排序书写是最简单的，但是平均性能是没有选择排序和插入排序好的。   </p>
-<p>选择排序把交换次数降低到最低，但是比较次数还是挺大的。当数据量小，并且交换数据相对于比较数据更加 耗时的情况下，可以应用选择排序。   </p>
-<p>在大多数情况下，假设数据量比较小或基本有序时，插入排序是三种算法中最好的选择。   </p>
-<p>后面我们会讲解高级排序，大O表示法的时间级别将比O(N2)小。</p>
-<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+<h2 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h2><h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p>xiaomingxiaola<br>（BossLiu）</p>
+<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h3><p>58726094</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
