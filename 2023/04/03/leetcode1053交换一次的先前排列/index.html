@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>数据结构算法之链表 | 青春纪念册</title>
-  <meta name="keywords" content=" 数据结构算法 ">
-  <meta name="description" content="数据结构算法之链表 | 青春纪念册">
+  <title>leetcode1053交换一次的先前排列 | 青春纪念册</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="leetcode1053交换一次的先前排列 | 青春纪念册">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介一个以写代码为生的荒诞小说从业者。  2010-2014年，就读于江苏某高校，莫名其妙的选了计算机专业，也就名正言顺的成了格子衫双肩包的代码狗。   2014年-至今，就职于上海市浦东新区某软件开发岗。   工作学习之余，真的很想写点什么，也算是在互联网上留下一点数字痕迹。  关于青春纪念册青春纪念册 之所以起青春纪念册这么一个名字，是因为一直以来除了写代码之外，浑身散发着一股该死的文艺细">
 <meta property="og:type" content="website">
@@ -921,9 +921,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-数据结构算法之链表" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-leetcode1053交换一次的先前排列" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数据结构算法之链表</h1>
+        <h1 class="article-title">leetcode1053交换一次的先前排列</h1>
     
     <div class="article-meta">
         
@@ -935,22 +935,15 @@
             
             <a  data-rel="java">java</a> > 
             
-            <a  data-rel="java&lt;---&gt;数据结构算法">数据结构算法</a>
+            <a  data-rel="java&lt;---&gt;leetcode">leetcode</a>
             
         </span>
         
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color2">数据结构算法</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-12-22 09:27:19'>2022-12-22 09:10</time>
+            发布时间 : <time class="date" title='最后更新: 2023-04-03 13:50:22'>2023-04-03 11:35</time>
         
     </div>
     <div class="article-meta">
@@ -983,7 +976,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8"><span class="toc-text">链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%93%BE%E8%A1%A8%EF%BC%88Linked-List%EF%BC%89"><span class="toc-text">1. 链表（Linked List）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%EF%BC%88Single-Linked-List%EF%BC%89"><span class="toc-text">2.单向链表（Single-Linked List）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">2.1单链表的具体实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E7%94%A8%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="toc-text">2.2 用单向链表实现栈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%8C%E7%AB%AF%E9%93%BE%E8%A1%A8"><span class="toc-text">3 双端链表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E5%8F%8C%E7%AB%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">3.1双端链表的具体实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2%E7%94%A8%E5%8F%8C%E7%AB%AF%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97"><span class="toc-text">3.2用双端链表实现队列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88ADT%EF%BC%89"><span class="toc-text">4抽象数据类型（ADT）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8"><span class="toc-text">5有序链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E5%92%8C%E6%97%A0%E5%BA%8F%E6%95%B0%E7%BB%84%E7%BB%84%E5%90%88%E6%8E%92%E5%BA%8F"><span class="toc-text">6有序链表和无序数组组合排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-text">7双向链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E6%80%BB%E7%BB%93"><span class="toc-text">8总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91"><span class="toc-text">实现逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81"><span class="toc-text">实现代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85"><span class="toc-text">联系作者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text">微信公众号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ%E7%BE%A4"><span class="toc-text">QQ群</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -999,498 +992,62 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><p>前面博客我们在讲解数组中，知道数组作为数据存储结构有一定的缺陷。在无序数组中，搜索性能差，在有序数组<br>中，插入效率又很低，而且这两种数组的删除效率都很低，并且数组在创建后，其大小是固定了，设置的过大会造<br>成内存的浪费，过小又不能满足数据量的存储。  </p>
-<p>本篇博客我们将讲解一种新型的数据结构——链表。我们知道数组是一种通用的数据结构，能用来实现栈、队<br>列等很多数据结构。而链表也是一种使用广泛的通用数据结构，它也可以用来作为实现栈、队列等数据结构的基<br>础，基本上除非需要频繁的通过下标来随机访问各个数据，否则很多使用数组的地方都可以用链表来代替。  </p>
-<p>但是我们需要说明的是，链表是不能解决数据存储的所有问题的，它也有它的优点和缺点。本篇博客我们介绍<br>几种常见的链表，分别是单向链表、双端链表、有序链表、双向链表以及有迭代器的链表。并且会讲解一下抽象数<br>据类型（ADT）的思想，如何用 ADT 描述栈和队列，如何用链表代替数组来实现栈和队列。  </p>
-<h2 id="1-链表（Linked-List）"><a href="#1-链表（Linked-List）" class="headerlink" title="1. 链表（Linked List）"></a>1. 链表（Linked List）</h2><pre><code>链表通常由一连串节点组成，每个节点包含任意的实例数据（data fields）和一或两个用来指向上一个/或下一个节点
-的位置的链接（&quot;links&quot;）
-</code></pre>
-<p>链表（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在<br>每一个节点里存到下一个节点的指针(Pointer)。  </p>
-<p>使用链表结构可以克服数组链表需要预先知道数据大小的缺点，链表结构可以充分利用计算机内存空间，实现<br>灵活的内存动态管理。但是链表失去了数组随机读取的优点，同时链表由于增加了结点的指针域，空间开销比较<br>大。  </p>
-<h2 id="2-单向链表（Single-Linked-List）"><a href="#2-单向链表（Single-Linked-List）" class="headerlink" title="2.单向链表（Single-Linked List）"></a>2.单向链表（Single-Linked List）</h2><p>单链表是链表中结构最简单的。一个单链表的节点(Node)分为两个部分，第一个部分(data)保存或者显示关于节点<br>的信息，另一个部分存储下一个节点的地址。最后一个节点存储地址的部分指向空值。  </p>
-<p>单向链表只可向一个方向遍历，一般查找一个节点的时候需要从第一个节点开始每次访问下一个节点，一直访<br>问到需要的位置。而插入一个节点，对于单向链表，我们只提供在链表头插入，只需要将当前插入的节点设置为头<br>节点，next指向原头节点即可。删除一个节点，我们将该节点的上一个节点的next指向该节点的下一个节点。</p>
-<h3 id="2-1单链表的具体实现"><a href="#2-1单链表的具体实现" class="headerlink" title="2.1单链表的具体实现"></a>2.1单链表的具体实现</h3><pre><code class="java">public class SingleLinkedList &#123;
-    private int size;//链表节点的个数
-    private Node head;//头节点
-
-    public SingleLinkedList()&#123;
-        size = 0;
-        head = null;
-    &#125;
-
-    //链表的每个节点类
-    private class Node&#123;
-    private Object data;//每个节点的数据
-    private Node next;//每个节点指向下一个节点的连接
-         public Node(Object data)&#123;
-            this.data = data;
-         &#125;
-    &#125;
-
-    //在链表头添加元素
-    public Object addHead(Object obj)&#123;
-        Node newHead = new Node(obj);
-        if(size == 0)&#123;
-            head = newHead;
-        &#125;else&#123;
-            newHead.next = head;
-            head = newHead;
-        &#125;
-        size++;
-        return obj;
-    &#125;
-
-    //在链表头删除元素
-    public Object deleteHead()&#123;
-        Object obj = head.data;
-        head = head.next;
-        size--;
-        return obj;
-    &#125;
-
-    //查找指定元素，找到了返回节点Node，找不到返回null
-    public Node find(Object obj)&#123;
-        Node current = head;
-        int tempSize = size;
-        while(tempSize &gt; 0)&#123;
-            if(obj.equals(current.data))&#123;
-                return current;
-            &#125;else&#123;
-                current = current.next;
-            &#125;
-            tempSize--;
-        &#125;
-        return null;
-    &#125;
-
-
-    //删除指定的元素，删除成功返回true
-    public boolean delete(Object value)&#123;
-        if(size == 0)&#123;
-            return false;
-        &#125;
-        Node current = head;
-        Node previous = head;
-        while(current.data != value)&#123;
-            if(current.next == null)&#123;
-                return false;
-            &#125;else&#123;
-                previous = current;
-                current = current.next;
-            &#125;
-        &#125;
-        //如果删除的节点是第一个节点
-        if(current == head)&#123;
-            head = current.next;
-            size--;
-        &#125;else&#123;//删除的节点不是第一个节点
-            previous.next = current.next;
-            size--;
-        &#125;
-        return true;
-    &#125;
-
-    //判断链表是否为空
-    public boolean isEmpty()&#123;
-        return (size == 0);
-    &#125;
-
-    //显示节点信息
-    public void display()&#123;
-        if(size &gt;0)&#123;
-            Node node = head;
-            int tempSize = size;
-            if(tempSize == 1)&#123;//当前链表只有一个节点
-                System.out.println(&quot;[&quot;+node.data+&quot;]&quot;);
-                return;
-            &#125;
-            while(tempSize&gt;0)&#123;
-                if(node.equals(head))&#123;
-                    System.out.print(&quot;[&quot;+node.data+&quot;‐&gt;&quot;);
-                &#125;else if(node.next == null)&#123;
-                    System.out.print(node.data+&quot;]&quot;);
-                &#125;else&#123;
-                    System.out.print(node.data+&quot;‐&gt;&quot;);
-                &#125;
-                node = node.next;
-                tempSize--;
-            &#125;
-            System.out.println();
-        &#125;else&#123;//如果链表一个节点都没有，直接打印[]
-            System.out.println(&quot;[]&quot;);
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>测试：</p>
-<pre><code class="java">import org.junit.Test;
-
-public class SingleLinkedListTest &#123;
-    @Test
-    public void testSingleLinkedList()&#123;
-        SingleLinkedList singleList = new SingleLinkedList();
-        singleList.addHead(&quot;A&quot;);
-        singleList.addHead(&quot;B&quot;);
-        singleList.addHead(&quot;C&quot;);
-        singleList.addHead(&quot;D&quot;);
-        //打印当前链表信息
-        singleList.display();
-        //删除C
-        singleList.delete(&quot;C&quot;);
-        singleList.display();
-        //查找B
-        System.out.println(singleList.find(&quot;B&quot;));
-    &#125;
-&#125;
-</code></pre>
-<p>结果：</p>
-<pre><code>[D‐&gt;C‐&gt;B‐&gt;A]
-[D‐&gt;B‐&gt;A]
-algorithm.linkedlist.SingleLinkedList$Node@531d72ca
-</code></pre>
-<h3 id="2-2-用单向链表实现栈"><a href="#2-2-用单向链表实现栈" class="headerlink" title="2.2 用单向链表实现栈"></a>2.2 用单向链表实现栈</h3><p>栈的pop()方法和push()方法，对应于链表的在头部删除元素deleteHead()以及在头部增加元素addHead()。</p>
-<pre><code class="java">public class SingleLinkedStack &#123;
-    private SingleLinkedList link;
-
-    public SingleLinkedStack()&#123;
-        link = new SingleLinkedList();
-    &#125;
-
-    //添加元素
-    public void push(Object obj)&#123;
-        link.addHead(obj);
-    &#125;
-
-    //移除栈顶元素
-    public Object pop()&#123;
-        Object obj = link.deleteHead();
-        return obj;
-    &#125;
-
-    //判断是否为空
-    public boolean isEmpty()&#123;
-        return link.isEmpty();
-    &#125;
-
-    //打印栈内元素信息
-    public void display()&#123;
-        link.display();
-    &#125;
-&#125;
-</code></pre>
-<h2 id="3-双端链表"><a href="#3-双端链表" class="headerlink" title="3 双端链表"></a>3 双端链表</h2><p>对于单项链表，我们如果想在尾部添加一个节点，那么必须从头部一直遍历到尾部，找到尾节点，然后在尾节点后<br>面插入一个节点。这样操作很麻烦，如果我们在设计链表的时候多个对尾节点的引用，那么会简单很多。<br>注意和后面将的双向链表的区别！！！</p>
-<h3 id="3-1双端链表的具体实现"><a href="#3-1双端链表的具体实现" class="headerlink" title="3.1双端链表的具体实现"></a>3.1双端链表的具体实现</h3><pre><code class="java">public class DoublePointLinkedList &#123;
-    private Node head;//头节点
-    private Node tail;//尾节点
-    private int size;//节点的个数
-
-    private class Node&#123;
-        private Object data;
-        private Node next;
-
-        public Node(Object data)&#123;
-            this.data = data;
-        &#125;
-    &#125;
-
-    public DoublePointLinkedList()&#123;
-        size = 0;
-        head = null;
-        tail = null;
-    &#125;
-
-    //链表头新增节点
-    public void addHead(Object data)&#123;
-        Node node = new Node(data);
-        if(size == 0)&#123;//如果链表为空，那么头节点和尾节点都是该新增节点
-            head = node;
-            tail = node;
-            size++;
-        &#125;else&#123;
-            node.next = head;
-            head = node;
-            size++;
-        &#125;
-    &#125;
-
-    //链表尾新增节点
-    public void addTail(Object data)&#123;
-        Node node = new Node(data);
-        if(size == 0)&#123;//如果链表为空，那么头节点和尾节点都是该新增节点
-            head = node;
-            tail = node;
-            size++;
-        &#125;else&#123;
-            tail.next = node;
-            tail = node;
-            size++;
-        &#125;
-    &#125;
-
-    //删除头部节点，成功返回true，失败返回false
-    public boolean deleteHead()&#123;
-        if(size == 0)&#123;//当前链表节点数为0
-            return false;
-        &#125;
-        if(head.next == null)&#123;//当前链表节点数为1
-            head = null;
-            tail = null;
-        &#125;else&#123;
-            head = head.next;
-        &#125;
-        size--;
-        return true;
-    &#125;
-
-    //判断是否为空
-    public boolean isEmpty()&#123;
-        return (size ==0);
-    &#125;
-
-    //获得链表的节点个数
-    public int getSize()&#123;
-        return size;
-    &#125;
-
-    //显示节点信息
-    public void display()&#123;
-        if(size &gt;0)&#123;
-            Node node = head;
-            int tempSize = size;
-            if(tempSize == 1)&#123;//当前链表只有一个节点
-                System.out.println(&quot;[&quot;+node.data+&quot;]&quot;);
-                return;
-            &#125;
-            while(tempSize&gt;0)&#123;
-                if(node.equals(head))&#123;
-                    System.out.print(&quot;[&quot;+node.data+&quot;‐&gt;&quot;);
-                &#125;else if(node.next == null)&#123;
-                    System.out.print(node.data+&quot;]&quot;);
-                &#125;else&#123;
-                    System.out.print(node.data+&quot;‐&gt;&quot;);
-                &#125;
-                node = node.next;
-                tempSize--;
-            &#125;
-            System.out.println();
-        &#125;else&#123;//如果链表一个节点都没有，直接打印[]
-            System.out.println(&quot;[]&quot;);
-        &#125;
-    &#125;
-
-&#125;
-</code></pre>
-<h3 id="3-2用双端链表实现队列"><a href="#3-2用双端链表实现队列" class="headerlink" title="3.2用双端链表实现队列"></a>3.2用双端链表实现队列</h3><pre><code class="java">public class DoublePointLinkedQueue &#123;
-    private DoublePointLinkedList dp;
-
-    public DoublePointLinkedQueue()&#123;
-        dp = new DoublePointLinkedList();
-    &#125;
-
-    public void insert(Object data)&#123;
-        dp.addTail(data);
-    &#125;
-
-    public void delete()&#123;
-        dp.deleteHead();
-    &#125;
-
-    public boolean isEmpty()&#123;
-        return dp.isEmpty();
-    &#125;
-
-    public int getSize()&#123;
-        return dp.getSize();
-    &#125;
-
-    public void display()&#123;
-        dp.display();
-    &#125;
-&#125;
-</code></pre>
-<h2 id="4抽象数据类型（ADT）"><a href="#4抽象数据类型（ADT）" class="headerlink" title="4抽象数据类型（ADT）"></a>4抽象数据类型（ADT）</h2><p>在介绍抽象数据类型的时候，我们先看看什么是数据类型，听到这个词，在Java中我们可能首先会想到像<br>int,double这样的词，这是Java中的基本数据类型，一个数据类型会涉及到两件事：  </p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你一个正整数数组 arr（可能存在重复的元素），请你返回可在 一次交换（交换两数字 arr[i] 和 arr[j] 的位置）后得到的、按字典序排列小于 arr 的最大排列。  </p>
+<p>如果无法这么操作，就请返回原数组。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>输入：arr &#x3D; [3,2,1]<br>输出：[3,1,2]  </p>
+<p>输入：arr &#x3D; [1,9,4,6,7]<br>输出：[1,7,4,6,9]  </p>
+<p>输入：arr &#x3D; [3,1,1,3]<br>输出：[1,3,1,3]</p>
+<p>输入：arr &#x3D; [3,1,2,3]<br>输出：[2,1,3,3]</p>
+<p>输入：arr &#x3D; [4,1,2,3]<br>输出：[3,1,2,4]</p>
+<h2 id="实现逻辑"><a href="#实现逻辑" class="headerlink" title="实现逻辑"></a>实现逻辑</h2><p>这道题目的关键是 <strong>按字典序排列小于</strong> A 的最大可能排列， 那么有  </p>
 <ul>
-<li>拥有特定特征的数据项</li>
-<li>在数据上允许的操作</li>
+<li>对当前序列进行逆序查找，找到<strong>第一个降序</strong>的位置 i，使得 A[i]&gt;A[i+1]<br>由于 A[i]&gt;A[i+1]A[i]&gt;A[i+1]，必能构造比当前字典序小的序列<br>由于逆序查找，交换 A[i] 为最优解  </li>
+<li>寻找在 A[i] 右边小于 A[i] 的最大的数字 A[j]<br>由于 A[j] &lt; A[i], 交换 A[i] 与 A[j] 后的序列字典序一定小于当前字典序<br>由于 A[j] 是满足关系的右边最大的，因此一定是满足小于关系的交换后字典序最大的</li>
 </ul>
-<p>比如Java中的int数据类型，它表示整数，取值范围为：-2147483648~2147483647，还能使用各种操作符，<br>+、-、*、&#x2F; 等对其操作。数据类型允许的操作是它本身不可分离的部分，理解类型包括理解什么样的操作可以应用<br>在该类型上。  </p>
-<p>那么当年设计计算机语言的人，为什么会考虑到数据类型？  </p>
-<p>我们先看这样一个例子，比如，大家都需要住房子，也都希望房子越大越好。但显然，没有钱，考虑房子没有<br>意义。于是就出现了各种各样的商品房，有别墅的、复式的、错层的、单间的……甚至只有两平米的胶囊房间。这<br>样做的意义是满足不同人的需要。  </p>
-<p>同样，在计算机中，也存在相同的问题。计算1+1这样的表达式不需要开辟很大的存储空间，不需要适合小数<br>甚至字符运算的内存空间。于是计算机的研究者们就考虑，要对数据进行分类，分出来多种数据类型。比如int，比<br>如float。  </p>
-<p>虽然不同的计算机有不同的硬件系统，但实际上高级语言编写者才不管程序运行在什么计算机上，他们的目的<br>就是为了实现整形数字的运算，比如a+b等。他们才不关心整数在计算机内部是如何表示的，也不管CPU是如何计<br>算的。于是我们就考虑，无论什么计算机、什么语言都会面临类似的整数运算，我们可以考虑将其抽象出来。抽象<br>是抽取出事物具有的普遍性本质，是对事物的一个概括，是一种思考问题的方式.  </p>
-<p>抽象数据类型（ADT）是指一个数学模型及定义在该模型上的一组操作。它仅取决于其逻辑特征，而与计算机<br>内部如何表示和实现无关。比如刚才说得整型，各个计算机，不管大型机、小型机、PC、平板电脑甚至智能手机，<br>都有“整型”类型，也需要整形运算，那么整型其实就是一个抽象数据类型。  </p>
-<p>更广泛一点的，比如我们刚讲解的栈和队列这两种数据结构，我们分别使用了数组和链表来实现，比如栈，对<br>于使用者只需要知道pop()和push()方法或其它方法的存在以及如何使用即可，使用者不需要知道我们是使用的数<br>组或是链表来实现的。  </p>
-<p>ADT的思想可以作为我们设计工具的理念，比如我们需要存储数据，那么就从考虑需要在数据上实现的操作开<br>始，需要存取最后一个数据项吗？还是第一个？还是特定值的项？还是特定位置的项？回答这些问题会引出ADT的<br>定义，只有完整的定义了ADT后，才应该考虑实现的细节。  </p>
-<p>这在我们Java语言中的接口设计理念是想通的。</p>
-<h2 id="5有序链表"><a href="#5有序链表" class="headerlink" title="5有序链表"></a>5有序链表</h2><p>前面的链表实现插入数据都是无序的，在有些应用中需要链表中的数据有序，这称为有序链表。  </p>
-<p>在有序链表中，数据是按照关键值有序排列的。一般在大多数需要使用有序数组的场合也可以使用有序链表。<br>有序链表优于有序数组的地方是插入的速度（因为元素不需要移动），另外链表可以扩展到全部有效的使用内存，<br>而数组只能局限于一个固定的大小中。  </p>
-<pre><code class="java">public class OrderLinkedList &#123;
-    private Node head;
+<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><pre><code class="java">package leetcode;
 
-    private class Node&#123;
-        private int data;
-        private Node next;
-        public Node(int data)&#123;
-            this.data = data;
-        &#125;
-    &#125;
-
-    public OrderLinkedList()&#123;
-        head = null;
-    &#125;
-
-    //插入节点，并按照从小打到的顺序排列
-    public void insert(int value)&#123;
-        Node node = new Node(value);
-        Node pre = null;
-        Node current = head;
-        while(current != null &amp;&amp; value &gt; current.data)&#123;
-            pre = current;
-            current = current.next;
-        &#125;
-        if(pre == null)&#123;
-            head = node;
-            head.next = current;
-        &#125;else&#123;
-            pre.next = node;
-            node.next = current;
-        &#125;
-    &#125;
-
-    //删除头节点
-    public void deleteHead()&#123;
-        head = head.next;
-    &#125;
-
-    public void display()&#123;
-        Node current = head;
-        while(current != null)&#123;
-            System.out.print(current.data+&quot; &quot;);
-            current = current.next;
-        &#125;
-        System.out.println(&quot;&quot;);
-    &#125;
-&#125;
-</code></pre>
-<p>在有序链表中插入和删除某一项最多需要O(N)次比较，平均需要O(N&#x2F;2)次，因为必须沿着链表上一步一步走才能找<br>到正确的插入位置，然而可以最快速度删除最值，因为只需要删除表头即可，如果一个应用需要频繁的存取最小<br>值，且不需要快速的插入，那么有序链表是一个比较好的选择方案。比如优先级队列可以使用有序链表来实现。  </p>
-<h2 id="6有序链表和无序数组组合排序"><a href="#6有序链表和无序数组组合排序" class="headerlink" title="6有序链表和无序数组组合排序"></a>6有序链表和无序数组组合排序</h2><p>比如有一个无序数组需要排序，前面我们在讲解冒泡排序、选择排序、插入排序这三种简单的排序时，需要的时间<br>级别都是O(N2)。  </p>
-<p>现在我们讲解了有序链表之后，对于一个无序数组，我们先将数组元素取出，一个一个的插入到有序链表中，<br>然后将他们从有序链表中一个一个删除，重新放入数组，那么数组就会排好序了。和插入排序一样，如果插入了N<br>个新数据，那么进行大概N2&#x2F;4次比较。但是相对于插入排序，每个元素只进行了两次排序，一次从数组到链表，一<br>次从链表到数组，大概需要2*N次移动，而插入排序则需要N2次移动，  </p>
-<p>效率肯定是比前面讲的简单排序要高，但是缺点就是需要开辟差不多两倍的空间，而且数组和链表必须在内存<br>中同时存在，如果有现成的链表可以用，那么这种方法还是挺好的。  </p>
-<h2 id="7双向链表"><a href="#7双向链表" class="headerlink" title="7双向链表"></a>7双向链表</h2><p>我们知道单向链表只能从一个方向遍历，那么双向链表它可以从两个方向遍历。  </p>
-<p>具体代码实现：</p>
-<pre><code class="java">public class TwoWayLinkedList &#123;
-    private Node head;//表示链表头
-    private Node tail;//表示链表尾
-    private int size;//表示链表的节点个数
-
-    private class Node&#123;
-        private Object data;
-        private Node next;
-        private Node prev;
-        public Node(Object data)&#123;
-            this.data = data;
-        &#125;
-    &#125;
-
-    public TwoWayLinkedList()&#123;
-        size = 0;
-        head = null;
-        tail = null;
-    &#125;
-
-    //在链表头增加节点
-    public void addHead(Object value)&#123;
-        Node newNode = new Node(value);
-        if(size == 0)&#123;
-            head = newNode;
-            tail = newNode;
-            size++;
-        &#125;else&#123;
-            head.prev = newNode;
-            newNode.next = head;
-            head = newNode;
-            size++;
-        &#125;
-    &#125;
-
-    //在链表尾增加节点
-    public void addTail(Object value)&#123;
-        Node newNode = new Node(value);
-        if(size == 0)&#123;
-            head = newNode;
-            tail = newNode;
-            size++;
-        &#125;else&#123;
-            newNode.prev = tail;
-            tail.next = newNode;
-            tail = newNode;
-            size++;
-        &#125;
-    &#125;
-
-    //删除链表头
-    public Node deleteHead()&#123;
-        Node temp = head;
-        if(size != 0)&#123;
-            head = head.next;
-            head.prev = null;
-            size--;
-        &#125;
-        return temp;
-    &#125;
-
-    //删除链表尾
-    public Node deleteTail()&#123;
-        Node temp = tail;
-        if(size != 0)&#123;
-            tail = tail.prev;
-            tail.next = null;
-            size--;
-        &#125;
-        return temp;
-    &#125;
-
-    //获得链表的节点个数
-    public int getSize()&#123;
-        return size;
-    &#125;
-
-    //判断链表是否为空
-    public boolean isEmpty()&#123;
-        return (size == 0);
-    &#125;
-
-    //显示节点信息
-    public void display()&#123;
-        if(size &gt;0)&#123;
-            Node node = head;
-            int tempSize = size;
-            if(tempSize == 1)&#123;//当前链表只有一个节点
-                System.out.println(&quot;[&quot;+node.data+&quot;]&quot;);
-                return;
-            &#125;
-            while(tempSize&gt;0)&#123;
-                if(node.equals(head))&#123;
-                    System.out.print(&quot;[&quot;+node.data+&quot;‐&gt;&quot;);
-                &#125;else if(node.next == null)&#123;
-                    System.out.print(node.data+&quot;]&quot;);
-                &#125;else&#123;
-                    System.out.print(node.data+&quot;‐&gt;&quot;);
+public class Solution1053 &#123;
+    public static int[] prevPermOpt1(int[] arr) &#123;
+        int len = arr.length;
+        int maxJ = -1;
+        int indexJ = -1;
+        boolean hasResult = false;
+        for(int i=len-2; i&gt;=0; i--)&#123;
+            if(arr[i+1]&lt;arr[i])&#123;
+                //arr[i]为逆序结尾处，为待交换元素
+                for(int j=i+1; j&lt;len; j++)&#123;
+                    //寻找与 arr[i] 交换的位置
+                    if(arr[i]&gt;arr[j])&#123;
+                        // 必须满足 arr[i] &gt; arr[j]，否则不能满足交换后的字典序小于原始字典序
+                        hasResult = true;
+                        if(arr[j]&gt;maxJ)&#123;
+                            maxJ = arr[j];
+                            indexJ = j;
+                        &#125;
+                    &#125;
                 &#125;
-                node = node.next;
-                tempSize--;
+                if(hasResult)&#123;
+                    int tmp = arr[i];
+                    arr[i] = arr[indexJ];
+                    arr[indexJ] = tmp;
+                    return arr;
+                &#125;
             &#125;
-            System.out.println();
-        &#125;else&#123;//如果链表一个节点都没有，直接打印[]
-            System.out.println(&quot;[]&quot;);
+        &#125;
+        return arr;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        int arr[] = new int[]&#123;1,9,4,7,6&#125;;
+        int result[]= prevPermOpt1(arr);
+        for(int i=0; i&lt;result.length; i++)&#123;
+            System.out.println(result[i]);
         &#125;
     &#125;
 &#125;
 </code></pre>
-<p>我们也可以用双向链表来实现双端队列，这里就不做具体代码演示了.  </p>
-<h2 id="8总结"><a href="#8总结" class="headerlink" title="8总结"></a>8总结</h2><p>上面我们讲了各种链表，每个链表都包括一个LinikedList对象和许多Node对象，LinkedList对象通常包含头和尾节<br>点的引用，分别指向链表的第一个节点和最后一个节点。而每个节点对象通常包含数据部分data，以及对上一个节<br>点的引用prev和下一个节点的引用next，只有下一个节点的引用称为单向链表，两个都有的称为双向链表。next值<br>为null则说明是链表的结尾，如果想找到某个节点，我们必须从第一个节点开始遍历，不断通过next找到下一个节<br>点，直到找到所需要的。栈和队列都是ADT，可以用数组来实现，也可以用链表实现。</p>
-<h1 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h1><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><p>xiaomingxiaola<br>（BossLiu）</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h2><p>58726094</p>
+<h2 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h2><h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p>xiaomingxiaola<br>（BossLiu）</p>
+<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群"></a>QQ群</h3><p>58726094</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 384276224@qq.com </span>
